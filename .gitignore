@@ -1,0 +1,11 @@
+.*.sw[ponxmn]
+.vimtagsdisplay
+tags
+Build
+.lwpcookies
+cover_db
+tmp*
+*~
+vim.sh
+temp*
+errors.err

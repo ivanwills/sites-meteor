@@ -1,0 +1,33 @@
+{
+    "environments" : [
+        { "name" : "dev" , "label" : "Dev"  },
+        { "name" : "prod", "label" : "Prod" }
+    ],
+    "groups" : [
+        {
+            "name"  : "portals",
+            "label" : "Portals",
+            "data"  : [
+                {
+                    "label" : "Sites - meteor",
+                    "links" : [
+                        { "name" : "GIT"    , "label" : "G", "url" : "http://github.com/ivanwills/sites-meteor" },
+                        { "name" : "Jenkins", "label" : "J", "url" : "http://jenkins.sites-meteor.com/" }
+                    ],
+                    "environments" : [
+                        {
+                            "dev" : {
+                                "links" : [
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "abriviations" : [
+        { "abriviation" : "G", "description" : "Git Repository" },
+        { "abriviation" : "J", "description" : "Jenkins Job"    }
+    ]
+}
