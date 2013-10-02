@@ -26,7 +26,29 @@ Template.table.events({
 });
 
 Template.group.group = function () {
+    for ( var i in this.data ) {
+        this.data[i].group = this.name;
+    }
     return this.data;
+};
+
+Template.group.state = function () {
+    var key = 'group.'+this.name;
+    console.log('get', key, ReactiveLocal.get(key));
+    return ReactiveLocal.get(key) ? 'open' : 'closed';
+};
+
+Template.group.events({
+    'click th' : function () {
+        var key = 'group.'+this.name;
+        console.log('set', key, ReactiveLocal.get(key));
+        ReactiveLocal.set(key, ReactiveLocal.get(key) ? false : true );
+    }
+});
+
+Template.group_data.display = function () {
+    var key = 'group.'+this.group;
+    return ReactiveLocal.get(key) ? '' : 'hidden';
 };
 
 Template.group_data.environment = function () {

@@ -13,3 +13,9 @@ td, th {
 .group.head.open {
     background : url("/img/arrow_up.png") no-repeat 0 2px;
 }
+.group.head.closed {
+    background : url("/img/arrow_down.png") no-repeat 0 2px;
+}
+.hidden {
+    display : none;
+}
