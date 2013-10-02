@@ -3,11 +3,78 @@
 </head>
 
 <body>
-  {{> hello}}
+  {{> table}}
+  <br/>
+  {{> show}}
 </body>
 
-<template name="hello">
-  <h1>Hello World!</h1>
-  {{greeting}}
-  <input type="button" value="Click" />
+<template name="table">
+    <table id="replace" class="main">
+        <thead>
+            <tr>
+                <th class="site">
+                    <a href="{{git_web}}" title="Repositories">Site</a>
+                </th>
+                {{#each environment}}
+                    {{> env_head}}
+                {{/each}}
+            </tr>
+        </thead>
+        {{#each group}}
+            {{> group}}
+        {{/each}}
+    </table>
+</template>
+
+<template name="env_head">
+    <th>{{label}}</th>
+</template>
+
+<template name="group">
+    <tbody>
+        <tr>
+            <th id="group_{{name}}" colspan="20">{{label}}</th>
+        </tr>
+        {{#each group}}
+            {{> group_data}}
+        {{/each}}
+    </tbody>
+</template>
+
+<template name="group_data">
+    <tr>
+        <td>
+            {{label}}
+            <div class="right">[ {{> links}} ]</div>
+        </td>
+        {{#each environment}}
+            {{> group_env}}
+        {{/each}}
+    </tr>
+</template>
+
+<template name="group_env">
+    <td class="env_{{name}}">
+        {{> links}}
+    </td>
+</template>
+
+<template name="links">
+{{#each links}}
+    <a href="{{url}}" title="{{name}}">{{label}}</a> {{pipe}}
+{{/each}}
+</template>
+
+<template name="show">
+    <table class="">
+        <tr>
+            <th>Show:</th>
+            {{#each environments}}
+            <td class="display {{name}} note" title="Click to display {{name}} links">{{label}}</td>
+            {{/each}}
+        </tr>
+    </table>
+</template>
+
+<template name="roup_env">
 </template>
