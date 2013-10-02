@@ -1,0 +1,9 @@
+[submodule "packages/reactive-local"]
+	path = packages/reactive-local
+	url = git@github.com:ivanwills/meteor-reactive-local.git
+[submodule "packages/jquery-localstorage"]
+	path = packages/jquery-localstorage
+	url = git@github.com:ivanwills/meteor-jquery-localstorage.git
+[submodule "packages/jquery-cookie"]
+	path = packages/jquery-cookie
+	url = git@github.com:ivanwills/meteor-jquery-cookie.git
