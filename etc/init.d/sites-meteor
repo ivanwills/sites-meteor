@@ -1,0 +1,22 @@
+#! /bin/sh
+
+### BEGIN INIT INFO
+# Provides:		sshd
+# Required-Start:	$remote_fs $syslog
+# Required-Stop:	$remote_fs $syslog
+# Default-Start:	2 3 4 5
+# Default-Stop:
+# Short-Description:	OpenBSD Secure Shell server
+### END INIT INFO
+
+set -e
+
+case 'Ubuntu' in
+    Ubuntu)
+	# The init.d script is only for chroots.
+	if [ -e /etc/init/sites-meteor.conf ] && ! ischroot; then
+	    exec /lib/init/upstart-job sites-meteor "$@"
+	fi
+	;;
+esac
+
