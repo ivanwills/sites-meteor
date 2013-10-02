@@ -1,4 +1,9 @@
 {
+    "config" : [
+        { "name" : "git_web", "value" : "https://github.com/ivanwills" },
+        { "name" : "a", "value" : "" },
+        { "name" : "b", "value" : "" }
+    ],
     "environments" : [
         { "name" : "dev" , "label" : "Dev"  },
         { "name" : "prod", "label" : "Prod" }
@@ -14,14 +19,16 @@
                         { "name" : "GIT"    , "label" : "G", "url" : "http://github.com/ivanwills/sites-meteor" },
                         { "name" : "Jenkins", "label" : "J", "url" : "http://jenkins.sites-meteor.com/" }
                     ],
-                    "environments" : [
-                        {
-                            "dev" : {
-                                "links" : [
-                                ]
-                            }
+                    "environments" : {
+                        "dev" : {
+                            "links" : [
+                            ]
+                        },
+                        "prod" : {
+                            "links" : [
+                            ]
                         }
-                    ]
+                    }
                 }
             ]
         }
