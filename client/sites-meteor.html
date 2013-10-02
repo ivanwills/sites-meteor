@@ -27,7 +27,7 @@
 </template>
 
 <template name="env_head">
-    <th>{{label}}</th>
+    <th class="{{state}}">{{label}}</th>
 </template>
 
 <template name="group">
@@ -54,7 +54,7 @@
 </template>
 
 <template name="group_env">
-    <td class="env_{{name}}">
+    <td class="env_{{name}} {{state}}">
         {{> links}}
     </td>
 </template>
@@ -70,7 +70,7 @@
         <tr>
             <th>Show:</th>
             {{#each environments}}
-            <td class="display {{name}} note" title="Click to display {{name}} links">{{label}}</td>
+            <td class="display {{name}} note {{state}}" title="Click to display {{name}} links">{{label}}</td>
             {{/each}}
         </tr>
     </table>

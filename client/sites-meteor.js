@@ -25,6 +25,20 @@ Template.table.events({
     }
 });
 
+Template.env_head.state = function () {
+    var key = 'emv.'+this.name;
+    console.log('get', key, ReactiveLocal.get(key));
+    return ReactiveLocal.get(key) ? '' : 'hidden';
+};
+
+Template.env_head.events({
+    'click th' : function () {
+        var key = 'env.'+this.name;
+        console.log('set', key, ReactiveLocal.get(key));
+        ReactiveLocal.set(key, ReactiveLocal.get(key) ? false : true );
+    }
+});
+
 Template.group.group = function () {
     for ( var i in this.data ) {
         this.data[i].group = this.name;
@@ -61,6 +75,20 @@ Template.group_data.environment = function () {
     });
     return envs;
 };
+
+Template.group_env.state = function () {
+    var key = 'emv.'+this.name;
+    console.log('get', key, ReactiveLocal.get(key));
+    return ReactiveLocal.get(key) ? 'hidden' : '';
+};
+
+Template.group_env.events({
+    'click td' : function () {
+        var key = 'env.'+this.name;
+        console.log('set', key, ReactiveLocal.get(key));
+        ReactiveLocal.set(key, ReactiveLocal.get(key) ? false : true );
+    }
+});
 
 Template.links.links = function () {
     if ( this.links && this.links.length )
