@@ -5,3 +5,11 @@ td, th {
 .right {
     float : right;
 }
+.group.head {
+    text-align : left;
+    padding-left : 20px;
+    cursor : pointer;
+}
+.group.head.open {
+    background : url("/img/arrow_up.png") no-repeat 0 2px;
+}
