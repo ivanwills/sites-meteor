@@ -1,8 +1,8 @@
 {
     "config" : [
         { "name" : "git_web", "value" : "https://github.com/ivanwills" },
-        { "name" : "a", "value" : "" },
-        { "name" : "b", "value" : "" }
+        { "name" : "title"    , "value" : "Sites" },
+        { "name" : "copyright", "value" : "Ivan Wills 2013" }
     ],
     "environments" : [
         { "name" : "dev" , "label" : "Dev"  },
