@@ -1,7 +1,4 @@
 /* CSS declarations go here */
-td, th {
-    border : 1px solid silver;
-}
 .right {
     float : right;
 }
@@ -18,4 +15,10 @@ td, th {
 }
 .hidden {
     display : none;
+}
+.env {
+    font-size : 0.9em;
+}
+.env span {
+    cursor : pointer;
 }

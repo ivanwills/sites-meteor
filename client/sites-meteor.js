@@ -9,6 +9,27 @@ db = {
     abriviations : new Meteor.Collection("abriviations")
 };
 
+var visible_environments = function() {
+    var count = 0;
+    db.environments.find().forEach( function(env) {
+        var key = 'env.' + env.name;
+        var value = ReactiveLocal.get(key);
+        if ( value === true ) count++;
+        else if (value !== false ) ReactiveLocal.set(key, false);
+    });
+    return count;
+}
+
+Template.title.title = function () {
+    var title = db.config.findOne({name : "title"});
+    return title ? title.value : 'Sites';
+};
+
+Template.footer.copyright = function () {
+    var title = db.config.findOne({name : "copyright"});
+    return title ? title.value : 'Ivan Wills 2013';
+};
+
 Template.show.environments = Template.table.environment = function () {
     return db.environments.find();
 };
@@ -17,27 +38,26 @@ Template.table.group = function () {
     return db.groups.find();
 };
 
-Template.table.events({
-    'click input' : function () {
-    // template data, if any, is available in 'this'
-    if (typeof console !== 'undefined')
-        console.log("You pressed the button");
-    }
-});
-
-Template.env_head.state = function () {
-    var key = 'emv.'+this.name;
-    console.log('get', key, ReactiveLocal.get(key));
+Template.group_env.state = Template.env_head.state = function () {
+    var key = 'env.' + this.name;
     return ReactiveLocal.get(key) ? '' : 'hidden';
+};
+
+Template.env_head.action = function () {
+    var key = 'env.' + this.name;
+    return ReactiveLocal.get(key) ? 'Hide' : 'Show';
 };
 
 Template.env_head.events({
     'click th' : function () {
-        var key = 'env.'+this.name;
-        console.log('set', key, ReactiveLocal.get(key));
+        var key = 'env.' + this.name;
         ReactiveLocal.set(key, ReactiveLocal.get(key) ? false : true );
     }
 });
+
+Template.group.colspan = function () {
+    return 1 + visible_environments();
+};
 
 Template.group.group = function () {
     for ( var i in this.data ) {
@@ -47,21 +67,24 @@ Template.group.group = function () {
 };
 
 Template.group.state = function () {
-    var key = 'group.'+this.name;
-    console.log('get', key, ReactiveLocal.get(key));
+    var key = 'group.' + this.name;
     return ReactiveLocal.get(key) ? 'open' : 'closed';
+};
+
+Template.group.action = function () {
+    var key = 'group.' + this.name;
+    return ReactiveLocal.get(key) ? 'Hide' : 'Show';
 };
 
 Template.group.events({
     'click th' : function () {
-        var key = 'group.'+this.name;
-        console.log('set', key, ReactiveLocal.get(key));
+        var key = 'group.' + this.name;
         ReactiveLocal.set(key, ReactiveLocal.get(key) ? false : true );
     }
 });
 
 Template.group_data.display = function () {
-    var key = 'group.'+this.group;
+    var key = 'group.' + this.group;
     return ReactiveLocal.get(key) ? '' : 'hidden';
 };
 
@@ -76,16 +99,19 @@ Template.group_data.environment = function () {
     return envs;
 };
 
-Template.group_env.state = function () {
-    var key = 'emv.'+this.name;
-    console.log('get', key, ReactiveLocal.get(key));
+Template.show_env.state = function () {
+    var key = 'env.' + this.name;
     return ReactiveLocal.get(key) ? 'hidden' : '';
 };
 
-Template.group_env.events({
-    'click td' : function () {
-        var key = 'env.'+this.name;
-        console.log('set', key, ReactiveLocal.get(key));
+Template.show_env.action = function () {
+    var key = 'env.' + this.name;
+    return ReactiveLocal.get(key) ? 'Hide' : 'Show';
+};
+
+Template.show_env.events({
+    'click th' : function () {
+        var key = 'env.' + this.name;
         ReactiveLocal.set(key, ReactiveLocal.get(key) ? false : true );
     }
 });
