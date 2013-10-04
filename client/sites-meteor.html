@@ -36,7 +36,7 @@
         </div>
     </div>
     {{> footer }}
-
+    <div id="edit"></div>
 </body>
 
 <template name="title">
@@ -84,10 +84,13 @@
 </template>
 
 <template name="group_data">
-    <tr class="group-{{group}} {{display}}">
+    <tr class="group-{{ group }} {{ display }}">
         <td>
-            {{ label }}
-            <div class="right">[ {{> links }} ]</div>
+            <p class="pull-left">{{ label }}</p>
+            {{#if loggedin }}
+                {{> edit }}
+            {{/if }}
+            <div class="pull-right">[ {{> links }} ]</div>
         </td>
         {{#each environment }}
             {{> group_env }}
@@ -124,6 +127,10 @@
     <th class="display {{ name }} note {{ state }}" title="{{ action }} {{ name }}">
         {{ label }}
     </th>
+</template>
+
+<template name="edit">
+    <div class="edit pull-left"><a href="#" title="Edit {{ name }}'s data">Edit</a></div>
 </template>
 
 <template name="roup_env">

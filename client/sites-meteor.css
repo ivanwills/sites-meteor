@@ -1,7 +1,4 @@
 /* CSS declarations go here */
-.right {
-    float : right;
-}
 .group.head {
     text-align : left;
     padding-left : 20px;
@@ -21,4 +18,15 @@
 }
 .env span {
     cursor : pointer;
+}
+
+html #login-dropdown-list {
+    left : auto;
+    right : 1px;
+}
+.edit {
+    font-stretch : condensed;
+    vertical-align : super;
+    font-size : 0.8em;
+    padding : 0 5px;
 }

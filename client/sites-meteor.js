@@ -20,6 +20,10 @@ var visible_environments = function() {
     return count;
 }
 
+Template.group_data.loggedin = function () {
+    return Meteor.userId();
+};
+
 Template.title.title = function () {
     var title = db.config.findOne({name : "title"});
     return title ? title.value : 'Sites';
@@ -49,7 +53,7 @@ Template.env_head.action = function () {
 };
 
 Template.env_head.events({
-    'click th' : function () {
+    'click th' : function (evt, tmpl) {
         var key = 'env.' + this.name;
         ReactiveLocal.set(key, ReactiveLocal.get(key) ? false : true );
     }
@@ -77,7 +81,7 @@ Template.group.action = function () {
 };
 
 Template.group.events({
-    'click th' : function () {
+    'click th' : function (evt, tmpl) {
         var key = 'group.' + this.name;
         ReactiveLocal.set(key, ReactiveLocal.get(key) ? false : true );
     }
@@ -110,7 +114,7 @@ Template.show_env.action = function () {
 };
 
 Template.show_env.events({
-    'click th' : function () {
+    'click th' : function (evt, tmpl) {
         var key = 'env.' + this.name;
         ReactiveLocal.set(key, ReactiveLocal.get(key) ? false : true );
     }
