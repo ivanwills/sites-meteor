@@ -31,7 +31,7 @@ Template.title.title = function () {
 
 Template.filter.filters = function () {
     var filter = db.config.find({"name" : "filters" });
-    return filter && filter.value ? filter.value.length :
+    return filter && filter.value ? filter.value.length : false;
 };
 
 Template.footer.copyright = function () {
