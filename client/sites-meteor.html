@@ -12,6 +12,9 @@
                     <span class="icon-bar">C</span>
                 </a>
                 <a class="brand" href="/">{{> title }}</a>
+                {{#if filters }}
+                    {{> filter }}
+                {{/if }}
                 <div class="nav-collapse collapse pull-right">
                     <p class="navbar-text pull-right">
                         {{ loginButtons }}
@@ -41,6 +44,10 @@
 
 <template name="title">
     {{ title }}
+</template>
+
+<template name="filter">
+    Select :
 </template>
 
 <template name="footer">

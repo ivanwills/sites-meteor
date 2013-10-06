@@ -29,6 +29,11 @@ Template.title.title = function () {
     return title ? title.value : 'Sites';
 };
 
+Template.filter.filters = function () {
+    var filter = db.config.find({"name" : "filters" });
+    return filter && filter.value ? filter.value.length :
+};
+
 Template.footer.copyright = function () {
     var title = db.config.findOne({name : "copyright"});
     return title ? title.value : 'Ivan Wills 2013';
