@@ -3,7 +3,7 @@
         { "name" : "git_web"  , "value" : "https://github.com/ivanwills" },
         { "name" : "title"    , "value" : "Sites" },
         { "name" : "copyright", "value" : "Ivan Wills 2013" },
-        { "filters" : [] }
+        { "name" : "filters"  , "value" : [] }
     ],
     "environments" : [
         { "name" : "dev" , "filter" : "One" , "label" : "Dev" },
