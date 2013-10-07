@@ -1,19 +1,22 @@
 {
     "config" : [
-        { "name" : "git_web", "value" : "https://github.com/ivanwills" },
+        { "name" : "git_web"  , "value" : "https://github.com/ivanwills" },
         { "name" : "title"    , "value" : "Sites" },
         { "name" : "copyright", "value" : "Ivan Wills 2013" },
         { "filters" : [] }
     ],
     "environments" : [
-        { "name" : "dev" , "label" : "Dev"  },
-        { "name" : "prod", "label" : "Prod" }
+        { "name" : "dev" , "filter" : "One" , "label" : "Dev" },
+        { "name" : "prod", "filter" : "One", "label" : "Prod" },
+        { "name" : "dev" , "filter" : "Two" , "label" : "Dev" },
+        { "name" : "prod", "filter" : "Two", "label" : "Prod" }
     ],
     "groups" : [
         {
-            "name"  : "portals",
-            "label" : "Portals",
-            "data"  : [
+            "name"   : "portals",
+            "label"  : "Portals",
+            "filter" : "One",
+            "data"   : [
                 {
                     "label" : "Sites - meteor",
                     "links" : [
@@ -21,14 +24,44 @@
                         { "name" : "Jenkins", "label" : "J", "url" : "http://jenkins.sites-meteor.com/" }
                     ],
                     "environments" : {
-                        "dev" : {
-                            "links" : [
-                            ]
-                        },
-                        "prod" : {
-                            "links" : [
-                            ]
-                        }
+                        "dev"  : { "links" : [] },
+                        "prod" : { "links" : [] }
+                    }
+                }
+            ]
+        },
+        {
+            "name"   : "sites",
+            "label"  : "Sites",
+            "filter" : "One",
+            "data"   : [
+                {
+                    "label" : "Sites - meteor",
+                    "links" : [
+                        { "name" : "GIT"    , "label" : "G", "url" : "http://github.com/ivanwills/sites-meteor" },
+                        { "name" : "Jenkins", "label" : "J", "url" : "http://jenkins.sites-meteor.com/" }
+                    ],
+                    "environments" : {
+                        "dev"  : { "links" : [] },
+                        "prod" : { "links" : [] }
+                    }
+                }
+            ]
+        },
+        {
+            "name"   : "portals",
+            "label"  : "Portals",
+            "filter" : "Two",
+            "data"   : [
+                {
+                    "label" : "Sites - meteor",
+                    "links" : [
+                        { "name" : "GIT"    , "label" : "G", "url" : "http://github.com/ivanwills/sites-meteor" },
+                        { "name" : "Jenkins", "label" : "J", "url" : "http://jenkins.sites-meteor.com/" }
+                    ],
+                    "environments" : {
+                        "dev"  : { "links" : [] },
+                        "prod" : { "links" : [] }
                     }
                 }
             ]
