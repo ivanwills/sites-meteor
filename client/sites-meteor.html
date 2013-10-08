@@ -11,10 +11,7 @@
                     <span class="icon-bar">B</span>
                     <span class="icon-bar">C</span>
                 </a>
-                <a class="brand" href="/">{{> title }}</a>
-                {{#if filters }}
-                    {{> filter }}
-                {{/if }}
+                {{> filter }}
                 <div class="nav-collapse collapse pull-right">
                     <p class="navbar-text pull-right">
                         {{ loginButtons }}
@@ -47,7 +44,22 @@
 </template>
 
 <template name="filter">
-    Select :
+    {{#if filters }}
+        <div class="brand">
+            Select : <select id="filter">
+                <option{{{ selected 'All' }}}>All</option>
+                {{#each filters }}
+                    {{> filter_option }}
+                {{/each}}
+            </select>
+        </div>
+    {{else }}
+        <a class="brand" href="/">{{> title }}</a>
+    {{/if }}
+</template>
+
+<template name="filter_option">
+    <option{{{ selected }}}>{{ this }}</option>
 </template>
 
 <template name="footer">
@@ -76,7 +88,7 @@
 </template>
 
 <template name="env_head">
-    <th class="{{ state }}" title="{{ action }} {{ name }}">{{ label }}</th>
+    <th class="env {{ state }}" title="{{ action }} {{ name }}">{{ label }}</th>
 </template>
 
 <template name="group">
@@ -121,7 +133,7 @@
     <table class="table table-striped table-bordered">
         <thead>
             <tr>
-                <th>Show:</th>
+                <th title="Show hidden environments">Show:</th>
                 {{#each environments }}
                     {{> show_env }}
                 {{/each }}
@@ -131,7 +143,7 @@
 </template>
 
 <template name="show_env">
-    <th class="display {{ name }} note {{ state }}" title="{{ action }} {{ name }}">
+    <th class="display {{ name }} env {{ state }}" title="{{ action }} {{ name }}">
         {{ label }}
     </th>
 </template>

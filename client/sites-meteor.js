@@ -11,14 +11,26 @@ db = {
 
 var visible_environments = function() {
     var count = 0;
-    db.environments.find().forEach( function(env) {
-        var key = 'env.' + env.name;
+    db.environments.find(filter_query()).forEach( function(env) {
+        var key = env_key(env.name);
         var value = ReactiveLocal.get(key);
         if ( value === true ) count++;
         else if (value !== false ) ReactiveLocal.set(key, false);
     });
     return count;
-}
+};
+
+var env_key = function(env) {
+    var filter = ReactiveLocal.get("filter");
+    if (filter == 'All') filter = null;
+    return 'env.' + ( filter ? filter + '.' : '' ) + env;
+};
+
+var filter_query = function() {
+    var filter = ReactiveLocal.get("filter");
+    if (filter == 'All') filter = null;
+    return filter ? { "filter" : filter } : {};
+};
 
 Template.group_data.loggedin = function () {
     return Meteor.userId();
@@ -29,10 +41,25 @@ Template.title.title = function () {
     return title ? title.value : 'Sites';
 };
 
-Template.filter.filters = function () {
-    var filter = db.config.find({"name" : "filters" });
-    return filter && filter.value ? filter.value.length : false;
+Template.filter.selected = Template.filter_option.selected = function (all) {
+    var filter = ReactiveLocal.get("filter");
+    if (all != 'All') all = this + '';
+    return filter == all ? ' selected="selected"' : '';
 };
+
+Template.filter.filters = function () {
+    var filter = db.config.findOne({"name" : "filters" });
+    if ( !ReactiveLocal.get("filter") && filter && filter.value && filter.value.length ) {
+        ReactiveLocal.set("filter", "All" );
+    }
+    return filter && filter.value ? filter.value : false;
+};
+
+Template.filter.events({
+    'change select' : function (evt, tmpl) {
+        ReactiveLocal.set("filter", $('#filter').val() );
+    }
+});
 
 Template.footer.copyright = function () {
     var title = db.config.findOne({name : "copyright"});
@@ -40,26 +67,26 @@ Template.footer.copyright = function () {
 };
 
 Template.show.environments = Template.table.environment = function () {
-    return db.environments.find();
+    return db.environments.find(filter_query());
 };
 
 Template.table.group = function () {
-    return db.groups.find();
+    return db.groups.find(filter_query());
 };
 
 Template.group_env.state = Template.env_head.state = function () {
-    var key = 'env.' + this.name;
+    var key = env_key(this.name);
     return ReactiveLocal.get(key) ? '' : 'hidden';
 };
 
 Template.env_head.action = function () {
-    var key = 'env.' + this.name;
+    var key = env_key(this.name);
     return ReactiveLocal.get(key) ? 'Hide' : 'Show';
 };
 
 Template.env_head.events({
     'click th' : function (evt, tmpl) {
-        var key = 'env.' + this.name;
+        var key = env_key(this.name);
         ReactiveLocal.set(key, ReactiveLocal.get(key) ? false : true );
     }
 });
@@ -100,7 +127,7 @@ Template.group_data.display = function () {
 Template.group_data.environment = function () {
     var self = this;
     var envs = [];
-    db.environments.find().forEach(function(env) {
+    db.environments.find(filter_query()).forEach(function(env) {
         var data =  self.environments[env.name] || {} ;
         data.name = env.name;
         envs.push(data);
@@ -109,18 +136,18 @@ Template.group_data.environment = function () {
 };
 
 Template.show_env.state = function () {
-    var key = 'env.' + this.name;
+    var key = env_key(this.name);
     return ReactiveLocal.get(key) ? 'hidden' : '';
 };
 
 Template.show_env.action = function () {
-    var key = 'env.' + this.name;
+    var key = env_key(this.name);
     return ReactiveLocal.get(key) ? 'Hide' : 'Show';
 };
 
 Template.show_env.events({
     'click th' : function (evt, tmpl) {
-        var key = 'env.' + this.name;
+        var key = env_key(this.name);
         ReactiveLocal.set(key, ReactiveLocal.get(key) ? false : true );
     }
 });
