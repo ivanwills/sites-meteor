@@ -162,3 +162,12 @@ Template.links.pipe = function () {
     return this.last ? '' : '|';
 };
 
+Template.edit.events({
+    'click a' : function (evt, tmpl) {
+        evt.stopPropagation();
+        console.log('edit', tmpl.data);
+        $('#edit').jsonEdit({json : tmpl.data});
+        return false;
+    }
+});
+
