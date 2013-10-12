@@ -175,7 +175,7 @@ Template.edit.events({
         }
         json_edit = edit;
 
-        edit.jsonEdit({json : tmpl.data});
+        edit.jsonEdit({json : tmpl.data, max_depth : 3, edit : true });
 
         return false;
     }
