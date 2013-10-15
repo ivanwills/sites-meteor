@@ -26,7 +26,7 @@ var env_key = function(env) {
     return 'env.' + ( filter ? filter + '.' : '' ) + env;
 };
 
-var filter_query = function() {
+filter_query = function() {
     var filter = ReactiveLocal.get("filter");
     if (filter == 'All') filter = null;
     return filter ? { "filter" : filter } : {};
