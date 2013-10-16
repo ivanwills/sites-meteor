@@ -9,7 +9,7 @@ db = {
     abriviations : new Meteor.Collection("abriviations")
 };
 
-var visible_environments = function() {
+visible_environments = function() {
     var count = 0;
     db.environments.find(filter_query()).forEach( function(env) {
         var key = env_key(env.name);
@@ -20,7 +20,7 @@ var visible_environments = function() {
     return count;
 };
 
-var env_key = function(env) {
+env_key = function(env) {
     var filter = ReactiveLocal.get("filter");
     if (filter == 'All') filter = null;
     return 'env.' + ( filter ? filter + '.' : '' ) + env;
