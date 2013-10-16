@@ -6,10 +6,10 @@
         { "name" : "filters"  , "value" : [] }
     ],
     "environments" : [
-        { "name" : "dev" , "filter" : "One" , "label" : "Dev" },
-        { "name" : "prod", "filter" : "One", "label" : "Prod" },
-        { "name" : "dev" , "filter" : "Two" , "label" : "Dev" },
-        { "name" : "prod", "filter" : "Two", "label" : "Prod" }
+        { "name" : "dev" , "filter" : "One", "label" : "Dev" , "show" : true  },
+        { "name" : "prod", "filter" : "One", "label" : "Prod", "show" : false },
+        { "name" : "dev" , "filter" : "Two", "label" : "Dev" , "show" : false },
+        { "name" : "prod", "filter" : "Two", "label" : "Prod", "show" : true  }
     ],
     "groups" : [
         {
