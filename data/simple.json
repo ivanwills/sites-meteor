@@ -67,8 +67,8 @@
             ]
         }
     ],
-    "abriviations" : [
-        { "abriviation" : "G", "description" : "Git Repository" },
-        { "abriviation" : "J", "description" : "Jenkins Job"    }
+    "abbreviations" : [
+        { "abbreviation" : "G", "description" : "Git Repository" },
+        { "abbreviation" : "J", "description" : "Jenkins Job"    }
     ]
 }
