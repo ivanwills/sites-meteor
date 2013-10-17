@@ -1,12 +1,12 @@
 Meteor.subscribe('config');
 Meteor.subscribe('environments');
 Meteor.subscribe('groups');
-Meteor.subscribe('abriviations');
+Meteor.subscribe('abbreviations');
 db = {
     config       : new Meteor.Collection("config"),
     environments : new Meteor.Collection("environments"),
     groups       : new Meteor.Collection("groups"),
-    abriviations : new Meteor.Collection("abriviations")
+    abbreviations : new Meteor.Collection("abbreviations")
 };
 
 visible_environments = function() {
@@ -49,9 +49,9 @@ Template.filter.selected = Template.filter_option.selected = function (all) {
 
 Template.filter.filters = function () {
     var filter = db.config.findOne({"name" : "filters" });
-    if ( !ReactiveLocal.get("filter") && filter && filter.value && filter.value.length ) {
+    //if ( !ReactiveLocal.get("filter") || !filter || !filter.value || !filter.value.length ) {
         ReactiveLocal.set("filter", "All" );
-    }
+    //}
     return filter && filter.value ? filter.value : false;
 };
 

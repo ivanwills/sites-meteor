@@ -35,7 +35,7 @@
 <template name="group_data">
     <tr class="group-{{ group }} {{ display }}">
         <td>
-            <p class="pull-left">{{ label }}</p>
+            <p class="pull-left">{{{ label }}}</p>
             {{#if loggedin }}
                 {{> edit }}
             {{/if }}
@@ -51,5 +51,9 @@
     <td class="env {{ name }} {{ state }}">
         {{> links }}
     </td>
+</template>
+
+<template name="edit">
+    <div class="edit pull-left"><a href="#" title="Edit {{ name }}'s data">Edit</a></div>
 </template>
 

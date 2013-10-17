@@ -34,6 +34,11 @@
                 {{> show }}
             </div>
         </div>
+        <div class="row-fluid">
+            <div class="span12">
+                {{> abbreviation }}
+            </div>
+        </div>
     </div>
     {{> footer }}
     <div id="edit"></div>
@@ -92,10 +97,6 @@
     <th class="display {{ name }} env {{ state }}" title="{{ action }} {{ name }}">
         {{ label }}
     </th>
-</template>
-
-<template name="edit">
-    <div class="edit pull-left"><a href="#" title="Edit {{ name }}'s data">Edit</a></div>
 </template>
 
 <template name="roup_env">

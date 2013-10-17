@@ -1,0 +1,15 @@
+
+<template name="abbreviations">
+............................................
+    <dl>
+    {{#each abbreviation }}
+        {{> abbreviation }}
+    {{/each }}
+    </dl>
+</template>
+
+<template name="abbreviation">
+--------------------------------------------
+    <dt>{{ abbreviation }}</td>
+    <dd>{{ description }}</dd>
+</template>
