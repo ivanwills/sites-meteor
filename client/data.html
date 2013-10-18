@@ -39,7 +39,9 @@
             {{#if loggedin }}
                 {{> edit }}
             {{/if }}
-            <div class="pull-right">[ {{> links }} ]</div>
+            {{#if links }}
+                <div class="pull-right">[ {{> links }} ]</div>
+            {{/if }}
         </td>
         {{#each environment }}
             {{> group_env }}

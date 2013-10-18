@@ -50,7 +50,7 @@ Template.filter.selected = Template.filter_option.selected = function (all) {
 Template.filter.filters = function () {
     var filter = db.config.findOne({"name" : "filters" });
     //if ( !ReactiveLocal.get("filter") || !filter || !filter.value || !filter.value.length ) {
-        ReactiveLocal.set("filter", "All" );
+        //ReactiveLocal.set("filter", "All" );
     //}
     return filter && filter.value ? filter.value : false;
 };
