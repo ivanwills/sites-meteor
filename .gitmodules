@@ -7,3 +7,6 @@
 [submodule "packages/jquery-cookie"]
 	path = packages/jquery-cookie
 	url = git@github.com:ivanwills/meteor-jquery-cookie.git
+[submodule "packages/jquery-jsonedit"]
+	path = packages/jquery-jsonedit
+	url = git@github.com:ivanwills/jquery-jsonEdit.git
