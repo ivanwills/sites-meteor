@@ -11,7 +11,7 @@ db = {
 
 visible_environments = function() {
     var count = 0;
-    db.environments.find(filter_query()).forEach( function(env) {
+    db.environments.find(filter_query(), sort_order).forEach( function(env) {
         var key = env_key(env.name);
         var value = ReactiveLocal.get(key);
         if ( value === true ) count++;
@@ -22,7 +22,7 @@ visible_environments = function() {
 
 env_key = function(env) {
     var filter = ReactiveLocal.get("filter");
-    if (filter == 'All') filter = null;
+    if (!filter || filter == 'All') filter = null;
     return 'env.' + ( filter ? filter + '.' : '' ) + env;
 };
 
@@ -31,6 +31,7 @@ filter_query = function() {
     if (filter == 'All') filter = null;
     return filter ? { "filter" : filter } : {};
 };
+sort_order = { sort : { order : 1 } };
 
 Template.group_data.loggedin = function () {
     return Meteor.userId();
@@ -64,7 +65,7 @@ Template.footer.copyright = function () {
 };
 
 Template.show.environments = Template.table.environment = function () {
-    return db.environments.find(filter_query());
+    return db.environments.find(filter_query(), sort_order);
 };
 
 Template.show_env.state = function () {
