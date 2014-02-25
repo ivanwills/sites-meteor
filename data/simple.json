@@ -6,16 +6,17 @@
         { "name" : "filters"  , "value" : [] }
     ],
     "environments" : [
-        { "name" : "dev" , "filter" : "One", "label" : "Dev" , "show" : true  },
-        { "name" : "prod", "filter" : "One", "label" : "Prod", "show" : false },
-        { "name" : "dev" , "filter" : "Two", "label" : "Dev" , "show" : false },
-        { "name" : "prod", "filter" : "Two", "label" : "Prod", "show" : true  }
+        { "name" : "dev" , "order" : 0, "filter" : "One", "label" : "Dev" , "show" : true  },
+        { "name" : "prod", "order" : 1, "filter" : "One", "label" : "Prod", "show" : false },
+        { "name" : "dev" , "order" : 2, "filter" : "Two", "label" : "Dev" , "show" : false },
+        { "name" : "prod", "order" : 3, "filter" : "Two", "label" : "Prod", "show" : true  }
     ],
     "groups" : [
         {
             "name"   : "portals",
             "label"  : "Portals",
             "filter" : "One",
+            "order"  : 0,
             "data"   : [
                 {
                     "label" : "Sites - meteor",
@@ -34,6 +35,7 @@
             "name"   : "sites",
             "label"  : "Sites",
             "filter" : "One",
+            "order"  : 1,
             "data"   : [
                 {
                     "label" : "Sites - meteor",
@@ -52,6 +54,7 @@
             "name"   : "portals",
             "label"  : "Portals",
             "filter" : "Two",
+            "order"  : 2,
             "data"   : [
                 {
                     "label" : "Sites - meteor",
