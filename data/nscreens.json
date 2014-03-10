@@ -1,0 +1,1756 @@
+{
+    "config" : [
+        { "name" : "git_web"  , "value" : "https://github.com/ivanwills" },
+        { "name" : "title"    , "value" : "NScreens Sites" },
+        { "name" : "copyright", "value" : "Optus" }
+    ],
+    "environments" : [
+        { "name" : "mine"    , "label" : "Mine"    , "show" : true , "order" : 0 , "filter" : "NScreens" },
+        { "name" : "ivan-usr", "label" : "ivan-usr", "show" : false, "order" : 1 , "filter" : "NScreens" },
+        { "name" : "front01" , "label" : "front01" , "show" : false, "order" : 2 , "filter" : "NScreens" },
+        { "name" : "dev"     , "label" : "DEV"     , "show" : true , "order" : 3 , "filter" : "NScreens" },
+        { "name" : "test"    , "label" : "TEST"    , "show" : true , "order" : 4 , "filter" : "NScreens" },
+        { "name" : "zst"     , "label" : "ZST"     , "show" : false, "order" : 5 , "filter" : "NScreens" },
+        { "name" : "zst2"    , "label" : "ZST2"    , "show" : false, "order" : 6 , "filter" : "NScreens" },
+        { "name" : "zuat"    , "label" : "ZUAT"    , "show" : false, "order" : 7 , "filter" : "NScreens" },
+        { "name" : "zsit"    , "label" : "ZSIT"    , "show" : false, "order" : 8 , "filter" : "NScreens" },
+        { "name" : "zsit2"   , "label" : "ZSIT2"   , "show" : false, "order" : 9 , "filter" : "NScreens" },
+        { "name" : "zlt"     , "label" : "ZLT"     , "show" : false, "order" : 10, "filter" : "NScreens" },
+        { "name" : "prep"    , "label" : "PREP"    , "show" : true , "order" : 11, "filter" : "NScreens" },
+        { "name" : "prod"    , "label" : "PROD"    , "show" : true , "order" : 12, "filter" : "NScreens" }
+    ],
+    "groups" : [
+        {
+            "name"  : "portals",
+            "label" : "Portals",
+            "show"  : true,
+            "filter" : "NScreens",
+            "order"  : 0,
+            "data"  : [
+                {
+                    "label" : "Mobile",
+                    "url"   : "http://cgit.toolsns.dev/cgit.cgi/NScreens-Mobile",
+                    "links" : [
+                        { "name" : "GIT"   , "label" : "G", "url" : "http://github.com/ivanwills/sites-meteor" },
+                        { "name" : "Hudson", "label" : "H", "url" : "http://hudson.toolsns.dev.optusnet.com.au/job/NScreens-Mobile", "title": "Hudson build info" }
+                    ],
+                    "environments" : {
+                        "mine": {
+                            "links": [
+                                { "label" : "Site", "url": "http://mobile.ivan-usr.dev.optusnet.com.au/" },
+                                { "label" : "S", "url": "http://mobile.ivan-usr.dev.optusnet.com.au/Shibboleth.sso/Session", "title": "Shibboleth Session Info" },
+                                { "label" : "M", "url": "http://mobile.ivan-usr.dev.optusnet.com.au/Shibboleth.sso/Metadata", "title": "Shibboleth Metadata" },
+                                { "label" : "N", "url": "http://mobile.ivan-usr.dev.optusnet.com.au/login", "title": "Normal IDP Login" },
+                                { "label" : "C", "url": "http://mobile.ivan-usr.dev.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf", "title": "CSR Login" },
+                                { "label" : "L", "url": "http://mobile.ivan-usr.dev.optusnet.com.au/logout", "title": "Normal IDP Logout" },
+                                { "label" : "G", "url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://mobile.ivan-usr.dev.optusnet.com.au", "title": "Global IDP Logout" }
+                            ]
+                        },
+                        "ivan-usr": {
+                            "links": [
+                                { "label" : "Site", "url": "http://mobile.ivan-usr.dev.optusnet.com.au/" },
+                                { "label" : "S", "url": "http://mobile.ivan-usr.dev.optusnet.com.au/Shibboleth.sso/Session", "title": "Shibboleth Session Info" },
+                                { "label" : "M", "url": "http://mobile.ivan-usr.dev.optusnet.com.au/Shibboleth.sso/Metadata", "title": "Shibboleth Metadata" },
+                                { "label" : "N", "url": "http://mobile.ivan-usr.dev.optusnet.com.au/login", "title": "Normal IDP Login" },
+                                { "label" : "C", "url": "http://mobile.ivan-usr.dev.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf", "title": "CSR Login" },
+                                { "label" : "L", "url": "http://mobile.ivan-usr.dev.optusnet.com.au/logout", "title": "Normal IDP Logout" },
+                                { "label" : "G", "url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://mobile.ivan-usr.dev.optusnet.com.au", "title": "Global IDP Logout" }
+                            ]
+                        },
+                        "dev": {
+                            "links": [
+                                { "label" : "Site", "url": "http://mobile.wwwns03.dev.optusnet.com.au/" },
+                                { "label" : "S", "url": "http://mobile.wwwns03.dev.optusnet.com.au/Shibboleth.sso/Session", "title": "Shibboleth Session Info" },
+                                { "label" : "M", "url": "http://mobile.wwwns03.dev.optusnet.com.au/Shibboleth.sso/Metadata", "title": "Shibboleth Metadata" },
+                                { "label" : "N", "url": "http://mobile.wwwns03.dev.optusnet.com.au/login", "title": "Normal IDP Login" },
+                                { "label" : "C", "url": "http://mobile.wwwns03.dev.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf", "title": "CSR Login" },
+                                { "label" : "L", "url": "http://mobile.wwwns03.dev.optusnet.com.au/logout", "title": "Normal IDP Logout" },
+                                { "label" : "G", "url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://mobile.ivan-usr.wwwns03.dev.optusnet.com.au", "title": "Global IDP Logout" }
+                            ]
+                        },
+                        "test": {
+                            "links": [
+                                { "label" : "Site", "url": "http://mobile.test.optusnet.com.au/" },
+                                { "label" : "S", "url": "http://mobile.test.optusnet.com.au/Shibboleth.sso/Session", "title": "Shibboleth Session Info" },
+                                { "label" : "M", "url": "http://mobile.test.optusnet.com.au/Shibboleth.sso/Metadata", "title": "Shibboleth Metadata" },
+                                { "label" : "N", "url": "http://mobile.test.optusnet.com.au/login", "title": "Normal IDP Login" },
+                                { "label" : "C", "url": "http://mobile.test.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf", "title": "CSR Login" },
+                                { "label" : "L", "url": "http://mobile.test.optusnet.com.au/logout", "title": "Normal IDP Logout" },
+                                { "label" : "G", "url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://mobile.test.optusnet.com.au", "title": "Global IDP Logout" }
+                            ]
+                        },
+                        "zst": {
+                            "links": [
+                                { "label" : "Site", "url": "http://mobile.zst.optusnet.com.au/" },
+                                { "label" : "S", "url": "http://mobile.zst.optusnet.com.au/Shibboleth.sso/Session", "title": "Shibboleth Session Info" },
+                                { "label" : "M", "url": "http://mobile.zst.optusnet.com.au/Shibboleth.sso/Metadata", "title": "Shibboleth Metadata" },
+                                { "label" : "N", "url": "http://mobile.zst.optusnet.com.au/login", "title": "Normal IDP Login" },
+                                { "label" : "C", "url": "http://mobile.zst.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf", "title": "CSR Login" },
+                                { "label" : "L", "url": "http://mobile.zst.optusnet.com.au/logout", "title": "Normal IDP Logout" },
+                                { "label" : "G", "url": "https://idp.zst.optusnet.com.au/idp/optus/Logout?return_url=http://mobile.zst.optusnet.com.au", "title": "Global IDP Logout" }
+                            ]
+                        },
+                        "zst2": {
+                            "links": [
+                                { "label" : "Site", "url": "http://mobile.zst2.optusnet.com.au/" },
+                                { "label" : "S", "url": "http://mobile.zst2.optusnet.com.au/Shibboleth.sso/Session", "title": "Shibboleth Session Info" },
+                                { "label" : "M", "url": "http://mobile.zst2.optusnet.com.au/Shibboleth.sso/Metadata", "title": "Shibboleth Metadata" },
+                                { "label" : "N", "url": "http://mobile.zst2.optusnet.com.au/login", "title": "Normal IDP Login" },
+                                { "label" : "C", "url": "http://mobile.zst2.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf", "title": "CSR Login" },
+                                { "label" : "L", "url": "http://mobile.zst2.optusnet.com.au/logout", "title": "Normal IDP Logout" },
+                                { "label" : "G", "url": "https://idp.zst2.optusnet.com.au/idp/optus/Logout?return_url=http://mobile.zst2.optusnet.com.au", "title": "Global IDP Logout" }
+                            ]
+                        },
+                        "zuat": {
+                            "links": [
+                                { "label" : "Site", "url": "http://mobile.zuat.optusnet.com.au/" },
+                                { "label" : "S", "url": "http://mobile.zuat.optusnet.com.au/Shibboleth.sso/Session", "title": "Shibboleth Session Info" },
+                                { "label" : "M", "url": "http://mobile.zuat.optusnet.com.au/Shibboleth.sso/Metadata", "title": "Shibboleth Metadata" },
+                                { "label" : "N", "url": "http://mobile.zuat.optusnet.com.au/login", "title": "Normal IDP Login" },
+                                { "label" : "C", "url": "http://mobile.zuat.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf", "title": "CSR Login" },
+                                { "label" : "L", "url": "http://mobile.zuat.optusnet.com.au/logout", "title": "Normal IDP Logout" },
+                                { "label" : "G", "url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://mobile.zuat.optusnet.com.au", "title": "Global IDP Logout" }
+                            ]
+                        },
+                        "zsit": {
+                            "links": [
+                                { "label" : "Site", "url": "http://mobile.zsit.optusnet.com.au/" },
+                                { "label" : "S", "url": "http://mobile.zsit.optusnet.com.au/Shibboleth.sso/Session", "title": "Shibboleth Session Info" },
+                                { "label" : "M", "url": "http://mobile.zsit.optusnet.com.au/Shibboleth.sso/Metadata", "title": "Shibboleth Metadata" },
+                                { "label" : "N", "url": "http://mobile.zsit.optusnet.com.au/login", "title": "Normal IDP Login" },
+                                { "label" : "C", "url": "http://mobile.zsit.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf", "title": "CSR Login" },
+                                { "label" : "L", "url": "http://mobile.zsit.optusnet.com.au/logout", "title": "Normal IDP Logout" },
+                                { "label" : "G", "url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://mobile.zsit.optusnet.com.au", "title": "Global IDP Logout" }
+                            ]
+                        },
+                        "zsit2": {
+                            "links": [
+                                { "label" : "Site", "url": "http://mobile.zsit2.optusnet.com.au/" },
+                                { "label" : "S", "url": "http://mobile.zsit2.optusnet.com.au/Shibboleth.sso/Session", "title": "Shibboleth Session Info" },
+                                { "label" : "M", "url": "http://mobile.zsit2.optusnet.com.au/Shibboleth.sso/Metadata", "title": "Shibboleth Metadata" },
+                                { "label" : "N", "url": "http://mobile.zsit2.optusnet.com.au/login", "title": "Normal IDP Login" },
+                                { "label" : "C", "url": "http://mobile.zsit2.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf", "title": "CSR Login" },
+                                { "label" : "L", "url": "http://mobile.zsit2.optusnet.com.au/logout", "title": "Normal IDP Logout" },
+                                { "label" : "G", "url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://mobile.zsit2.optusnet.com.au", "title": "Global IDP Logout" }
+                            ]
+                        },
+                        "zlt": {
+                            "links": [
+                                { "label" : "Site", "url": "http://mobile.zlt.optusnet.com.au/" },
+                                { "label" : "S", "url": "http://mobile.zlt.optusnet.com.au/Shibboleth.sso/Session", "title": "Shibboleth Session Info" },
+                                { "label" : "M", "url": "http://mobile.zlt.optusnet.com.au/Shibboleth.sso/Metadata", "title": "Shibboleth Metadata" },
+                                { "label" : "N", "url": "http://mobile.zlt.optusnet.com.au/login", "title": "Normal IDP Login" },
+                                { "label" : "C", "url": "http://mobile.zlt.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf", "title": "CSR Login" },
+                                { "label" : "L", "url": "http://mobile.zlt.optusnet.com.au/logout", "title": "Normal IDP Logout" },
+                                { "label" : "G", "url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://mobile.zlt.optusnet.com.au", "title": "Global IDP Logout" }
+                            ]
+                        },
+                        "prep": {
+                            "links": [
+                                { "label" : "Site", "url": "http://mobile.next.optusnet.com.au/" },
+                                { "label" : "S", "url": "http://mobile.next.optusnet.com.au/Shibboleth.sso/Session", "title": "Shibboleth Session Info" },
+                                { "label" : "M", "url": "http://mobile.next.optusnet.com.au/Shibboleth.sso/Metadata", "title": "Shibboleth Metadata" },
+                                { "label" : "N", "url": "http://mobile.next.optusnet.com.au/login", "title": "Normal IDP Login" },
+                                { "label" : "C", "url": "http://mobile.next.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf", "title": "CSR Login" },
+                                { "label" : "L", "url": "http://mobile.next.optusnet.com.au/logout", "title": "Normal IDP Logout" },
+                                { "label" : "G", "url": "https://idp.optusnet.com.au/idp/next/Logout?return_url=http://mobile.next.optusnet.com.au", "title": "Global IDP Logout" }
+                            ]
+                        },
+                        "prod": {
+                            "links": [
+                                { "label" : "Site", "url": "http://mobile.optuszoo.com.au/" },
+                                { "label" : "S", "url": "http://mobile.optuszoo.com.au/Shibboleth.sso/Session", "title": "Shibboleth Session Info" },
+                                { "label" : "M", "url": "http://mobile.optuszoo.com.au/Shibboleth.sso/Metadata", "title": "Shibboleth Metadata" },
+                                { "label" : "N", "url": "http://mobile.optuszoo.com.au/login", "title": "Normal IDP Login" },
+                                { "label" : "C", "url": "http://mobile.optuszoo.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf", "title": "CSR Login" },
+                                { "label" : "L", "url": "http://mobile.optuszoo.com.au/logout", "title": "Normal IDP Logout" },
+                                { "label" : "G", "url": "https://idp.optusnet.com.au/idp/Logout?return_url=http://mobile.optuszoo.com.au", "title": "Global IDP Logout" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "MSC",
+                    "url": "http://cgit.toolsns.dev/cgit.cgi/NScreens-MSC",
+                    "links" : [
+                        { "name" : "GIT"   , "label" : "G", "url" : "http://github.com/ivanwills/sites-meteor" },
+                        { "name" : "Hudson", "label" : "H", "url" : "http://hudson.toolsns.dev.optusnet.com.au/job/NScreens-Mobile", "title": "Hudson build info" }
+                    ],
+                    "environments": {
+                        "mine": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://msc.ivan-usr.dev.optusnet.com.au/" },
+                                { "label" : "S",	"url": "http://msc.ivan-usr.dev.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://msc.ivan-usr.dev.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://msc.ivan-usr.dev.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://msc.ivan-usr.dev.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://msc.ivan-usr.dev.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://msc.ivan-usr.dev.optusnet.com.au",	"title": "Global IDP Logout" }
+                            ]
+                        },
+                        "ivan-usr": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://msc.ivan-usr.dev.optusnet.com.au/" },
+                                { "label" : "S",	"url": "http://msc.ivan-usr.dev.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://msc.ivan-usr.dev.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://msc.ivan-usr.dev.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://msc.ivan-usr.dev.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://msc.ivan-usr.dev.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://msc.ivan-usr.dev.optusnet.com.au",	"title": "Global IDP Logout" }
+                            ]
+                        },
+                        "dev": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://msc.wwwns03.dev.optusnet.com.au/" },
+                                { "label" : "S",	"url": "http://msc.wwwns03.dev.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://msc.wwwns03.dev.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://msc.wwwns03.dev.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://msc.wwwns03.dev.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://msc.wwwns03.dev.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://msc.ivan-usr.wwwns03.dev.optusnet.com.au",	"title": "Global IDP Logout" }
+                            ]
+                        },
+                        "test": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://msc.test.optusnet.com.au/" },
+                                { "label" : "S",	"url": "http://msc.test.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://msc.test.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://msc.test.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://msc.test.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://msc.test.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://msc.test.optusnet.com.au",	"title": "Global IDP Logout" }
+                            ]
+                        },
+                        "zst": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://msc.zst.optusnet.com.au/" },
+                                { "label" : "S",	"url": "http://msc.zst.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://msc.zst.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://msc.zst.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://msc.zst.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://msc.zst.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zst.optusnet.com.au/idp/optus/Logout?return_url=http://msc.zst.optusnet.com.au",	"title": "Global IDP Logout" }
+                            ]
+                        },
+                        "zst2": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://msc.zst2.optusnet.com.au/" },
+                                { "label" : "S",	"url": "http://msc.zst2.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://msc.zst2.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://msc.zst2.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://msc.zst2.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://msc.zst2.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zst2.optusnet.com.au/idp/optus/Logout?return_url=http://msc.zst2.optusnet.com.au",	"title": "Global IDP Logout" }
+                            ]
+                        },
+                        "zuat": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://msc.zuat.optusnet.com.au/" },
+                                { "label" : "S",	"url": "http://msc.zuat.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://msc.zuat.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://msc.zuat.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://msc.zuat.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://msc.zuat.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://msc.zuat.optusnet.com.au",	"title": "Global IDP Logout" }
+                            ]
+                        },
+                        "zsit": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://msc.zsit.optusnet.com.au/" },
+                                { "label" : "S",	"url": "http://msc.zsit.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://msc.zsit.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://msc.zsit.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://msc.zsit.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://msc.zsit.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://msc.zsit.optusnet.com.au",	"title": "Global IDP Logout" }
+                            ]
+                        },
+                        "zsit2": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://msc.zsit2.optusnet.com.au/" },
+                                { "label" : "S",	"url": "http://msc.zsit2.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://msc.zsit2.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://msc.zsit2.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://msc.zsit2.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://msc.zsit2.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://msc.zsit2.optusnet.com.au",	"title": "Global IDP Logout" }
+                            ]
+                        },
+                        "zlt": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://msc.zlt.optusnet.com.au/" },
+                                { "label" : "S",	"url": "http://msc.zlt.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://msc.zlt.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://msc.zlt.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://msc.zlt.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://msc.zlt.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://msc.zlt.optusnet.com.au",	"title": "Global IDP Logout" }
+                            ]
+                        },
+                        "prep": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://msc.next.optusnet.com.au/" },
+                                { "label" : "S",	"url": "http://msc.next.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://msc.next.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://msc.next.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://msc.next.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://msc.next.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.optusnet.com.au/idp/next/Logout?return_url=http://msc.next.optusnet.com.au",	"title": "Global IDP Logout" }
+                            ]
+                        },
+                        "prod": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://msc.optuszoo.com.au/" },
+                                { "label" : "S",	"url": "http://msc.optuszoo.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://msc.optuszoo.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://msc.optuszoo.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://msc.optuszoo.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://msc.optuszoo.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.optusnet.com.au/idp/Logout?return_url=http://msc.optuszoo.com.au",	"title": "Global IDP Logout" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "My Digital Safe",
+                    "url"   : "http://cgit.toolsns.dev/cgit.cgi/NScreens-Mobile",
+                    "links" : [
+                        { "name" : "GIT"   , "label" : "G", "url" : "http://github.com/ivanwills/sites-meteor" },
+                        { "name" : "Hudson", "label" : "H", "url" : "http://hudson.toolsns.dev.optusnet.com.au/job/NScreens-DigitalVault", "title": "Hudson build info" }
+                    ],
+                    "environments": {
+                        "mine": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://digitalvault.ivan-usr.dev.optusnet.com.au/" },
+                                { "label" : "S",	"url": "http://digitalvault.ivan-usr.dev.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://digitalvault.ivan-usr.dev.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://digitalvault.ivan-usr.dev.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://digitalvault.ivan-usr.dev.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://digitalvault.ivan-usr.dev.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://digitalvault.ivan-usr.dev.optusnet.com.au",	"title": "Global IDP Logout" }
+                            ]
+                        },
+                        "ivan-usr": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://digitalvault.ivan-usr.dev.optusnet.com.au/" },
+                                { "label" : "S",	"url": "http://digitalvault.ivan-usr.dev.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://digitalvault.ivan-usr.dev.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://digitalvault.ivan-usr.dev.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://digitalvault.ivan-usr.dev.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://digitalvault.ivan-usr.dev.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://digitalvault.ivan-usr.dev.optusnet.com.au",	"title": "Global IDP Logout" }
+                            ]
+                        },
+                        "dev": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://digitalvault.dev.optusnet.com.au/" },
+                                { "label" : "S",	"url": "http://digitalvault.dev.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://digitalvault.dev.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://digitalvault.dev.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://digitalvault.dev.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://digitalvault.dev.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://digitalvault.ivan-usr.dev.optusnet.com.au",	"title": "Global IDP Logout" }
+                            ]
+                        },
+                        "test": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://mydigitalsafe.test.optusnet.com.au/" },
+                                { "label" : "S",	"url": "http://mydigitalsafe.test.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://mydigitalsafe.test.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://mydigitalsafe.test.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://mydigitalsafe.test.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://mydigitalsafe.test.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://mydigitalsafe.test.optusnet.com.au",	"title": "Global IDP Logout" },
+                                { "label" : "3",	"url": "https://optus.preview.sdc.f-secure.com/",	"title": "" }
+                            ]
+                        },
+                        "zst": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://mydigitalsafe.zst.optusnet.com.au/" },
+                                { "label" : "S",	"url": "http://mydigitalsafe.zst.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://mydigitalsafe.zst.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://mydigitalsafe.zst.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://mydigitalsafe.zst.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://mydigitalsafe.zst.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zst.optusnet.com.au/idp/optus/Logout?return_url=http://mydigitalsafe.zst.optusnet.com.au",	"title": "Global IDP Logout" },
+                                { "label" : "3",	"url": "https://optus.preview.sdc.f-secure.com/",	"title": "" }
+                            ]
+                        },
+                        "zst2": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://mydigitalsafe.zst2.optusnet.com.au/" },
+                                { "label" : "S",	"url": "http://mydigitalsafe.zst2.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://mydigitalsafe.zst2.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://mydigitalsafe.zst2.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://mydigitalsafe.zst2.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://mydigitalsafe.zst2.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zst2.optusnet.com.au/idp/optus/Logout?return_url=http://mydigitalsafe.zst2.optusnet.com.au",	"title": "Global IDP Logout" },
+                                { "label" : "3",	"url": "https://optus.preview.sdc.f-secure.com/",	"title": "" }
+                            ]
+                        },
+                        "zuat": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://mydigitalsafe.zuat.optusnet.com.au/" },
+                                { "label" : "S",	"url": "http://mydigitalsafe.zuat.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://mydigitalsafe.zuat.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://mydigitalsafe.zuat.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://mydigitalsafe.zuat.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://mydigitalsafe.zuat.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://mydigitalsafe.zuat.optusnet.com.au",	"title": "Global IDP Logout" },
+                                { "label" : "3",	"url": "https://optus.preview.sdc.f-secure.com/",	"title": "" }
+                            ]
+                        },
+                        "zsit": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://mydigitalsafe.zsit.optusnet.com.au/" },
+                                { "label" : "S",	"url": "http://mydigitalsafe.zsit.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://mydigitalsafe.zsit.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://mydigitalsafe.zsit.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://mydigitalsafe.zsit.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://mydigitalsafe.zsit.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://mydigitalsafe.zsit.optusnet.com.au",	"title": "Global IDP Logout" },
+                                { "label" : "3",	"url": "https://optus.preview.sdc.f-secure.com/",	"title": "" }
+                            ]
+                        },
+                        "zsit2": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://mydigitalsafe.zsit2.optusnet.com.au/" },
+                                { "label" : "S",	"url": "http://mydigitalsafe.zsit2.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://mydigitalsafe.zsit2.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://mydigitalsafe.zsit2.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://mydigitalsafe.zsit2.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://mydigitalsafe.zsit2.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://mydigitalsafe.zsit2.optusnet.com.au",	"title": "Global IDP Logout" },
+                                { "label" : "3",	"url": "https://optus.preview.sdc.f-secure.com/",	"title": "" }
+                            ]
+                        },
+                        "zlt": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://mydigitalsafe.zlt.optusnet.com.au/" },
+                                { "label" : "S",	"url": "http://mydigitalsafe.zlt.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://mydigitalsafe.zlt.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://mydigitalsafe.zlt.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://mydigitalsafe.zlt.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://mydigitalsafe.zlt.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://mydigitalsafe.zlt.optusnet.com.au",	"title": "Global IDP Logout" },
+                                { "label" : "3",	"url": "https://optus.preview.sdc.f-secure.com/",	"title": "" }
+                            ]
+                        },
+                        "prep": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://optussmartsafe.next.optusnet.com.au/" },
+                                { "label" : "S",	"url": "http://optussmartsafe.next.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://optussmartsafe.next.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://optussmartsafe.next.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://optussmartsafe.next.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://optussmartsafe.next.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.optusnet.com.au/idp/next/Logout?return_url=http://optussmartsafe.next.optusnet.com.au",	"title": "Global IDP Logout" },
+                                { "label" : "3",	"url": "https://optus.sdc.f-secure.com/",	"title": "" }
+                            ]
+                        },
+                        "prod": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://optussmartsafe.optus.com.au/" },
+                                { "label" : "S",	"url": "http://optussmartsafe.optus.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://optussmartsafe.optus.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://optussmartsafe.optus.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://optussmartsafe.optus.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://optussmartsafe.optus.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.optusnet.com.au/idp/Logout?return_url=http://optussmartsafe.optus.com.au",	"title": "Global IDP Logout" },
+                                { "label" : "3",	"url": "https://optus.sdc.f-secure.com/",	"title": "" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Optus TV Now",
+                    "url"   : "http://cgit.toolsns.dev/cgit.cgi/NScreens-Mobile",
+                    "links" : [
+                        { "name" : "GIT"   , "label" : "G", "url" : "http://github.com/ivanwills/sites-meteor" },
+                        { "name" : "Hudson", "label" : "H", "url" : "http://hudson.toolsns.dev.optusnet.com.au/job/NScreens-CloudPVR", "title": "Hudson build info" }
+                    ],
+                    "environments": {
+                        "mine": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://cloudpvr.ivan-usr.dev.optusnet.com.au/",	"title": "http://cloudpvr.ivan-usr.dev.optusnet.com.au/" },
+                                { "label" : "S",	"url": "http://cloudpvr.ivan-usr.dev.optusnet.com.au/Shibboleth.sso/Session",	"title": "http://cloudpvr.ivan-usr.dev.optusnet.com.au/Shibboleth.sso/Session" },
+                                { "label" : "M",	"url": "http://cloudpvr.ivan-usr.dev.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://cloudpvr.ivan-usr.dev.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://cloudpvr.ivan-usr.dev.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://cloudpvr.ivan-usr.dev.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://cloudpvr.ivan-usr.dev.optusnet.com.au",	"title": "Global IDP Logout" }
+                            ]
+                        },
+                        "ivan-usr": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://cloudpvr.ivan-usr.dev.optusnet.com.au/",	"title": "http://cloudpvr.ivan-usr.dev.optusnet.com.au/" },
+                                { "label" : "S",	"url": "http://cloudpvr.ivan-usr.dev.optusnet.com.au/Shibboleth.sso/Session",	"title": "http://cloudpvr.ivan-usr.dev.optusnet.com.au/Shibboleth.sso/Session" },
+                                { "label" : "M",	"url": "http://cloudpvr.ivan-usr.dev.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://cloudpvr.ivan-usr.dev.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://cloudpvr.ivan-usr.dev.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://cloudpvr.ivan-usr.dev.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://cloudpvr.ivan-usr.dev.optusnet.com.au",	"title": "Global IDP Logout" }
+                            ]
+                        },
+                        "dev": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://cloudpvr.dev.optusnet.com.au/" },
+                                { "label" : "S",	"url": "http://cloudpvr.dev.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://cloudpvr.dev.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://cloudpvr.dev.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://cloudpvr.dev.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://cloudpvr.dev.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://cloudpvr.ivan-usr.dev.optusnet.com.au",	"title": "Global IDP Logout" }
+                            ]
+                        },
+                        "test": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://cloudpvr.test.optusnet.com.au/" },
+                                { "label" : "S",	"url": "http://cloudpvr.test.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://cloudpvr.test.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://cloudpvr.test.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://cloudpvr.test.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://cloudpvr.test.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://cloudpvr.test.optusnet.com.au",	"title": "Global IDP Logout" },
+                                { "label" : "3",	"url": "http://host3.planetmedianetwork.com/play/home.do",	"title": "" }
+                            ]
+                        },
+                        "zst": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://cloudpvr.zst.optusnet.com.au/" },
+                                { "label" : "S",	"url": "http://cloudpvr.zst.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://cloudpvr.zst.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://cloudpvr.zst.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://cloudpvr.zst.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://cloudpvr.zst.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zst.optusnet.com.au/idp/optus/Logout?return_url=http://cloudpvr.zst.optusnet.com.au",	"title": "Global IDP Logout" },
+                                { "label" : "3",	"url": "http://host3.planetmedianetwork.com/play/home.do",	"title": "" }
+                            ]
+                        },
+                        "zst2": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://cloudpvr.zst2.optusnet.com.au/" },
+                                { "label" : "S",	"url": "http://cloudpvr.zst2.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://cloudpvr.zst2.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://cloudpvr.zst2.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://cloudpvr.zst2.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://cloudpvr.zst2.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zst2.optusnet.com.au/idp/optus/Logout?return_url=http://cloudpvr.zst2.optusnet.com.au",	"title": "Global IDP Logout" },
+                                { "label" : "3",	"url": "http://host3.planetmedianetwork.com/play/home.do",	"title": "" }
+                            ]
+                        },
+                        "zuat": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://cloudpvr.zuat.optusnet.com.au/" },
+                                { "label" : "S",	"url": "http://cloudpvr.zuat.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://cloudpvr.zuat.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://cloudpvr.zuat.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://cloudpvr.zuat.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://cloudpvr.zuat.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://cloudpvr.zuat.optusnet.com.au",	"title": "Global IDP Logout" },
+                                { "label" : "3",	"url": "http://host3.planetmedianetwork.com/play/home.do",	"title": "" }
+                            ]
+                        },
+                        "zsit": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://cloudpvr.zsit.optusnet.com.au/" },
+                                { "label" : "S",	"url": "http://cloudpvr.zsit.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://cloudpvr.zsit.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://cloudpvr.zsit.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://cloudpvr.zsit.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://cloudpvr.zsit.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://cloudpvr.zsit.optusnet.com.au",	"title": "Global IDP Logout" },
+                                { "label" : "3",	"url": "http://host3.planetmedianetwork.com/play/home.do",	"title": "" }
+                            ]
+                        },
+                        "zsit2": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://cloudpvr.zsit2.optusnet.com.au/" },
+                                { "label" : "S",	"url": "http://cloudpvr.zsit2.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://cloudpvr.zsit2.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://cloudpvr.zsit2.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://cloudpvr.zsit2.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://cloudpvr.zsit2.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://cloudpvr.zsit2.optusnet.com.au",	"title": "Global IDP Logout" },
+                                { "label" : "3",	"url": "http://host3.planetmedianetwork.com/play/home.do",	"title": "" }
+                            ]
+                        },
+                        "zlt": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://cloudpvr.zlt.optusnet.com.au/" },
+                                { "label" : "S",	"url": "http://cloudpvr.zlt.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://cloudpvr.zlt.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://cloudpvr.zlt.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://cloudpvr.zlt.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://cloudpvr.zlt.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://cloudpvr.zlt.optusnet.com.au",	"title": "Global IDP Logout" },
+                                { "label" : "3",	"url": "http://host3.planetmedianetwork.com/play/home.do",	"title": "" }
+                            ]
+                        },
+                        "prep": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://account.optustvnow.next.optusnet.com.au/" },
+                                { "label" : "S",	"url": "http://account.optustvnow.next.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://account.optustvnow.next.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://account.optustvnow.next.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://account.optustvnow.next.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://account.optustvnow.next.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.optusnet.com.au/idp/next/Logout?return_url=http://account.optustvnow.next.optusnet.com.au",	"title": "Global IDP Logout" },
+                                { "label" : "3",	"url": "http://host3.planetmedianetwork.com/play/home.do",	"title": "" }
+                            ]
+                        },
+                        "prod": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://account.optustvnow.optus.com.au/" },
+                                { "label" : "S",	"url": "http://account.optustvnow.optus.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://account.optustvnow.optus.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://account.optustvnow.optus.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://account.optustvnow.optus.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://account.optustvnow.optus.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.optusnet.com.au/idp/Logout?return_url=http://account.optustvnow.optus.com.au",	"title": "Global IDP Logout" },
+                                { "label" : "3",	"url": "http://host3.planetmedianetwork.com/play/home.do",	"title": "" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Pcat Out",
+                    "url"   : "http://cgit.toolsns.dev/cgit.cgi/NScreens-Mobile",
+                    "links" : [
+                        { "name" : "GIT"   , "label" : "G", "url" : "http://github.com/ivanwills/sites-meteor" },
+                        { "name" : "Hudson", "label" : "H", "url" : "http://hudson.toolsns.dev.optusnet.com.au/job/NScreens-Mobile", "title": "Hudson build info" }
+                    ],
+                    "environments": {
+                        "mine": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://pcatout.ivan-usr.dev.optusnet.com.au/" },
+                                { "label" : "L",	"url": "http://pcatout.ivan-usr.dev.optusnet.com.au/list?site=memberservices",	"title": "List site's pages" }
+                            ]
+                        },
+                        "ivan-usr": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://pcatout.ivan-usr.dev.optusnet.com.au/" },
+                                { "label" : "L",	"url": "http://pcatout.ivan-usr.dev.optusnet.com.au/list?site=memberservices",	"title": "List site's pages" }
+                            ]
+                        },
+                        "dev": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://pcatout.dev.optusnet.com.au/" },
+                                { "label" : "L",	"url": "http://pcatout.dev.optusnet.com.au/list?site=memberservices",	"title": "List site's pages" }
+                            ]
+                        },
+                        "test": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://pcatout.test.optusnet.com.au/" },
+                                { "label" : "L",	"url": "http://pcatout.test.optusnet.com.au/list?site=memberservices",	"title": "List site's pages" }
+                            ]
+                        },
+                        "zst": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://pcatout.zst.optusnet.com.au/" },
+                                { "label" : "L",	"url": "http://pcatout.zst.optusnet.com.au/list?site=memberservices",	"title": "List site's pages" }
+                            ]
+                        },
+                        "zst2": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://pcatout.zst2.optusnet.com.au/" },
+                                { "label" : "L",	"url": "http://pcatout.zst2.optusnet.com.au/list?site=memberservices",	"title": "List site's pages" }
+                            ]
+                        },
+                        "zuat": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://pcatout.zuat.optusnet.com.au/" },
+                                { "label" : "L",	"url": "http://pcatout.zuat.optusnet.com.au/list?site=memberservices",	"title": "List site's pages" }
+                            ]
+                        },
+                        "zsit": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://pcatout.zsit.optusnet.com.au/" },
+                                { "label" : "L",	"url": "http://pcatout.zsit.optusnet.com.au/list?site=memberservices",	"title": "List site's pages" }
+                            ]
+                        },
+                        "zsit2": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://pcatout.zsit2.optusnet.com.au/" },
+                                { "label" : "L",	"url": "http://pcatout.zsit2.optusnet.com.au/list?site=memberservices",	"title": "List site's pages" }
+                            ]
+                        },
+                        "zlt": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://pcatout.zlt.optusnet.com.au/" },
+                                { "label" : "L",	"url": "http://pcatout.zlt.optusnet.com.au/list?site=memberservices",	"title": "List site's pages" }
+                            ]
+                        },
+                        "prep": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://pcatout.next.optusnet.com.au/" },
+                                { "label" : "L",	"url": "http://pcatout.next.optusnet.com.au/list?site=memberservices",	"title": "List site's pages" }
+                            ]
+                        },
+                        "prod": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://pcatout.optuszoo.com.au/" },
+                                { "label" : "L",	"url": "http://pcatout.optuszoo.com.au/list?site=memberservices",	"title": "List site's pages" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "STB",
+                    "url"   : "http://cgit.toolsns.dev/cgit.cgi/NScreens-STB",
+                    "links" : [
+                        { "name" : "GIT"   , "label" : "G", "url" : "http://github.com/ivanwills/sites-meteor" },
+                        { "name" : "Hudson", "label" : "H", "url" : "http://hudson.toolsns.dev.optusnet.com.au/job/NScreens-STB", "title": "Hudson build info" }
+                    ],
+                    "environments": {
+                        "mine": {
+                            "links": [
+                                { "label" : "Shell",	"url": "http://stbshell.mandy-usr2.dev.optusnet.com.au/" },
+                                { "label" : "Fake",	"url": "http://stb.mandy-usr2.dev.optusnet.com.au/t/fake-stb.html",	"title": "NScreens STB emulation" },
+                                { "label" : "Test",	"url": "http://stb.mandy-usr2.dev.optusnet.com.au/t/jasmine/SpecRunner.html",	"title": "Jasmine test suite" }
+                            ]
+                        },
+                        "ivan-usr": {
+                            "links": [
+                                { "label" : "Shell",	"url": "http://stbshell.ivan-usr.dev.optusnet.com.au/" },
+                                { "label" : "Fake",	"url": "http://stb.ivan-usr.dev.optusnet.com.au/t/fake-stb.html",	"title": "NScreens STB emulation" },
+                                { "label" : "Test",	"url": "http://stb.ivan-usr.dev.optusnet.com.au/t/jasmine/SpecRunner.html",	"title": "Jasmine test suite" }
+                            ]
+                        },
+                        "fron01": {
+                            "links": [
+                                { "label" : "Shell",	"url": "http://stbshell.frontendns01.dev.optusnet.com.au/" },
+                                { "label" : "Fake",	"url": "http://stb.frontendns01.dev.optusnet.com.au/t/fake-stb.html",	"title": "NScreens STB emulation" },
+                                { "label" : "Test",	"url": "http://stb.frontendns01.dev.optusnet.com.au/t/jasmine/SpecRunner.html",	"title": "Jasmine test suite" }
+                            ]
+                        },
+                        "dev": {
+                            "links": [
+                                { "label" : "Fake",	"url": "http://optusmetv-apps.wwwns03.dev.optusnet.com.au/t/fake-stb.html",	"title": "NScreens STB emulation" },
+                                { "label" : "Test",	"url": "http://optusmetv-apps.wwwns03.dev.optusnet.com.au/t/jasmine/SpecRunner.html",	"title": "Jasmine test suite" }
+                            ]
+                        },
+                        "test": {
+                            "links": [
+                                { "label" : "Fake",	"url": "http://optusmetv-apps.test.optusnet.com.au/t/fake-stb.html",	"title": "NScreens STB emulation" },
+                                { "label" : "Test",	"url": "http://optusmetv-apps.test.optusnet.com.au/t/jasmine/SpecRunner.html",	"title": "Jasmine test suite" }
+                            ]
+                        },
+                        "zst": {
+                            "links": [
+                                { "label" : "Fake",	"url": "http://optusmetv-apps.zst.optusnet.com.au/t/fake-stb.html",	"title": "NScreens STB emulation" },
+                                { "label" : "Test",	"url": "http://optusmetv-apps.zst.optusnet.com.au/t/jasmine/SpecRunner.html",	"title": "Jasmine test suite" }
+                            ]
+                        },
+                        "zst2": {
+                            "links": [
+                                { "label" : "Fake",	"url": "http://optusmetv-apps.zst2.optusnet.com.au/t/fake-stb.html",	"title": "NScreens STB emulation" },
+                                { "label" : "Test",	"url": "http://optusmetv-apps.zst2.optusnet.com.au/t/jasmine/SpecRunner.html",	"title": "Jasmine test suite" }
+                            ]
+                        },
+                        "zuat": {
+                            "links": [
+                                { "label" : "Fake",	"url": "http://optusmetv-apps.zuat.optusnet.com.au/t/fake-stb.html",	"title": "NScreens STB emulation" },
+                                { "label" : "Test",	"url": "http://optusmetv-apps.zuat.optusnet.com.au/t/jasmine/SpecRunner.html",	"title": "Jasmine test suite" }
+                            ]
+                        },
+                        "zsit": {
+                            "links": [
+                                { "label" : "Fake",	"url": "http://optusmetv-apps.zsit.optusnet.com.au/t/fake-stb.html",	"title": "NScreens STB emulation" },
+                                { "label" : "Test",	"url": "http://optusmetv-apps.zsit.optusnet.com.au/t/jasmine/SpecRunner.html",	"title": "Jasmine test suite" }
+                            ]
+                        },
+                        "zsit2": {
+                            "links": [
+                                { "label" : "Fake",	"url": "http://optusmetv-apps.zsit2.optusnet.com.au/t/fake-stb.html",	"title": "NScreens STB emulation" },
+                                { "label" : "Test",	"url": "http://optusmetv-apps.zsit2.optusnet.com.au/t/jasmine/SpecRunner.html",	"title": "Jasmine test suite" }
+                            ]
+                        },
+                        "zlt": {
+                            "links": [
+                                { "label" : "Fake",	"url": "http://optusmetv-apps.zlt.optusnet.com.au/t/fake-stb.html",	"title": "NScreens STB emulation" },
+                                { "label" : "Test",	"url": "http://optusmetv-apps.zlt.optusnet.com.au/t/jasmine/SpecRunner.html",	"title": "Jasmine test suite" }
+                            ]
+                        },
+                        "prep": {
+                            "links": [
+                                { "label" : "Fake",	"url": "http://optusmetv-apps.next.optusnet.com.au/t/fake-stb.html",	"title": "NScreens STB emulation" },
+                                { "label" : "Test",	"url": "http://optusmetv-apps.next.optusnet.com.au/t/jasmine/SpecRunner.html",	"title": "Jasmine test suite" }
+                            ]
+                        },
+                        "prod": {
+                            "links": [
+                                { "label" : "Fake",	"url": "https://optusmetv-apps.optuszoo.com.au/t/fake-stb.html",	"title": "NScreens STB emulation" },
+                                { "label" : "Test",	"url": "https://optusmetv-apps.optuszoo.com.au/t/jasmine/SpecRunner.html",	"title": "Jasmine test suite" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Zoo",
+                    "url"   : "http://cgit.toolsns.dev/cgit.cgi/NScreens-Mobile",
+                    "links" : [
+                        { "name" : "GIT"   , "label" : "G", "url" : "http://github.com/ivanwills/sites-meteor" },
+                        { "name" : "Hudson", "label" : "H", "url" : "http://hudson.toolsns.dev.optusnet.com.au/job/thecaw", "title": "Hudson build info" }
+                    ],
+                    "environments": {
+                        "mine": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://zoo.ivan-usr.dev.optusnet.com.au/tvandvideo/optustv" },
+                                { "label" : "S",	"url": "http://zoo.ivan-usr.dev.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://zoo.ivan-usr.dev.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://zoo.ivan-usr.dev.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://zoo.ivan-usr.dev.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://zoo.ivan-usr.dev.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://zoo.ivan-usr.dev.optusnet.com.au",	"title": "Global IDP Logout" }
+                            ]
+                        },
+                        "ivan-usr": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://zoo.ivan-usr.dev.optusnet.com.au/tvandvideo/optustv" },
+                                { "label" : "S",	"url": "http://zoo.ivan-usr.dev.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://zoo.ivan-usr.dev.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://zoo.ivan-usr.dev.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://zoo.ivan-usr.dev.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://zoo.ivan-usr.dev.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://zoo.ivan-usr.dev.optusnet.com.au",	"title": "Global IDP Logout" }
+                            ]
+                        },
+                        "dev": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://zoo.dev.optusnet.com.au/tvandvideo/optustv" },
+                                { "label" : "S",	"url": "http://zoo.dev.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://zoo.dev.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://zoo.dev.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://zoo.dev.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://zoo.dev.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://zoo.ivan-usr.dev.optusnet.com.au",	"title": "Global IDP Logout" }
+                            ]
+                        },
+                        "test": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://zoo.test.optusnet.com.au/tvandvideo/optustv" },
+                                { "label" : "S",	"url": "http://zoo.test.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://zoo.test.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://zoo.test.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://zoo.test.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://zoo.test.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://zoo.test.optusnet.com.au",	"title": "Global IDP Logout" }
+                            ]
+                        },
+                        "zst": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://zoo.zst.optusnet.com.au/tvandvideo/optustv" },
+                                { "label" : "S",	"url": "http://zoo.zst.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://zoo.zst.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://zoo.zst.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://zoo.zst.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://zoo.zst.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zst.optusnet.com.au/idp/optus/Logout?return_url=http://zoo.zst.optusnet.com.au",	"title": "Global IDP Logout" }
+                            ]
+                        },
+                        "zst2": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://zoo.zst2.optusnet.com.au/tvandvideo/optustv" },
+                                { "label" : "S",	"url": "http://zoo.zst2.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://zoo.zst2.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://zoo.zst2.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://zoo.zst2.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://zoo.zst2.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zst2.optusnet.com.au/idp/optus/Logout?return_url=http://zoo.zst2.optusnet.com.au",	"title": "Global IDP Logout" }
+                            ]
+                        },
+                        "zuat": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://zoo.zuat.optusnet.com.au/tvandvideo/optustv" },
+                                { "label" : "S",	"url": "http://zoo.zuat.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://zoo.zuat.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://zoo.zuat.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://zoo.zuat.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://zoo.zuat.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://zoo.zuat.optusnet.com.au",	"title": "Global IDP Logout" }
+                            ]
+                        },
+                        "zsit": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://zoo.zsit.optusnet.com.au/tvandvideo/optustv" },
+                                { "label" : "S",	"url": "http://zoo.zsit.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://zoo.zsit.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://zoo.zsit.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://zoo.zsit.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://zoo.zsit.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://zoo.zsit.optusnet.com.au",	"title": "Global IDP Logout" }
+                            ]
+                        },
+                        "zsit2": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://zoo.zsit2.optusnet.com.au/tvandvideo/optustv" },
+                                { "label" : "S",	"url": "http://zoo.zsit2.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://zoo.zsit2.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://zoo.zsit2.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://zoo.zsit2.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://zoo.zsit2.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://zoo.zsit2.optusnet.com.au",	"title": "Global IDP Logout" }
+                            ]
+                        },
+                        "zlt": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://zoo.zlt.optusnet.com.au/tvandvideo/optustv" },
+                                { "label" : "S",	"url": "http://zoo.zlt.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://zoo.zlt.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://zoo.zlt.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://zoo.zlt.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://zoo.zlt.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.zuat.optusnet.com.au/idp/optus/Logout?return_url=http://zoo.zlt.optusnet.com.au",	"title": "Global IDP Logout" }
+                            ]
+                        },
+                        "prep": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://next.optusnet.com.au/tvandvideo/optustv" },
+                                { "label" : "S",	"url": "http://next.optusnet.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://next.optusnet.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://next.optusnet.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://next.optusnet.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://next.optusnet.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.optusnet.com.au/idp/next/Logout?return_url=http://next.optusnet.com.au",	"title": "Global IDP Logout" }
+                            ]
+                        },
+                        "prod": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://www.optuszoo.com.au/tvandvideo/optustv" },
+                                { "label" : "S",	"url": "http://www.optuszoo.com.au/Shibboleth.sso/Session",	"title": "Shibboleth Session Info" },
+                                { "label" : "M",	"url": "http://www.optuszoo.com.au/Shibboleth.sso/Metadata",	"title": "Shibboleth Metadata" },
+                                { "label" : "N",	"url": "http://www.optuszoo.com.au/login",	"title": "Normal IDP Login" },
+                                { "label" : "C",	"url": "http://www.optuszoo.com.au/Shibboleth.sso/Login?authnContextClassRef=urn:optus:names:tc:SAML:2.0:ac:classes:CSR:LogonBehalf",	"title": "CSR Login" },
+                                { "label" : "L",	"url": "http://www.optuszoo.com.au/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "G",	"url": "https://idp.optusnet.com.au/idp/Logout?return_url=http://www.optuszoo.com.au",	"title": "Global IDP Logout" }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name"  : "tools",
+            "label" : "Tools",
+            "show"  : true,
+            "filter" : "NScreens",
+            "order"  : 1,
+            "data"  : [
+                {
+                    "label" : "DataStore",
+                    "url"   : "http://cgit.toolsns.dev/cgit.cgi/Sputnik-DataStore",
+                    "links" : [
+                        { "name" : "GIT"   , "label" : "G", "url" : "http://github.com/ivanwills/sites-meteor" },
+                        { "name" : "Hudson", "label" : "H", "url" : "http://hudson.toolsns.dev.optusnet.com.au/job/Sputnik-DataStore", "title": "Hudson build info" }
+                    ],
+                    "environments": {
+                        "mine": {
+                            "links": [
+                                { "label" : "Tools",	"url": "http://ivan.wills.usr.optusnet.com.au:3005/" },
+                                { "label" : "WS",	"url": "http://ivan.wills.usr.optusnet.com.au:3015/" }
+                            ]
+                        },
+                        "ivan-usr": {
+                            "links": [
+                                { "label" : "Tools",	"url": "http://ivan.wills.usr.optusnet.com.au:3005/" },
+                                { "label" : "WS",	"url": "http://ivan.wills.usr.optusnet.com.au:3015/" }
+                            ]
+                        },
+                        "dev": {
+                            "links": [
+                                { "label" : "Tools",	"url": "http://wwwtoolsns04.dev.optusnet.com.au/datastore/" },
+                                { "label" : "WS",	"url": "http://wsns04.dev.optusnet.com.au/datastore/" }
+                            ]
+                        },
+                        "test": {
+                            "links": [
+                                { "label" : "Tools",	"url": "http://wwwtools03.test.optusnet.com.au/datastore/" },
+                                { "label" : "WS",	"url": "http://wsns03.test.optusnet.com.au/datastore/" }
+                            ]
+                        },
+                        "zst": {
+                            "links": [
+                                { "label" : "Tools",	"url": "http://wwwtools01.zst.optusnet.com.au/datastore/" },
+                                { "label" : "WS",	"url": "http://wsns01.zst.optusnet.com.au/datastore/" }
+                            ]
+                        },
+                        "zst2": {
+                            "links": [
+                                { "label" : "Tools",	"url": "http://wwwtools01.zst2.optusnet.com.au/datastore/" },
+                                { "label" : "WS",	"url": "http://wsns01.zst2.optusnet.com.au/datastore/" }
+                            ]
+                        },
+                        "zuat": {
+                            "links": [
+                                { "label" : "Tools",	"url": "http://wwwtools01.zuat.optusnet.com.au/datastore/" },
+                                { "label" : "WS",	"url": "http://wsns01.zuat.optusnet.com.au/datastore/" }
+                            ]
+                        },
+                        "zsit": {
+                            "links": [
+                                { "label" : "Tools",	"url": "http://wwwtools01.zsit.optusnet.com.au/datastore/" },
+                                { "label" : "WS",	"url": "http://wsns01.zsit.optusnet.com.au/datastore/" }
+                            ]
+                        },
+                        "zsit2": {
+                            "links": [
+                                { "label" : "Tools",	"url": "http://wwwtools01.zsits.optusnet.com.au/datastore/" },
+                                { "label" : "WS",	"url": "http://wsns01.zsits.optusnet.com.au/datastore/" }
+                            ]
+                        },
+                        "zlt": {
+                            "links": [
+                                { "label" : "Tools",	"url": "http://wwwtools01.zlt.optusnet.com.au/datastore/" },
+                                { "label" : "WS",	"url": "http://wsns01.zlt.optusnet.com.au/datastore/" }
+                            ]
+                        },
+                        "prep": {
+                            "links": [
+                                { "label" : "Tools",	"url": "http://wwwtools.prep.optusnet.com.au/datastore/" },
+                                { "label" : "WS",	"url": "http://wsns.prep.optusnet.com.au/datastore/" }
+                            ]
+                        },
+                        "prod": {
+                            "links": [
+                                { "label" : "Tools",	"url": "http://wwwtools.optusnet.com.au/datastore/" },
+                                { "label" : "WS",	"url": "http://ws.optusnet.com.au/datastore/" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Greenbox",
+                    "url"   : "http://cgit.toolsns.dev/cgit.cgi/x-Greenbox",
+                    "links" : [
+                        { "name" : "GIT"   , "label" : "G", "url" : "http://github.com/ivanwills/sites-meteor" },
+                        { "name" : "Hudson", "label" : "H", "url" : "http://hudson.toolsns.dev.optusnet.com.au/job/Greenbox", "title": "Hudson build info" }
+                    ],
+                    "environments": {
+                        "dev"  : {
+                            "links": [
+                                { "label" : "Site", "url": "http://wwwtoolsns04.dev.optusnet.com.au/greenbox/search" }
+                            ]
+                        },
+                        "test" : {
+                            "links": [
+                                { "label" : "Site", "url": "http://wwwtoolsns03.test.optusnet.com.au/greenbox/search" }
+                            ]
+                        },
+                        "prod" : {
+                            "links": [
+                                { "label" : "Site", "url": "http://wwwtoolsns.syd.optusnet.com.au/greenbox/search" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "PCat",
+                    "url"   : "http://cgit.toolsns.dev/cgit.cgi/PCat",
+                    "links" : [
+                        { "name" : "GIT"   , "label" : "G", "url" : "http://github.com/ivanwills/sites-meteor" },
+                        { "name" : "Hudson", "label" : "H", "url" : "http://hudson.toolsns.dev.optusnet.com.au/job/PCat", "title": "Hudson build info" }
+                    ],
+                    "environments": {
+                        "mine": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://ivan.wills.usr.optusnet.com.au:5000/" },
+                                { "label" : "Sites",	"url": "http://ivan.wills.usr.optusnet.com.au:5000/site/list",	"title": "List of PCAT using sites", "class": "small" },
+                                { "label" : "Tags",	"url": "http://ivan.wills.usr.optusnet.com.au:5000/validtag/search",	"title": "Content tags", "class": "small" },
+                                { "label" : "Cats",	"url": "http://ivan.wills.usr.optusnet.com.au:5000/filecat/list",	"title": "File Categories", "class": "small" },
+                                { "label" : "WS",	"url": "http://ivan.wills.usr.optusnet.com.au:5001/current?content_type=TYPE&site=SITE&device_type=PC_OR_MOBILE&tag=TAG",	"title": "Example of the webservises URL - wont work directly", "class": "small" },
+                                { "label" : "WSp",	"url": "http://ivan.wills.usr.optusnet.com.au:5001/page/get_page?page_uri=URI&site=SITE&device_type=pc&format=plain",	"title": "Example of the webservises URL - wont work directly for a page", "class": "small" }
+                            ]
+                        },
+                        "ivan-usr": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://ivan.wills.usr.optusnet.com.au:5000/" },
+                                { "label" : "Sites",	"url": "http://ivan.wills.usr.optusnet.com.au:5000/site/list",	"title": "List of PCAT using sites", "class": "small" },
+                                { "label" : "Tags",	"url": "http://ivan.wills.usr.optusnet.com.au:5000/validtag/search",	"title": "Content tags", "class": "small" },
+                                { "label" : "Cats",	"url": "http://ivan.wills.usr.optusnet.com.au:5000/filecat/list",	"title": "File Categories", "class": "small" },
+                                { "label" : "WS",	"url": "http://ivan.wills.usr.optusnet.com.au:5001/current?content_type=TYPE&site=SITE&device_type=PC_OR_MOBILE&tag=TAG",	"title": "Example of the webservises URL - wont work directly", "class": "small" },
+                                { "label" : "WSp",	"url": "http://ivan.wills.usr.optusnet.com.au:5001/page/get_page?page_uri=URI&site=SITE&device_type=pc&format=plain",	"title": "Example of the webservises URL - wont work directly for a page", "class": "small" }
+                            ]
+                        },
+                        "dev": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://wwwtoolsns04.dev.optusnet.com.au/pcatnew/" },
+                                { "label" : "Sites",	"url": "http://wwwtoolsns04.dev.optusnet.com.au/pcatnew/site/list",	"title": "List of PCAT using sites", "class": "small" },
+                                { "label" : "Tags",	"url": "http://wwwtoolsns04.dev.optusnet.com.au/pcatnew/validtag/search",	"title": "Content tags", "class": "small" },
+                                { "label" : "Cats",	"url": "http://wwwtoolsns04.dev.optusnet.com.au/pcatnew/filecat/list",	"title": "File Categories", "class": "small" },
+                                { "label" : "N",	"url": "http://wwwtoolsns04.dev.optusnet.com.au/pcatnew/login",	"title": "Normal IDP Login" },
+                                { "label" : "L",	"url": "http://wwwtoolsns04.dev.optusnet.com.au/pcatnew/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "WS",	"url": "http://wsns04.dev.optusnet.com.au/pcatnew/current?content_type=TYPE&site=SITE&device_type=PC_OR_MOBILE&tag=TAG",	"title": "Example of the webservises URL - wont work directly", "class": "small" },
+                                { "label" : "WSp",	"url": "http://wsns04.dev.optusnet.com.au/pcatnew/page/get_page?page_uri=URI&site=SITE&device_type=pc&format=plain",	"title": "Example of the webservises URL - wont work directly for a page", "class": "small" }
+                            ]
+                        },
+                        "test": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://wwwtoolsns03.test.optusnet.com.au/pcatnew/" },
+                                { "label" : "Sites",	"url": "http://wwwtoolsns03.test.optusnet.com.au/pcatnew/site/list",	"title": "List of PCAT using sites", "class": "small" },
+                                { "label" : "Tags",	"url": "http://wwwtoolsns03.test.optusnet.com.au/pcatnew/validtag/search",	"title": "Content tags", "class": "small" },
+                                { "label" : "Cats",	"url": "http://wwwtoolsns03.test.optusnet.com.au/pcatnew/filecat/list",	"title": "File Categories", "class": "small" },
+                                { "label" : "N",	"url": "http://wwwtoolsns03.test.optusnet.com.au/pcatnew/login",	"title": "Normal IDP Login" },
+                                { "label" : "L",	"url": "http://wwwtoolsns03.test.optusnet.com.au/pcatnew/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "WS",	"url": "http://wsns03.test.optusnet.com.au/pcatnew/current?content_type=TYPE&site=SITE&device_type=PC_OR_MOBILE&tag=TAG",	"title": "Example of the webservises URL - wont work directly", "class": "small" },
+                                { "label" : "WSp",	"url": "http://wsns03.test.optusnet.com.au/pcatnew/page/get_page?page_uri=URI&site=SITE&device_type=pc&format=plain",	"title": "Example of the webservises URL - wont work directly for a page", "class": "small" },
+                                { "label" : "Zoo",	"url": "http://zoo.wwwtoolsns03.test.optusnet.com.au/tvandvideo/optustv",	"title": "Zoo connected to unpublished data" }
+                            ]
+                        },
+                        "zst": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://wwwtoolsns01.zst.optusnet.com.au/pcatnew/" },
+                                { "label" : "Sites",	"url": "http://wwwtoolsns01.zst.optusnet.com.au/pcatnew/site/list",	"title": "List of PCAT using sites", "class": "small" },
+                                { "label" : "Tags",	"url": "http://wwwtoolsns01.zst.optusnet.com.au/pcatnew/validtag/search",	"title": "Content tags", "class": "small" },
+                                { "label" : "Cats",	"url": "http://wwwtoolsns01.zst.optusnet.com.au/pcatnew/filecat/list",	"title": "File Categories", "class": "small" },
+                                { "label" : "N",	"url": "http://wwwtoolsns01.zst.optusnet.com.au/pcatnew/login",	"title": "Normal IDP Login" },
+                                { "label" : "L",	"url": "http://wwwtoolsns01.zst.optusnet.com.au/pcatnew/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "WS",	"url": "http://wsns03.zst.optusnet.com.au/pcatnew/current?content_type=TYPE&site=SITE&device_type=PC_OR_MOBILE&tag=TAG",	"title": "Example of the webservises URL - wont work directly" }
+                            ]
+                        },
+                        "zst2": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://wwwtoolsns01.zst2.optusnet.com.au/pcatnew/" },
+                                { "label" : "Sites",	"url": "http://wwwtoolsns01.zst2.optusnet.com.au/pcatnew/site/list",	"title": "List of PCAT using sites", "class": "small" },
+                                { "label" : "Tags",	"url": "http://wwwtoolsns01.zst2.optusnet.com.au/pcatnew/validtag/search",	"title": "Content tags", "class": "small" },
+                                { "label" : "Cats",	"url": "http://wwwtoolsns01.zst2.optusnet.com.au/pcatnew/filecat/list",	"title": "File Categories", "class": "small" },
+                                { "label" : "N",	"url": "http://wwwtoolsns01.zst2.optusnet.com.au/pcatnew/login",	"title": "Normal IDP Login" },
+                                { "label" : "L",	"url": "http://wwwtoolsns01.zst2.optusnet.com.au/pcatnew/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "WS",	"url": "http://wsns01.zst2.optusnet.com.au/pcatnew/current?content_type=TYPE&site=SITE&device_type=PC_OR_MOBILE&tag=TAG",	"title": "Example of the webservises URL - wont work directly", "class": "small" },
+                                { "label" : "WSp",	"url": "http://wsns01.zst2.optusnet.com.au/pcatnew/page/get_page?page_uri=URI&site=SITE&device_type=pc&format=plain",	"title": "Example of the webservises URL - wont work directly for a page", "class": "small" }
+                            ]
+                        },
+                        "zuat": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://wwwtoolsns01.zuat.optusnet.com.au/pcatnew/" },
+                                { "label" : "Sites",	"url": "http://wwwtoolsns01.zuat.optusnet.com.au/pcatnew/site/list",	"title": "List of PCAT using sites", "class": "small" },
+                                { "label" : "Tags",	"url": "http://wwwtoolsns01.zuat.optusnet.com.au/pcatnew/validtag/search",	"title": "Content tags", "class": "small" },
+                                { "label" : "Cats",	"url": "http://wwwtoolsns01.zuat.optusnet.com.au/pcatnew/filecat/list",	"title": "File Categories", "class": "small" },
+                                { "label" : "WS",	"url": "http://wsns01.zuat.optusnet.com.au/pcatnew/current?content_type=TYPE&site=SITE&device_type=PC_OR_MOBILE&tag=TAG",	"title": "Example of the webservises URL - wont work directly", "class": "small" },
+                                { "label" : "WSp",	"url": "http://wsns01.zuat.optusnet.com.au/pcatnew/page/get_page?page_uri=URI&site=SITE&device_type=pc&format=plain",	"title": "Example of the webservises URL - wont work directly for a page", "class": "small" }
+                            ]
+                        },
+                        "zsit": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://wwwtoolsns01.zsit.optusnet.com.au/pcatnew/" },
+                                { "label" : "Sites",	"url": "http://wwwtoolsns01.zsit.optusnet.com.au/pcatnew/site/list",	"title": "List of PCAT using sites", "class": "small" },
+                                { "label" : "Tags",	"url": "http://wwwtoolsns01.zsit.optusnet.com.au/pcatnew/validtag/search",	"title": "Content tags", "class": "small" },
+                                { "label" : "Cats",	"url": "http://wwwtoolsns01.zsit.optusnet.com.au/pcatnew/filecat/list",	"title": "File Categories", "class": "small" },
+                                { "label" : "N",	"url": "http://wwwtoolsns01.zsit.optusnet.com.au/pcatnew/login",	"title": "Normal IDP Login" },
+                                { "label" : "L",	"url": "http://wwwtoolsns01.zsit.optusnet.com.au/pcatnew/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "WS",	"url": "http://wsns01.zsit.optusnet.com.au/pcatnew/current?content_type=TYPE&site=SITE&device_type=PC_OR_MOBILE&tag=TAG",	"title": "Example of the webservises URL - wont work directly", "class": "small" },
+                                { "label" : "WSp",	"url": "http://wsns01.zsit.optusnet.com.au/pcatnew/page/get_page?page_uri=URI&site=SITE&device_type=pc&format=plain",	"title": "Example of the webservises URL - wont work directly for a page", "class": "small" }
+                            ]
+                        },
+                        "zsit2": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://wwwtoolsns01.zsit2.optusnet.com.au/pcatnew/" },
+                                { "label" : "Sites",	"url": "http://wwwtoolsns01.zsit2.optusnet.com.au/pcatnew/site/list",	"title": "List of PCAT using sites", "class": "small" },
+                                { "label" : "Tags",	"url": "http://wwwtoolsns01.zsit2.optusnet.com.au/pcatnew/validtag/search",	"title": "Content tags", "class": "small" },
+                                { "label" : "Cats",	"url": "http://wwwtoolsns01.zsit2.optusnet.com.au/pcatnew/filecat/list",	"title": "File Categories", "class": "small" },
+                                { "label" : "N",	"url": "http://wwwtoolsns01.zsit2.optusnet.com.au/pcatnew/login",	"title": "Normal IDP Login" },
+                                { "label" : "L",	"url": "http://wwwtoolsns01.zsit2.optusnet.com.au/pcatnew/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "WS",	"url": "http://wsns01.zsit2.optusnet.com.au/pcatnew/current?content_type=TYPE&site=SITE&device_type=PC_OR_MOBILE&tag=TAG",	"title": "Example of the webservises URL - wont work directly", "class": "small" },
+                                { "label" : "WSp",	"url": "http://wsns01.zsit2.optusnet.com.au/pcatnew/page/get_page?page_uri=URI&site=SITE&device_type=pc&format=plain",	"title": "Example of the webservises URL - wont work directly for a page", "class": "small" }
+                            ]
+                        },
+                        "zlt": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://wwwtoolsns01.zlt.optusnet.com.au/pcatnew/" },
+                                { "label" : "Sites",	"url": "http://wwwtoolsns01.zlt.optusnet.com.au/pcatnew/site/list",	"title": "List of PCAT using sites", "class": "small" },
+                                { "label" : "Tags",	"url": "http://wwwtoolsns01.zlt.optusnet.com.au/pcatnew/validtag/search",	"title": "Content tags", "class": "small" },
+                                { "label" : "Cats",	"url": "http://wwwtoolsns01.zlt.optusnet.com.au/pcatnew/filecat/list",	"title": "File Categories", "class": "small" },
+                                { "label" : "WS",	"url": "http://wsns01.zlt.optusnet.com.au/pcatnew/current?content_type=TYPE&site=SITE&device_type=PC_OR_MOBILE&tag=TAG",	"title": "Example of the webservises URL - wont work directly", "class": "small" },
+                                { "label" : "WSp",	"url": "http://wsns01.zlt.optusnet.com.au/pcatnew/page/get_page?page_uri=URI&site=SITE&device_type=pc&format=plain",	"title": "Example of the webservises URL - wont work directly for a page", "class": "small" }
+                            ]
+                        },
+                        "prep": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns.prep.optusnet.com.au/pcatnew/current?content_type=TYPE&site=SITE&device_type=PC_OR_MOBILE&tag=TAG",	"title": "Example of the webservises URL - wont work directly", "class": "small" },
+                                    { "label" : "WSp",	"url": "http://wsns.prep.ptusnet.com.au/pcatnew/page/get_page?page_uri=URI&site=SITE&device_type=pc&format=plain",	"title": "Example of the webservises URL - wont work directly for a page", "class": "small" }
+                            ]
+                        },
+                        "prod": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://wwwtoolsns.syd.optusnet.com.au/pcatnew/" },
+                                { "label" : "Sites",	"url": "http://wwwtoolsns.syd.optusnet.com.au/pcatnew/site/list",	"title": "List of PCAT using sites", "class": "small" },
+                                { "label" : "Tags",	"url": "http://wwwtoolsns.syd.optusnet.com.au/pcatnew/validtag/search",	"title": "Content tags", "class": "small" },
+                                { "label" : "Cats",	"url": "http://wwwtoolsns.syd.optusnet.com.au/pcatnew/filecat/list",	"title": "File Categories", "class": "small" },
+                                { "label" : "N",	"url": "http://wwwtoolsns.syd.optusnet.com.au/pcatnew/login",	"title": "Normal IDP Login" },
+                                { "label" : "L",	"url": "http://wwwtoolsns.syd.optusnet.com.au/pcatnew/logout",	"title": "Normal IDP Logout" },
+                                { "label" : "WS",	"url": "http://ws.optusnet.com.au/pcatnew/current?content_type=TYPE&site=SITE&device_type=PC_OR_MOBILE&tag=TAG",	"title": "Example of the webservises URL - wont work directly", "class": "small" },
+                                { "label" : "WSp",	"url": "http://ws.optusnet.com.au/pcatnew/page/get_page?page_uri=URI&site=SITE&device_type=pc&format=plain",	"title": "Example of the webservises URL - wont work directly for a page", "class": "small" },
+                                { "label" : "Zoo",	"url": "http://zoo.wwwtoolsns.syd.optusnet.com.au/tvandvideo/optustv",	"title": "Zoo connected to unpublished data" }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name"  : "sputnik",
+            "label" : "Sputnik Web Services",
+            "show"  : false,
+            "filter" : "NScreens",
+            "order"  : 2,
+            "data"  : [
+                {
+                    "label" : "FFList",
+                    "url"   : "http://cgit.toolsns.dev/cgit.cgi/Sputnik-FFList",
+                    "links" : [
+                        { "name" : "GIT"   , "label" : "G", "url" : "http://github.com/ivanwills/sites-meteor" },
+                        { "name" : "Hudson", "label" : "H", "url" : "http://hudson.toolsns.dev.optusnet.com.au/job/Sputnik-FFList", "title": "Hudson build info" }
+                    ],
+                    "environments": {
+                        "mine": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://ivan.wills.usr.optusnet.com.au:3002/" }
+                            ]
+                        },
+                        "ivan-usr": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://ivan.wills.usr.optusnet.com.au:3002/" }
+                            ]
+                        },
+                        "dev": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns04.dev.optusnet.com.au/fflist/" }
+                            ]
+                        },
+                        "test": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns03.test.optusnet.com.au/fflist/" }
+                            ]
+                        },
+                        "zst": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns03.zst.optusnet.com.au/fflist/" }
+                            ]
+                        },
+                        "zst2": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns03.zst2.optusnet.com.au/fflist/" }
+                            ]
+                        },
+                        "zuat": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns03.zuat.optusnet.com.au/fflist/" }
+                            ]
+                        },
+                        "zsit": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns03.zsit.optusnet.com.au/fflist/" }
+                            ]
+                        },
+                        "zsit2": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns03.zsits.optusnet.com.au/fflist/" }
+                            ]
+                        },
+                        "zlt": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns03.zlt.optusnet.com.au/fflist/" }
+                            ]
+                        },
+                        "prep": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns.prep.optusnet.com.au/fflist/" }
+                            ]
+                        },
+                        "prod": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://ws.optusnet.com.au/fflist/" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "MMSSend",
+                    "url"   : "http://cgit.toolsns.dev/cgit.cgi/Sputnik-MMSSend",
+                    "links" : [
+                        { "name" : "GIT"   , "label" : "G", "url" : "http://github.com/ivanwills/sites-meteor" },
+                        { "name" : "Hudson", "label" : "H", "url" : "http://hudson.toolsns.dev.optusnet.com.au/job/Sputnik-MMSSend", "title": "Hudson build info" }
+                    ],
+                    "environments": {
+                        "mine": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://ivan.wills.usr.optusnet.com.au:3001/" }
+                            ]
+                        },
+                        "ivan-usr": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://ivan.wills.usr.optusnet.com.au:3001/" }
+                            ]
+                        },
+                        "dev": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns04.dev.optusnet.com.au/mmssend/" }
+                            ]
+                        },
+                        "test": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns03.test.optusnet.com.au/mmssend/" }
+                            ]
+                        },
+                        "zst": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns03.zst.optusnet.com.au/mmssend/" }
+                            ]
+                        },
+                        "zst2": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns03.zst2.optusnet.com.au/mmssend/" }
+                            ]
+                        },
+                        "zuat": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns03.zuat.optusnet.com.au/mmssend/" }
+                            ]
+                        },
+                        "zsit": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns03.zsit.optusnet.com.au/mmssend/" }
+                            ]
+                        },
+                        "zsit2": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns03.zsits.optusnet.com.au/mmssend/" }
+                            ]
+                        },
+                        "zlt": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns03.zlt.optusnet.com.au/mmssend/" }
+                            ]
+                        },
+                        "prep": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns.prep.optusnet.com.au/mmssend/" }
+                            ]
+                        },
+                        "prod": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://ws.optusnet.com.au/mmssend/" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Pipeline",
+                    "url"   : "http://cgit.toolsns.dev/cgit.cgi/Pipeline",
+                    "links" : [
+                        { "name" : "GIT"   , "label" : "G", "url" : "http://github.com/ivanwills/sites-meteor" },
+                        { "name" : "Hudson", "label" : "H", "url" : "http://hudson.toolsns.dev.optusnet.com.au/job/Pipeline", "title": "Hudson build info" }
+                    ],
+                    "environments": {
+                        "mine": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://ivan.wills.usr.optusnet.com.au:3004/" }
+                            ]
+                        },
+                        "ivan-usr": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://ivan.wills.usr.optusnet.com.au:3004/" }
+                            ]
+                        },
+                        "dev": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns04.dev.optusnet.com.au/pipeline/" }
+                            ]
+                        },
+                        "test": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns03.test.optusnet.com.au/pipeline/" }
+                            ]
+                        },
+                        "zst": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns03.zst.optusnet.com.au/pipeline/" }
+                            ]
+                        },
+                        "zst2": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns03.zst2.optusnet.com.au/pipeline/" }
+                            ]
+                        },
+                        "zuat": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns03.zuat.optusnet.com.au/pipeline/" }
+                            ]
+                        },
+                        "zsit": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns03.zsit.optusnet.com.au/pipeline/" }
+                            ]
+                        },
+                        "zsit2": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns03.zsits.optusnet.com.au/pipeline/" }
+                            ]
+                        },
+                        "zlt": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns03.zlt.optusnet.com.au/pipeline/" }
+                            ]
+                        },
+                        "prep": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns.prep.optusnet.com.au/pipeline/" }
+                            ]
+                        },
+                        "prod": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://ws.optusnet.com.au/pipeline/" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Total Access 18+",
+                    "url"   : "http://cgit.toolsns.dev/cgit.cgi/Sputnik-ta18plus",
+                    "links" : [
+                        { "name" : "GIT"   , "label" : "G", "url" : "http://github.com/ivanwills/sites-meteor" },
+                        { "name" : "Hudson", "label" : "H", "url" : "http://hudson.toolsns.dev.optusnet.com.au/job/Sputnik-ta18plus", "title": "Hudson build info" }
+                    ],
+                    "environments": {
+                        "mine": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://ivan.wills.usr.optusnet.com.au:3003/" }
+                            ]
+                        },
+                        "ivan-usr": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://ivan.wills.usr.optusnet.com.au:3003/" }
+                            ]
+                        },
+                        "dev": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns04.dev.optusnet.com.au/ta18plus/" }
+                            ]
+                        },
+                        "test": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns03.test.optusnet.com.au/ta18plus/" }
+                            ]
+                        },
+                        "zst": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns03.zst.optusnet.com.au/ta18plus/" }
+                            ]
+                        },
+                        "zst2": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns03.zst2.optusnet.com.au/ta18plus/" }
+                            ]
+                        },
+                        "zuat": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns03.zuat.optusnet.com.au/ta18plus/" }
+                            ]
+                        },
+                        "zsit": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns03.zsit.optusnet.com.au/ta18plus/" }
+                            ]
+                        },
+                        "zsit2": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns03.zsits.optusnet.com.au/ta18plus/" }
+                            ]
+                        },
+                        "zlt": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns03.zlt.optusnet.com.au/ta18plus/" }
+                            ]
+                        },
+                        "prep": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://wsns.prep.optusnet.com.au/ta18plus/" }
+                            ]
+                        },
+                        "prod": {
+                            "links": [
+                                { "label" : "WS",	"url": "http://ws.optusnet.com.au/ta18plus/" }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name"  : "libs",
+            "label" : "Libs",
+            "show"  : false,
+            "filter" : "NScreens",
+            "order"  : 3,
+            "data"  : [
+            ]
+        },
+        {
+            "name"  : "ms",
+            "label" : "Memberservices",
+            "show"  : false,
+            "filter" : "NScreens",
+            "order"  : 4,
+            "data"  : [
+                {
+                    "label" : "Optus TV",
+                    "links" : [
+                        { "name" : "GIT"   , "label" : "G", "url" : "http://github.com/ivanwills/sites-meteor" }
+                    ],
+                    "environments": {
+                        "mine": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://ivan.wills.usr.optusnet.com.au:88/optusmetv/"  ,	"title": "Apache Normal" },
+                                { "label" : "S",	"url": "http://ivan.wills.usr.optusnet.com.au:88/optusmetv/group/staff/adminsearch",	"title": "Tomcat Normal" }
+                            ]
+                        },
+                        "dev": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://memberservices.dev.optusnet.com.au/ta18plus/" }
+                            ]
+                        },
+                        "test": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://memberservices.test.optusnet.com.au/optusmetv/" },
+                                { "label" : "N",	"url": "http://memberservices.test.optusnet.com.au/optusmetv/web/portal-administrator",	"title": "Normal IDP Login" },
+                                { "label" : "S",	"url": "http://memberservices.test.optusnet.com.au/optusmetv/group/staff/",	"title": "Staff Login" },
+                                { "label" : "A",	"url": "http://memberservices.test.optusnet.com.au/optusmetv/web/portal-administrator/login",	"title": "Staff Login" }
+                            ]
+                        },
+                        "zst": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://memberservices-st.test.optusnet.com.au/optusmetv/" },
+                                { "label" : "N",	"url": "http://memberservices-st.test.optusnet.com.au/optusmetv/web/portal-administrator",	"title": "Normal IDP Login" },
+                                { "label" : "S",	"url": "http://memberservices-st.test.optusnet.com.au/optusmetv/group/staff/",	"title": "Staff Login" },
+                                { "label" : "A",	"url": "http://memberservices-st.test.optusnet.com.au/optusmetv/web/portal-administrator/login",	"title": "Staff Login" }
+                            ]
+                        },
+                        "zst2": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://memberservices-st2.test.optusnet.com.au/optusmetv/" },
+                                { "label" : "N",	"url": "http://memberservices-st2.test.optusnet.com.au/optusmetv/web/portal-administrator",	"title": "Normal IDP Login" },
+                                { "label" : "S",	"url": "http://memberservices-st2.test.optusnet.com.au/optusmetv/group/staff/",	"title": "Staff Login" },
+                                { "label" : "A",	"url": "http://memberservices-st2.test.optusnet.com.au/optusmetv/web/portal-administrator/login",	"title": "Staff Login" }
+                            ]
+                        },
+                        "zuat": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://memberservices-uat.test.optusnet.com.au/optusmetv/" },
+                                { "label" : "N",	"url": "http://memberservices-uat.test.optusnet.com.au/optusmetv/web/portal-administrator",	"title": "Normal IDP Login" },
+                                { "label" : "S",	"url": "http://memberservices-uat.test.optusnet.com.au/optusmetv/group/staff/",	"title": "Staff Login" },
+                                { "label" : "A",	"url": "http://memberservices-uat.test.optusnet.com.au/optusmetv/web/portal-administrator/login",	"title": "Staff Login" }
+                            ]
+                        },
+                        "zsit": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://memberservices-sit.test.optusnet.com.au/optusmetv/" },
+                                { "label" : "N",	"url": "http://memberservices-sit.test.optusnet.com.au/optusmetv/web/portal-administrator",	"title": "Normal IDP Login" },
+                                { "label" : "S",	"url": "http://memberservices-sit.test.optusnet.com.au/optusmetv/group/staff/",	"title": "Staff Login" },
+                                { "label" : "A",	"url": "http://memberservices-sit.test.optusnet.com.au/optusmetv/web/portal-administrator/login",	"title": "Staff Login" }
+                            ]
+                        },
+                        "zsit2": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://memberservices-sits.test.optusnet.com.au/optusmetv/" },
+                                { "label" : "N",	"url": "http://memberservices-sits.test.optusnet.com.au/optusmetv/web/portal-administrator",	"title": "Normal IDP Login" },
+                                { "label" : "S",	"url": "http://memberservices-sits.test.optusnet.com.au/optusmetv/group/staff/",	"title": "Staff Login" },
+                                { "label" : "A",	"url": "http://memberservices-sits.test.optusnet.com.au/optusmetv/web/portal-administrator/login",	"title": "Staff Login" }
+                            ]
+                        },
+                        "zlt": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://memberservices-lt.test.optusnet.com.au/optusmetv/" },
+                                { "label" : "N",	"url": "http://memberservices-lt.test.optusnet.com.au/optusmetv/web/portal-administrator",	"title": "Normal IDP Login" },
+                                { "label" : "S",	"url": "http://memberservices-lt.test.optusnet.com.au/optusmetv/group/staff/",	"title": "Staff Login" },
+                                { "label" : "A",	"url": "http://memberservices-lt.test.optusnet.com.au/optusmetv/web/portal-administrator/login",	"title": "Staff Login" }
+                            ]
+                        },
+                        "prep": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://memberservices-prep.test.optusnet.com.au/optusmetv/" }
+                            ]
+                        },
+                        "prod": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://memberservices.optusnet.com.au/optusmetv/" },
+                                { "label" : "N",	"url": "http://memberservices.optusnet.com.au/optusmetv/web/portal-administrator",	"title": "Normal IDP Login" },
+                                { "label" : "S",	"url": "http://memberservices.optusnet.com.au/optusmetv/group/staff/",	"title": "Staff Login" },
+                                { "label" : "A",	"url": "http://memberservices.optusnet.com.au/optusmetv/web/portal-administrator/login",	"title": "Staff Login" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Generic Services",
+                    "links" : [
+                        { "name" : "GIT"   , "label" : "G", "url" : "http://github.com/ivanwills/sites-meteor" }
+                    ],
+                    "environments": {
+                        "mine": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://odmservices.vm/"  ,	"title": "Apache Normal" },
+                                { "label" : "S",	"url": "http://odmservices.vm/group/staff",	"title": "Tomcat Normal" }
+                            ]
+                        },
+                        "test": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://digital.test.optusnet.com.au/" },
+                                { "label" : "N",	"url": "http://digital.test.optusnet.com.au/web/portal-administrator",	"title": "Normal IDP Login" },
+                                { "label" : "S",	"url": "http://digital.test.optusnet.com.au/group/staff/",	"title": "Staff Login" },
+                                { "label" : "A",	"url": "http://digital.test.optusnet.com.au/web/portal-administrator/login",	"title": "Staff Login" }
+                            ]
+                        },
+                        "zlt": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://digital-lt.test.optusnet.com.au/" },
+                                { "label" : "N",	"url": "http://digital-lt.test.optusnet.com.au/web/portal-administrator",	"title": "Normal IDP Login" },
+                                { "label" : "S",	"url": "http://digital-lt.test.optusnet.com.au/group/staff/",	"title": "Staff Login" },
+                                { "label" : "A",	"url": "http://digital-lt.test.optusnet.com.au/web/portal-administrator/login",	"title": "Staff Login" }
+                            ]
+                        },
+                        "qprep": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://digital-prep.test.optusnet.com.au/" }
+                            ]
+                        },
+                        "qprod": {
+                            "links": [
+                                { "label" : "Site",	"url": "http://digital.optusnet.com.au/" },
+                                { "label" : "N",	"url": "http://digital.optusnet.com.au/web/portal-administrator",	"title": "Normal IDP Login" },
+                                { "label" : "S",	"url": "http://digital.optusnet.com.au/group/staff/",	"title": "Staff Login" },
+                                { "label" : "A",	"url": "http://digital.optusnet.com.au/web/portal-administrator/login",	"title": "Staff Login" }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name"  : "optus_tools",
+            "label" : "Optus Tools",
+            "show"  : false,
+            "filter" : "NScreens",
+            "order"  : 5,
+            "data"  : [
+                {
+                    "label" : "Web Auth",
+                    "links" : [
+                    ],
+                    "environments": {
+                        "dev": {
+                            "links": [
+                                { "label" : "N",	"url": "https://staff.dev.optusnet.com.au/staffauth/" },
+                                { "label" : "R",	"url": "https://staff.dev.optusnet.com.au/staffauth/resetpassword/",	"title": "Reset Password" },
+                                { "label" : "C",	"url": "https://staff.dev.optusnet.com.au/conformlog/",	"title": "Conform Logs" }
+                            ]
+                        },
+                        "test": {
+                            "links": [
+                                { "label" : "N",	"url": "https://staff.test.optusnet.com.au/staffauth/" },
+                                { "label" : "R",	"url": "https://staff.test.optusnet.com.au/staffauth/resetpassword/",	"title": "Reset Password" },
+                                { "label" : "C",	"url": "https://staff.test.optusnet.com.au/conformlog/",	"title": "Conform Logs" }
+                            ]
+                        },
+                        "zst": {
+                            "links": [
+                                { "label" : "N",	"url": "https://staff.zst.optusnet.com.au/staffauth/" },
+                                { "label" : "R",	"url": "https://staff.zst.optusnet.com.au/staffauth/resetpassword/",	"title": "Reset Password" },
+                                { "label" : "C",	"url": "https://staff.zat.optusnet.com.au/conformlog/",	"title": "Conform Logs" }
+                            ]
+                        },
+                        "zst2": {
+                            "links": [
+                                { "label" : "N",	"url": "https://staff.zst2.optusnet.com.au/staffauth/" },
+                                { "label" : "R",	"url": "https://staff.zst2.optusnet.com.au/staffauth/resetpassword/",	"title": "Reset Password" },
+                                { "label" : "C",	"url": "https://staff.zst2.optusnet.com.au/conformlog/",	"title": "Conform Logs" }
+                            ]
+                        },
+                        "zuat": {
+                            "links": [
+                                { "label" : "N",	"url": "https://staff.zuat.optusnet.com.au/staffauth/" },
+                                { "label" : "R",	"url": "https://staff.zuat.optusnet.com.au/staffauth/resetpassword/",	"title": "Reset Password" },
+                                { "label" : "C",	"url": "https://staff.zuat.optusnet.com.au/conformlog/",	"title": "Conform Logs" }
+                            ]
+                        },
+                        "zsit": {
+                            "links": [
+                                { "label" : "N",	"url": "https://staff.zsit.optusnet.com.au/staffauth/" },
+                                { "label" : "R",	"url": "https://staff.zsit.optusnet.com.au/staffauth/resetpassword/",	"title": "Reset Password" },
+                                { "label" : "C",	"url": "https://staff.zsit.optusnet.com.au/conformlog/",	"title": "Conform Logs" }
+                            ]
+                        },
+                        "zsit2": {
+                            "links": [
+                                { "label" : "N",	"url": "https://staff.zsit2.optusnet.com.au/staffauth/" },
+                                { "label" : "R",	"url": "https://staff.zsit2.optusnet.com.au/staffauth/resetpassword/",	"title": "Reset Password" },
+                                { "label" : "C",	"url": "https://staff.zsit2.optusnet.com.au/conformlog/",	"title": "Conform Logs" }
+                            ]
+                        },
+                        "zlt": {
+                            "links": [
+                                { "label" : "N",	"url": "https://staff.zlt.optusnet.com.au/staffauth/" },
+                                { "label" : "R",	"url": "https://staff.zlt.optusnet.com.au/staffauth/resetpassword/",	"title": "Reset Password" },
+                                { "label" : "C",	"url": "https://staff.zlt.optusnet.com.au/conformlog/",	"title": "Conform Logs" }
+                            ]
+                        },
+                        "prep": {
+                            "links": [
+                                { "label" : "N",	"url": "https://staff.prep.optusnet.com.au/staffauth/" },
+                                { "label" : "R",	"url": "https://staff.prep.optusnet.com.au/staffauth/resetpassword/",	"title": "Reset Password" },
+                                { "label" : "C",	"url": "https://staff.prep.optusnet.com.au/conformlog/",	"title": "Conform Logs" }
+                            ]
+                        },
+                        "prod": {
+                            "links": [
+                                { "label" : "N",	"url": "https://staff.optusnet.com.au/staffauth/" },
+                                { "label" : "R",	"url": "https://staff.optusnet.com.au/staffauth/resetpassword/",	"title": "Reset Password" },
+                                { "label" : "C",	"url": "https://staff.optusnet.com.au/conformlog/",	"title": "Conform Logs" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Cricket Graphs",
+                    "links" : [
+                    ],
+                    "environments": {
+                        "prod": {
+                            "links": [
+                                { "label" : "C",	"url": "http://cricket.syd.optusnet.com.au/cricket/grapher.cgi" },
+                                    { "label" : "M",	"url": "http://cricket.syd.optusnet.com.au/cricket/grapher.cgi?target=%2Fmachines",	"title": "Machines" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Cable User Creation",
+                    "links" : [
+                    ],
+                    "environments": {
+                        "test": {
+                            "links": [
+                                { "label" : "C",	"url": "http://sa02.test.optusnet.com.au/cable/" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Mobile User Creation",
+                    "links" : [
+                    ],
+                    "environments": {
+                        "test": {
+                            "links": [
+                                { "label" : "C",	"url": "http://premiumpluseco.optus.com.au/atomicWSTestSiteWeb/transparencyadd.jsp" }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ],
+    "abbreviations" : [
+        { "abbreviation" : "G", "description" : "Git Repository" },
+        { "abbreviation" : "J", "description" : "Jenkins Job"    }
+    ]
+}

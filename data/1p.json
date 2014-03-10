@@ -1,0 +1,317 @@
+{
+    "environments" : [
+        { "name" : "mine"    , "label" : "Mine"    , "show" : true , "order" : 0, "filter" : "1P"      },
+        { "name" : "opt1"    , "label" : "OPT1"    , "show" : false, "order" : 3, "filter" : "1P"      },
+        { "name" : "opt2"    , "label" : "OPT2"    , "show" : false, "order" : 3, "filter" : "1P"      },
+        { "name" : "opt3"    , "label" : "OPT3"    , "show" : false, "order" : 3, "filter" : "1P"      },
+        { "name" : "opt4"    , "label" : "OPT4"    , "show" : false, "order" : 3, "filter" : "1P"      },
+        { "name" : "opt5"    , "label" : "OPT5"    , "show" : false, "order" : 3, "filter" : "1P"      },
+        { "name" : "opt6"    , "label" : "OPT6"    , "show" : false, "order" : 3, "filter" : "1P"      },
+        { "name" : "opt7"    , "label" : "OPT7"    , "show" : false, "order" : 3, "filter" : "1P"      },
+        { "name" : "opt8"    , "label" : "OPT8"    , "show" : false, "order" : 3, "filter" : "1P"      },
+        { "name" : "uat1"    , "label" : "UAT1"    , "show" : false, "order" : 3, "filter" : "1P"      },
+        { "name" : "ppt"     , "label" : "PPT"     , "show" : true , "order" : 4, "filter" : "1P"      },
+        { "name" : "prod"    , "label" : "Prod"    , "show" : true , "order" : 5, "filter" : "1P"      }
+    ],
+    "groups" : [
+        {
+            "name"  : "fe",
+            "label" : "FrontEnd",
+            "show"  : true,
+            "filter" : "1P",
+            "order"  : 0,
+            "data"  : [
+                {
+                    "label" : "OCA",
+                    "title" : "OCA",
+                    "links": [
+                        { "label" : "FE"   , "url": "http://git01.syd.optusnet.com.au/cgit/isdp/OnePortal-FrontEnd", "title": "CGIT" },
+                        { "label" : "Tools", "url": "http://git01.syd.optusnet.com.au/cgit/isdp/OnePortal-Tools/"  , "title": "CGIT" },
+                        { "label" : "J"    , "url": "http://sdpbuild01.lab.optusnet.com.au/jenkinsdev/view/Projects/view/One%20Portal%20BAU/", "title": "Jenkins build info" },
+                        { "label" : "A"    , "url": "http://z2artifactory.zdev.optusnet.com.au:8081/artifactory/index.html#view-repositories;libs-releases~browsestorage", "title": "Build Artifacts" }
+                    ],
+                    "environments": {
+                        "mine": {
+                            "links": [
+                                { "label" : "Shop"   , "url": "http://oneportal.local.optus.com.au/pageIndex/pageIndexShop.html" },
+                                { "label" : "Care"   , "url": "http://oneportal.local.optus.com.au/OnePortalR2/" },
+                                { "label" : "Spec"   , "url": "http://oneportal.local.optus.com.au/tests/jasmine/SpecRunner.html" },
+                                { "label" : "YS Spec", "url": "http://oneportal.local.optus.com.au/tests/yellowSubmarine/Specrunner.html" },
+                                { "label" : "Portal" , "url": "http://127.0.0.1:8090/shop/consumer" }
+                            ]
+                        },
+                        "ppt": {
+                            "links": [
+                                { "label" : "Site", "url": "https://ppt.optus.com.au/" }
+                            ]
+                        },
+                        "prod": {
+                            "links": [
+                                { "label" : "Site", "url": "https://www.optus.com.au/" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Style Guide",
+                    "title" : "Style Guide",
+                    "links": [
+                    ],
+                    "environments": {
+                        "prod": {
+                            "links": [
+                                { "label" : "Site", "url": "https://ccr-style.optusnet.com.au/" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Help & Support (Halo)",
+                    "title" : "Help & Support (Halo)",
+                    "links": [
+                        { "label" : "Wiki", "url": "https://wiki.express.optus.com.au/display/candp/Merge+Coordinator" }
+                    ],
+                    "environments": {
+                        "test": {
+                            "links": [
+                                { "label" : "Site", "url": "" }
+                            ]
+                        },
+                        "prod": {
+                            "links": [
+                                { "label" : "1P", "url": "http://www.optus.com.au/home/help-support/" }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name"  : "be",
+            "label" : "BackEnd",
+            "show"  : true,
+            "filter" : "1P",
+            "order"  : 0,
+            "data"  : [
+                {
+                    "label" : "Vignette",
+                    "title" : "Vignette",
+                    "links": [
+                    ],
+                    "environments": {
+                        "mine": {
+                            "links": [
+                            ]
+                        },
+                        "opt1": {
+                            "links": [
+                                { "label" : "Portal" , "url": "http://opportal01.opt1.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Preview", "url": "http://oppreview01.opt1.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "CMS"    , "url": "http://opcms01.opt1.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Site"   , "url": "http://opportal01.opt1.optusnet.com.au:8080/portal/console/" }
+                            ]
+                        },
+                        "opt2": {
+                            "links": [
+                                { "label" : "Portal" , "url": "http://opportal01.opt2.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Preview", "url": "http://oppreview01.opt2.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "CMS"    , "url": "http://opcms01.opt2.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Site"   , "url": "http://opportal01.opt2.optusnet.com.au:8080/portal/console/" }
+                            ]
+                        },
+                        "opt3": {
+                            "links": [
+                                { "label" : "Portal" , "url": "http://opportal01.opt3.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Preview", "url": "http://oppreview01.opt3.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "CMS"    , "url": "http://opcms01.opt3.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Site"   , "url": "http://opportal01.opt3.optusnet.com.au:8080/portal/console/" }
+                            ]
+                        },
+                        "opt4": {
+                            "links": [
+                                { "label" : "Portal" , "url": "http://opportal01.opt4.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Preview", "url": "http://oppreview01.opt4.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "CMS"    , "url": "http://opcms01.opt4.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Site"   , "url": "http://opportal01.opt4.optusnet.com.au:8080/portal/console/" }
+                            ]
+                        },
+                        "opt5": {
+                            "links": [
+                                { "label" : "Portal" , "url": "http://opportal01.opt5.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Preview", "url": "http://oppreview01.opt5.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "CMS"    , "url": "http://opcms01.opt5.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Site"   , "url": "http://opportal01.opt5.optusnet.com.au:8080/portal/console/" }
+                            ]
+                        },
+                        "opt6": {
+                            "links": [
+                                { "label" : "Portal" , "url": "http://opportal01.opt6.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Preview", "url": "http://oppreview01.opt6.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "CMS"    , "url": "http://opcms01.opt6.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Site"   , "url": "http://opportal01.opt6.optusnet.com.au:8080/portal/console/" }
+                            ]
+                        },
+                        "opt7": {
+                            "links": [
+                                { "label" : "Portal" , "url": "http://opportal01.opt7.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Preview", "url": "http://oppreview01.opt7.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "CMS"    , "url": "http://opcms01.opt7.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Site"   , "url": "http://opportal01.opt7.optusnet.com.au:8080/portal/console/" }
+                            ]
+                        },
+                        "opt8": {
+                            "links": [
+                                { "label" : "Portal" , "url": "http://opportal01.opt8.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Preview", "url": "http://oppreview01.opt8.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "CMS"    , "url": "http://opcms01.opt8.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Site"   , "url": "http://opportal01.opt8.optusnet.com.au:8080/portal/console/" }
+                            ]
+                        },
+                        "uat1": {
+                            "links": [
+                                { "label" : "Site"   , "url": "http://uat1.www.optus.com.au/" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Monitor",
+                    "title" : "Monitor",
+                    "links": [
+                    ],
+                    "environments": {
+                        "prod": {
+                            "links": [
+                                { "label" : "Site"   , "url": "https://eai.optusnet.com.au/monitor/" }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name"  : "wiki",
+            "label" : "Wiki",
+            "show"  : true,
+            "filter" : "1P",
+            "order"  : 0,
+            "data"  : [
+                {
+                    "label" : "Git",
+                    "title" : "Git",
+                    "links": [
+                    ],
+                    "environments": {
+                        "prod": {
+                            "links": [
+                                { "label" : "Git"    , "url": "https://wiki.express.optus.com.au/display/candp/Git" },
+                                { "label" : "Cloning", "url": "https://wiki.express.optus.com.au/display/candp/Git#Git-Cloning" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Frontend",
+                    "title" : "Frontend",
+                    "links": [
+                    ],
+                    "environments": {
+                        "prod": {
+                            "links": [
+                                { "label" : "Assets Versioning"      , "url": "https://wiki.express.optus.com.au/display/candp/Frontend+Artifactory+Version+List" },
+                                { "label" : "Git Branch Conventions" , "url": "https://wiki.express.optus.com.au/display/candp/Frontend+Git+Branch+Conventions" },
+                                { "label" : "(Local) deploy FE to VM", "url": "https://wiki.express.optus.com.au/display/candp/Deploying+Portal+Assets+to+a+DEV+VM" },
+                                { "label" : "Creating Static Pages"  , "url": "https://wiki.express.optus.com.au/display/candp/Creating+Static+Pages+in+OnePortal" },
+                                { "label" : "Code Lifecycle"         , "url": "https://wiki.express.optus.com.au/display/candp/Frontend+Code+Lifecycle" },
+                                { "label" : "Cucumber"               , "url": "https://wiki.express.optus.com.au/display/candp/Cucumber+Test+Automation+Framework" },
+                                { "label" : "New Starters"           , "url": "https://wiki.express.optus.com.au/display/candp/OnePortal+Frontend+Webdev+Start+Guide" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "BAU",
+                    "title" : "BAU",
+                    "links": [
+                    ],
+                    "environments": {
+                        "prod": {
+                            "links": [
+                                { "label" : "Skills matrix"      , "url": "https://wiki.express.optus.com.au/pages/viewpage.action?pageId=52167812" },
+                                { "label" : "Merge Coordinator"  , "url": "https://wiki.express.optus.com.au/display/candp/Merge+Coordinator" },
+                                { "label" : "Release Coordinator", "url": "https://wiki.express.optus.com.au/display/candp/Release+Coordination" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "SASS",
+                    "title" : "SASS",
+                    "links": [
+                    ],
+                    "environments": {
+                        "prod": {
+                            "links": [
+                                { "label" : "coding standards" , "url": "https://wiki.express.optus.com.au/display/candp/Sass+Coding+Standards" },
+                                { "label" : "building websites", "url": "https://wiki.express.optus.com.au/display/candp/Building+Websites+With+SASS" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Optimus dev framework",
+                    "title" : "Optimus dev framework",
+                    "links": [
+                    ],
+                    "environments": {
+                        "prod": {
+                            "links": [
+                                { "label" : "Page", "url": "https://wiki.express.optus.com.au/display/candp/Optimus+Development+Information#OptimusDevelopmentInformation-SetupVM" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "SQ Check",
+                    "title" : "SQ Check",
+                    "links": [
+                    ],
+                    "environments": {
+                        "prod": {
+                            "links": [
+                                { "label" : "Overview", "url": "https://wiki.express.optus.com.au/display/candp/SQ+Check" },
+                                { "label" : "QA", "url": "https://wiki.express.optus.com.au/display/candp/SQ+and+QAS+check" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "General",
+                    "title" : "General",
+                    "links": [
+                    ],
+                    "environments": {
+                        "prod": {
+                            "links": [
+                                { "label" : "Phoenix1", "url": "https://wiki.express.optus.com.au/display/SystemsInterfaceTeam/Accessing+Phoenix1+on+Mobile+Devices" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "",
+                    "title" : "",
+                    "links": [
+                    ],
+                    "environments": {
+                        "prod": {
+                            "links": [
+                                { "label" : "Page", "url": "" }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

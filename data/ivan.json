@@ -1,0 +1,1138 @@
+{
+    "config" : [
+        { "name" : "git_web"  , "value" : "https://github.com/ivanwills" },
+        { "name" : "title"    , "value" : "Sites" },
+        { "name" : "copyright", "value" : "Ivan Wills 2013" },
+        { "name" : "filters"  , "value" : ["Ivan", "Links"] }
+    ],
+    "environments" : [
+        { "name" : "desc", "order" : 0, "filter" : "Ivan" , "show" : true, "label" : "Decription"  },
+        { "name" : "dev" , "order" : 1, "filter" : "Ivan" , "show" : true, "label" : "Dev URLs"    },
+        { "name" : "pub" , "order" : 2, "filter" : "Ivan" , "show" : true, "label" : "Public URLs" },
+        { "name" : "url" , "order" : 3, "filter" : "Links", "show" : true, "label" : "URL"         }
+    ],
+    "groups" : [
+        {
+            "name"   : "Web Tech",
+            "label"  : "Web Tech",
+            "filter" : "Ivan",
+            "order"  : 0,
+            "data"   : [
+                {
+                    "label" : "Web Quick References",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "label" : "http://web.anastomoses.info/", "url" : "http://web.anastomoses.info" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "CSS Pure JS",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "label" : "http://localhost/css_js.html", "url" : "http://localhost/css_js.html" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Javascript Pure JS",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "label" : "http://localhost/js_js.html", "url" : "http://localhost/js_js.html" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "HTML Pure JS",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "label" : "http://localhost/html_js.html", "url" : "http://localhost/html_js.html" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "CSS",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "label" : "http://localhost/css.html", "url" : "http://localhost/css.html" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "CSS Quick Reference",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "label" : "http://localhost/css_qr.html", "url" : "http://localhost/css_qr.html" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "HTML Quick Reference",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "label" : "http://localhost/html_qr.html", "url" : "http://localhost/html_qr.html" }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name"    : "Chemistry",
+            "label"   : "Chemistry",
+            "filter" : "Ivan",
+            "order"  : 1,
+            "data"   : [
+                {
+                    "label" : "Periodic Table",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "label" : "http://localhost/periodic.html", "url" : "http://localhost/periodic.html" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Alt Periodic Table",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "label" : "http://localhost/periodic2.html", "url" : "http://localhost/periodic2.html" }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name"    : "General Web",
+            "label"   : "General Web",
+            "filter" : "Ivan",
+            "order"  : 2,
+            "data"   : [
+                {
+                    "label" : "DocPerl",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "label" : "http://siaw/docperl/", "url" : "siaw" },
+                                { "label" : "http://localhost/docperl/", "url" : "localhost" }
+                            ]
+                        },
+                        "pub"  : {
+                            "links" : [
+                                { "label" : "http://docperl.sf.net/", "url" : "http://docperl.sf.net/" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Diet/Calorie Counter/Exercise",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "label" : "http://localhost:3000/", "url" : "http://localhost:3000/" }
+                            ]
+                        },
+                        "pub"  : {
+                            "links" : [
+                                { "label" : "http://www.diet.siaw/", "url" : "http://www.diet.siaw/" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "DHTML Games",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "label" : "http://localhost:3001/", "url" : "http://localhost:3001/" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "OCA (CatKit)",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "label" : "http://localhost:3002/", "url" : "http://localhost:3002/" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "DocPHP",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "label" : "http://localhost:3003/docphp/", "url" : "http://localhost:3003/docphp/" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Anastomoses",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "label" : "http://localhost:3004/", "url" : "http://localhost:3004/" }
+                            ]
+                        },
+                        "pub"  : {
+                            "links" : [
+                                { "label" : "http://anastomoses.info/", "url" : "anastomoses.info" }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name"    : "Public Perl Modules",
+            "label"   : "Public Perl Modules",
+            "filter" : "Ivan",
+            "order"  : 3,
+            "data"   : [
+                {
+                        "label" : "App::TemplateCMD <span class=\"mark\">*</span>",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "url" : "file:///home/ivan/src/App-TemplateCMD", "label" : "/home/ivan/src/App-TemplateCMD" }
+                            ]
+                        },
+                        "pub"  : {
+                            "links" : [
+                                { "url" : "https://github.com/ivanwills/App-TemplateCMD", "label" : "Git Hub" },
+                                { "url" : "http://www.cpantesters.org/distro/A/App-TemplateCMD.html", "label" : "CPANTS" },
+                                { "url" : "http://cpants.perl.org/dist/kwalitee/App-TemplateCMD", "label" : "Kwalitee" },
+                                { "url" : "http://beta.metacpan.org/module/App::TemplateCMD", "label" : "Meta" },
+                                { "url" : "http://search.cpan.org/~ivanwills/App-TemplateCMD/", "label" : "Search.cpan" },
+                                { "url" : "https://rt.cpan.org/Public/Dist/Display.html?Name=App::TemplateCMD", "label" : "Bugs" },
+                                { "url" : "http://cpanratings.perl.org/dist/App-TemplateCMD.html", "label" : "Rating" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "App::PS1",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "url" : "file:///home/ivan/src/App-PS1", "label" : "/home/ivan/src/App-PS1" }
+                            ]
+                        },
+                        "pub"  : {
+                            "links" : [
+                                { "url" : "https://github.com/ivanwills/App-PS1", "label" : "Git Hub" }
+                                #{ "url" : "http://www.cpantesters.org/distro/A/App-PS1.html", "label" : "CPANTS" }
+                                #{ "url" : "http://cpants.perl.org/dist/kwalitee/App-PS1", "label" : "Kwalitee" }
+                                #{ "url" : "http://beta.metacpan.org/module/App::PS1", "label" : "Meta" }
+                                #{ "url" : "http://search.cpan.org/~ivanwills/App-PS1/", "label" : "Search.cpan" }
+                                #{ "url" : "https://rt.cpan.org/Public/Dist/Display.html?Name=App::PS1", "label" : "Bugs" }
+                                #{ "url" : "http://cpanratings.perl.org/dist/App-PS1.html", "label" : "Rating" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "App::Usefull",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "url" : "file:///home/ivan/src/App-Usefull", "label" : "/home/ivan/src/App-Usefull" }
+                            ]
+                        },
+                        "pub"  : {
+                            "links" : [
+                                { "url" : "https://github.com/ivanwills/App-Usefull", "label" : "Git Hub" }
+                                #{ "url" : "http://www.cpantesters.org/distro/A/App-Usefull.html", "label" : "CPANTS" }
+                                #{ "url" : "http://cpants.perl.org/dist/kwalitee/App-Usefull", "label" : "Kwalitee" }
+                                #{ "url" : "http://beta.metacpan.org/module/App::Usefull", "label" : "Meta" }
+                                #{ "url" : "http://search.cpan.org/~ivanwills/App-Usefull/", "label" : "Search.cpan" }
+                                #{ "url" : "https://rt.cpan.org/Public/Dist/Display.html?Name=App::Usefull", "label" : "Bugs" }
+                                #{ "url" : "http://cpanratings.perl.org/dist/App-Usefull.html", "label" : "Rating" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Catalyst::Plugin::LogDeep <span class=\"mark\">*</span>",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "url" : "file:///home/ivan/src/Catalyst-Plugin-LogDeep", "label" : "/home/ivan/src/Catalyst-Plugin-LogDeep" }
+                            ]
+                        },
+                        "pub"  : {
+                            "links" : [
+                                { "url" : "https://github.com/ivanwills/Catalyst-Plugin-LogDeep", "label" : "Git Hub" },
+                                { "url" : "http://www.cpantesters.org/distro/C/Catalyst-Plugin-LogDeep.html", "label" : "CPANTS" },
+                                { "url" : "http://cpants.perl.org/dist/kwalitee/Catalyst-Plugin-LogDeep", "label" : "Kwalitee" },
+                                { "url" : "http://beta.metacpan.org/module/Catalyst::Plugin::LogDeep", "label" : "Meta" },
+                                { "url" : "http://search.cpan.org/~ivanwills/Catalyst-Plugin-LogDeep/", "label" : "Search.cpan" },
+                                { "url" : "https://rt.cpan.org/Public/Dist/Display.html?Name=Catalyst::Plugin::LogDeep", "label" : "Bugs" },
+                                { "url" : "http://cpanratings.perl.org/dist/Catalyst-Plugin-LogDeep.html", "label" : "Rating" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Data::Context <span class=\"mark\">* †</span>",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "url" : "file:///home/ivan/src/Data-Context", "label" : "/home/ivan/src/Data-Context" }
+                            ]
+                        },
+                        "pub"  : {
+                            "links" : [
+                                { "url" : "https://github.com/ivanwills/Data-Context", "label" : "Git Hub" },
+                                { "url" : "http://www.cpantesters.org/distro/C/Data-Context.html", "label" : "CPANTS" },
+                                { "url" : "http://cpants.perl.org/dist/kwalitee/Data-Context", "label" : "Kwalitee" },
+                                { "url" : "http://beta.metacpan.org/module/Data::Context", "label" : "Meta" },
+                                { "url" : "http://search.cpan.org/~ivanwills/Data-Context/", "label" : "Search.cpan" },
+                                { "url" : "https://rt.cpan.org/Public/Dist/Display.html?Name=Data::Context", "label" : "Bugs" },
+                                { "url" : "http://cpanratings.perl.org/dist/Data-Context.html", "label" : "Rating" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "DBIx::Diagram <span class=\"mark\">†</span>",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "url" : "file:///home/ivan/src/DBIx-Diagram", "label" : "/home/ivan/src/DBIx-Diagram" }
+                            ]
+                        },
+                        "pub"  : {
+                            "links" : [
+                                { "url" : "https://github.com/ivanwills/DBIx-Diagram", "label" : "Git Hub" }
+                                #{ "url" : "http://www.cpantesters.org/distro/D/DBIx-Diagram.html", "label" : "CPANTS" }
+                                #{ "url" : "http://cpants.perl.org/dist/kwalitee/DBIx-Diagram", "label" : "Kwalitee" }
+                                #{ "url" : "http://beta.metacpan.org/module/DBIx::Diagram", "label" : "Meta" }
+                                #{ "url" : "http://search.cpan.org/~ivanwills/DBIx-Diagram/", "label" : "Search.cpan" }
+                                #{ "url" : "https://rt.cpan.org/Public/Dist/Display.html?Name=DBIx::Diagram", "label" : "Bugs" }
+                                #{ "url" : "http://cpanratings.perl.org/dist/DBIx-Diagram.html", "label" : "Rating" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Event::ScreenSaver <span class=\"mark\">*</span>",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "url" : "file:///home/ivan/src/Event-ScreenSaver", "label" : "/home/ivan/src/Event-ScreenSaver" }
+                            ]
+                        },
+                        "pub"  : {
+                            "links" : [
+                                { "url" : "https://github.com/ivanwills/Event-ScreenSaver", "label" : "Git Hub" },
+                                { "url" : "http://www.cpantesters.org/distro/E/Event-ScreenSaver.html", "label" : "CPANTS" },
+                                { "url" : "http://cpants.perl.org/dist/kwalitee/Event-ScreenSaver", "label" : "Kwalitee" },
+                                { "url" : "http://beta.metacpan.org/module/Event::ScreenSaver", "label" : "Meta" },
+                                { "url" : "http://search.cpan.org/~ivanwills/Event-ScreenSaver/", "label" : "Search.cpan" },
+                                { "url" : "https://rt.cpan.org/Public/Dist/Display.html?Name=Event::ScreenSaver", "label" : "Bugs" },
+                                { "url" : "http://cpanratings.perl.org/dist/Event-ScreenSaver.html", "label" : "Rating" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "File::CodeSearch <span class=\"mark\">*</span> <span class=\"mark\">†</span>",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "url" : "file:///home/ivan/src/File-CodeSearch", "label" : "/home/ivan/src/File-CodeSearch" }
+                            ]
+                        },
+                        "pub"  : {
+                            "links" : [
+                                { "url" : "https://github.com/ivanwills/File-CodeSearch", "label" : "Git Hub" },
+                                { "url" : "http://www.cpantesters.org/distro/F/File-CodeSearch.html", "label" : "CPANTS" },
+                                { "url" : "http://cpants.perl.org/dist/kwalitee/File-CodeSearch", "label" : "Kwalitee" },
+                                { "url" : "http://beta.metacpan.org/module/File::CodeSearch", "label" : "Meta" },
+                                { "url" : "http://search.cpan.org/~ivanwills/File-CodeSearch/", "label" : "Search.cpan" },
+                                { "url" : "https://rt.cpan.org/Public/Dist/Display.html?Name=File::CodeSearch", "label" : "Bugs" },
+                                { "url" : "http://cpanratings.perl.org/dist/File-CodeSearch.html", "label" : "Rating" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "FSpot",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "url" : "file:///home/ivan/src/FSpot", "label" : "/home/ivan/src/FSpot" }
+                            ]
+                        },
+                        "pub"  : {
+                            "links" : [
+                                { "url" : "https://github.com/ivanwills/FSpot-Tools", "label" : "Git Hub" }
+                                #{ "url" : "http://www.cpantesters.org/distro/F/FSpot-Tools.html", "label" : "CPANTS" }
+                                #{ "url" : "http://cpants.perl.org/dist/kwalitee/FSpot-Tools", "label" : "Kwalitee" }
+                                #{ "url" : "http://beta.metacpan.org/module/FSpot::Tools", "label" : "Meta" }
+                                #{ "url" : "http://search.cpan.org/~ivanwills/FSpot-Tools/", "label" : "Search.cpan" }
+                                #{ "url" : "https://rt.cpan.org/Public/Dist/Display.html?Name=FSpot::Tools", "label" : "Bugs" }
+                                #{ "url" : "http://cpanratings.perl.org/dist/FSpot-Tools.html", "label" : "Rating" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Game::Life::NDim <span class=\"mark\">†</span>",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "url" : "file:///home/ivan/src/Game-Life-NDim", "label" : "/home/ivan/src/Game-Life-NDim" }
+                            ]
+                        },
+                        "pub"  : {
+                            "links" : [
+                                { "url" : "https://github.com/ivanwills/Game-Life-NDim", "label" : "Git Hub" }
+                                #{ "url" : "http://www.cpantesters.org/distro/T/Game-Life-NDim.html", "label" : "CPANTS" }
+                                #{ "url" : "http://cpants.perl.org/dist/kwalitee/Game-Life-NDim", "label" : "Kwalitee" }
+                                #{ "url" : "http://beta.metacpan.org/module/Game::Life::NDim", "label" : "Meta" }
+                                #{ "url" : "http://search.cpan.org/~ivanwills/Game-Life-NDim/", "label" : "Search.cpan" }
+                                #{ "url" : "https://rt.cpan.org/Public/Dist/Display.html?Name=Game::Life::NDim", "label" : "Bugs" }
+                                #{ "url" : "http://cpanratings.perl.org/dist/Game-Life-NDim.html", "label" : "Rating" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Getopt::Alt <span class=\"mark\">* †</span>",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "url" : "file:///home/ivan/src/Getopt-Alt", "label" : "/home/ivan/src/Getopt-Alt" }
+                            ]
+                        },
+                        "pub"  : {
+                            "links" : [
+                                { "url" : "https://github.com/ivanwills/Getopt-Alt", "label" : "Git Hub" },
+                                { "url" : "http://www.cpantesters.org/distro/G/Getopt-Alt.html", "label" : "CPANTS" },
+                                { "url" : "http://cpants.perl.org/dist/kwalitee/Getopt-Alt", "label" : "Kwalitee" },
+                                { "url" : "http://beta.metacpan.org/module/Getopt::Alt", "label" : "Meta" },
+                                { "url" : "http://search.cpan.org/~ivanwills/Getopt-Alt/", "label" : "Search.cpan" },
+                                { "url" : "https://rt.cpan.org/Public/Dist/Display.html?Name=Getopt::Alt", "label" : "Bugs" },
+                                { "url" : "http://cpanratings.perl.org/dist/Getopt-Alt.html", "label" : "Rating" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Group::Git <span class=\"mark\">* †</span>",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "url" : "file:///home/ivan/src/Group-Git", "label" : "/home/ivan/src/Group-Git" }
+                            ]
+                        },
+                        "pub"  : {
+                            "links" : [
+                                { "url" : "https://github.com/ivanwills/Group-Git", "label" : "Git Hub" },
+                                { "url" : "http://www.cpantesters.org/distro/C/Group-Git.html", "label" : "CPANTS" },
+                                { "url" : "http://cpants.perl.org/dist/kwalitee/Group-Git", "label" : "Kwalitee" },
+                                { "url" : "http://beta.metacpan.org/module/Group::Git", "label" : "Meta" },
+                                { "url" : "http://search.cpan.org/~ivanwills/Group-Git/", "label" : "Search.cpan" },
+                                { "url" : "https://rt.cpan.org/Public/Dist/Display.html?Name=Group::Git", "label" : "Bugs" },
+                                { "url" : "http://cpanratings.perl.org/dist/Group-Git.html", "label" : "Rating" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Group::Git::Cmd::Ivan <span class=\"mark\">†</span>",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "url" : "file:///home/ivan/src/Group-Git-Cmd-Ivan", "label" : "/home/ivan/src/Group-Git-Cmd-Ivan" }
+                            ]
+                        },
+                        "pub"  : {
+                            "links" : [
+                                { "url" : "https://github.com/ivanwills/Group-Git-Cmd-Ivan", "label" : "Git Hub" }
+                                #{ "url" : "http://www.cpantesters.org/distro/C/Group-Git-Cmd-Ivan.html", "label" : "CPANTS" }
+                                #{ "url" : "http://cpants.perl.org/dist/kwalitee/Group-Git-Cmd-Ivan", "label" : "Kwalitee" }
+                                #{ "url" : "http://beta.metacpan.org/module/Group::Git::Cmd::Ivan", "label" : "Meta" }
+                                #{ "url" : "http://search.cpan.org/~ivanwills/Group-Git-Cmd-Ivan/", "label" : "Search.cpan" }
+                                #{ "url" : "https://rt.cpan.org/Public/Dist/Display.html?Name=Group::Git::Cmd::Ivan", "label" : "Bugs" }
+                                #{ "url" : "http://cpanratings.perl.org/dist/Group-Git-Cmd-Ivan.html", "label" : "Rating" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Log::Deep <span class=\"mark\">*</span>",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "url" : "file:///home/ivan/src/Log-Deep", "label" : "/home/ivan/src/Log-Deep" }
+                            ]
+                        },
+                        "pub"  : {
+                            "links" : [
+                                { "url" : "https://github.com/ivanwills/Log-Deep", "label" : "Git Hub" },
+                                { "url" : "http://www.cpantesters.org/distro/L/Log-Deep.html", "label" : "CPANTS" },
+                                { "url" : "http://cpants.perl.org/dist/kwalitee/Log-Deep", "label" : "Kwalitee" },
+                                { "url" : "http://beta.metacpan.org/module/Log::Deep", "label" : "Meta" },
+                                { "url" : "http://search.cpan.org/~ivanwills/Log-Deep/", "label" : "Search.cpan" },
+                                { "url" : "https://rt.cpan.org/Public/Dist/Display.html?Name=Log::Deep", "label" : "Bugs" },
+                                { "url" : "http://cpanratings.perl.org/dist/Log-Deep.html", "label" : "Rating" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "MooseX::Exception::Base <span class=\"mark\">*</span> <span class=\"mark\">†</span>",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "url" : "file:///home/ivan/src/MooseX-Exception-Base", "label" : "/home/ivan/src/MooseX-Exception-Base" }
+                            ]
+                        },
+                        "pub"  : {
+                            "links" : [
+                                { "url" : "https://github.com/ivanwills/MooseX-Exception-Base", "label" : "Git Hub" },
+                                { "url" : "http://www.cpantesters.org/distro/L/MooseX-Exception-Base.html", "label" : "CPANTS" },
+                                { "url" : "http://cpants.perl.org/dist/kwalitee/MooseX-Exception-Base", "label" : "Kwalitee" },
+                                { "url" : "http://beta.metacpan.org/module/MooseX::Exception::Base", "label" : "Meta" },
+                                { "url" : "http://search.cpan.org/~ivanwills/MooseX-Exception-Base/", "label" : "Search.cpan" },
+                                { "url" : "https://rt.cpan.org/Public/Dist/Display.html?Name=MooseX::Exception::Base", "label" : "Bugs" },
+                                { "url" : "http://cpanratings.perl.org/dist/MooseX-Exception-Base.html", "label" : "Rating" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "SVG::Calendar <span class=\"mark\">*</span>",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "url" : "file:///home/ivan/src/SVG-Calendar", "label" : "/home/ivan/src/SVG-Calendar" }
+                            ]
+                        },
+                        "pub"  : {
+                            "links" : [
+                                { "url" : "https://github.com/ivanwills/SVG-Calendar", "label" : "Git Hub" },
+                                { "url" : "http://www.cpantesters.org/distro/S/SVG-Calendar.html", "label" : "CPANTS" },
+                                { "url" : "http://cpants.perl.org/dist/kwalitee/SVG-Calendar", "label" : "Kwalitee" },
+                                { "url" : "http://beta.metacpan.org/module/SVG::Calendar", "label" : "Meta" },
+                                { "url" : "http://search.cpan.org/~ivanwills/SVG-Calendar/", "label" : "Search.cpan" },
+                                { "url" : "https://rt.cpan.org/Public/Dist/Display.html?Name=SVG::Calendar", "label" : "Bugs" },
+                                { "url" : "http://cpanratings.perl.org/dist/SVG-Calendar.html", "label" : "Rating" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Tail::Tool <span class=\"mark\">*</span> <span class=\"mark\">†</span>",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "url" : "file:///home/ivan/src/Tail-Tool", "label" : "/home/ivan/src/Tail-Tool" }
+                            ]
+                        },
+                        "pub"  : {
+                            "links" : [
+                                { "url" : "https://github.com/ivanwills/Tail-Tool", "label" : "Git Hub" },
+                                { "url" : "http://www.cpantesters.org/distro/T/Tail-Tool.html", "label" : "CPANTS" },
+                                { "url" : "http://cpants.perl.org/dist/kwalitee/Tail-Tool", "label" : "Kwalitee" },
+                                { "url" : "http://beta.metacpan.org/module/Tail::Tool", "label" : "Meta" },
+                                { "url" : "http://search.cpan.org/~ivanwills/Tail-Tool/", "label" : "Search.cpan" },
+                                { "url" : "https://rt.cpan.org/Public/Dist/Display.html?Name=Tail::Tool", "label" : "Bugs" },
+                                { "url" : "http://cpanratings.perl.org/dist/Tail-Tool.html", "label" : "Rating" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Term::Colour256",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "url" : "file:///home/ivan/src/Term-Colour256", "label" : "/home/ivan/src/Term-Colour256" }
+                            ]
+                        },
+                        "pub"  : {
+                            "links" : [
+                                { "url" : "https://github.com/ivanwills/Term-Colour256", "label" : "Git Hub" }
+                                #{ "url" : "http://www.cpantesters.org/distro/T/Term-Colour256.html", "label" : "CPANTS" }
+                                #{ "url" : "http://cpants.perl.org/dist/kwalitee/Term-Colour256", "label" : "Kwalitee" }
+                                #{ "url" : "http://beta.metacpan.org/module/Term::Colour256", "label" : "Meta" }
+                                #{ "url" : "http://search.cpan.org/~ivanwills/Term-Colour256/", "label" : "Search.cpan" }
+                                #{ "url" : "https://rt.cpan.org/Public/Dist/Display.html?Name=Term::Colour256", "label" : "Bugs" }
+                                #{ "url" : "http://cpanratings.perl.org/dist/Term-Colour256.html", "label" : "Rating" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "VCS::Which <span class=\"mark\">*</span> <span class=\"mark\">†</span>",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "url" : "file:///home/ivan/src/VCS-Which", "label" : "/home/ivan/src/VCS-Which" }
+                            ]
+                        },
+                        "pub"  : {
+                            "links" : [
+                                { "url" : "https://github.com/ivanwills/VCS-Which", "label" : "Git Hub" },
+                                { "url" : "http://www.cpantesters.org/distro/V/VCS-Which.html", "label" : "CPANTS" },
+                                { "url" : "http://cpants.perl.org/dist/kwalitee/VCS-Which", "label" : "Kwalitee" },
+                                { "url" : "http://beta.metacpan.org/module/VCS::Which", "label" : "Meta" },
+                                { "url" : "http://search.cpan.org/~ivanwills/VCS-Which/", "label" : "Search.cpan" },
+                                { "url" : "https://rt.cpan.org/Public/Dist/Display.html?Name=VCS::Which", "label" : "Bugs" },
+                                { "url" : "http://cpanratings.perl.org/dist/VCS-Which.html", "label" : "Rating" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "W3C::SOAP <span class=\"mark\">*</span> <span class=\"mark\">†</span>",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "url" : "file:///home/ivan/src/W3C-SOAP", "label" : "/home/ivan/src/W3C-SOAP" }
+                            ]
+                        },
+                        "pub"  : {
+                            "links" : [
+                                { "url" : "https://github.com/ivanwills/W3C-SOAP", "label" : "Git Hub" },
+                                { "url" : "http://www.cpantesters.org/distro/W/W3C-SOAP.html", "label" : "CPANTS" },
+                                { "url" : "http://cpants.perl.org/dist/kwalitee/W3C-SOAP", "label" : "Kwalitee" },
+                                { "url" : "http://beta.metacpan.org/module/W3C::SOAP", "label" : "Meta" },
+                                { "url" : "http://search.cpan.org/~ivanwills/W3C-SOAP/", "label" : "Search.cpan" },
+                                { "url" : "https://rt.cpan.org/Public/Dist/Display.html?Name=W3C::SOAP", "label" : "Bugs" },
+                                { "url" : "http://cpanratings.perl.org/dist/W3C-SOAP.html", "label" : "Rating" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "W3C::SOAP::WADL <span class=\"mark\">*</span> <span class=\"mark\">†</span>",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "url" : "file:///home/ivan/src/W3C-SOAP-WADL", "label" : "/home/ivan/src/W3C-SOAP-WADL" }
+                            ]
+                        },
+                        "pub"  : {
+                            "links" : [
+                                { "url" : "https://github.com/ivanwills/W3C-SOAP-WADL", "label" : "Git Hub" },
+                                { "url" : "http://www.cpantesters.org/distro/W/W3C-SOAP-WADL.html", "label" : "CPANTS" },
+                                { "url" : "http://cpants.perl.org/dist/kwalitee/W3C-SOAP-WADL", "label" : "Kwalitee" },
+                                { "url" : "http://beta.metacpan.org/module/W3C::SOAP::WADL", "label" : "Meta" },
+                                { "url" : "http://search.cpan.org/~ivanwills/W3C-SOAP-WADL/", "label" : "Search.cpan" },
+                                { "url" : "https://rt.cpan.org/Public/Dist/Display.html?Name=W3C::SOAP::WADL", "label" : "Bugs" },
+                                { "url" : "http://cpanratings.perl.org/dist/W3C-SOAP-WADL.html", "label" : "Rating" }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name"   : "Private Perl Modules",
+            "label"  : "Private Perl Modules",
+            "filter" : "Ivan",
+            "order"  : 4,
+            "data"   : [
+                {
+                    "label" : "App::CSVCommand",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "url" : "file:///home/ivan/src/App-CSVCommand", "label" : "/home/ivan/src/App-CSVCommand" }
+                            ]
+                        },
+                        "pub"  : {
+                            "links" : [
+                                #{ "url" : "https://github.com/ivanwills/App-CSVCommand", "label" : "Git Hub" }
+                                #{ "url" : "http://www.cpantesters.org/distro/T/App-CSVCommand.html", "label" : "CPANTS" }
+                                #{ "url" : "http://cpants.perl.org/dist/kwalitee/App-CSVCommand", "label" : "Kwalitee" }
+                                #{ "url" : "http://beta.metacpan.org/module/App::CSVCommand6", "label" : "Meta" }
+                                #{ "url" : "http://search.cpan.org/~ivanwills/App-CSVCommand/", "label" : "Search.cpan" }
+                                #{ "url" : "https://rt.cpan.org/Public/Dist/Display.html?Name=App::CSVCommand6", "label" : "Bugs" }
+                                #{ "url" : "http://cpanratings.perl.org/dist/App-CSVCommand.html", "label" : "Rating" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "App::Exercise",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "url" : "file:///home/ivan/src/App-Exercise", "label" : "/home/ivan/src/App-Exercise" }
+                            ]
+                        },
+                        "pub"  : {
+                            "links" : [
+                                #{ "url" : "https://github.com/ivanwills/App-Exercise", "label" : "Git Hub" }
+                                #{ "url" : "http://www.cpantesters.org/distro/T/App-Exercise.html", "label" : "CPANTS" }
+                                #{ "url" : "http://cpants.perl.org/dist/kwalitee/App-Exercise", "label" : "Kwalitee" }
+                                #{ "url" : "http://beta.metacpan.org/module/App::Exercise6", "label" : "Meta" }
+                                #{ "url" : "http://search.cpan.org/~ivanwills/App-Exercise/", "label" : "Search.cpan" }
+                                #{ "url" : "https://rt.cpan.org/Public/Dist/Display.html?Name=App::Exercise6", "label" : "Bugs" }
+                                #{ "url" : "http://cpanratings.perl.org/dist/App-Exercise.html", "label" : "Rating" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "App::Hours",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "url" : "file:///home/ivan/src/App-Hours", "label" : "/home/ivan/src/App-Hours" }
+                            ]
+                        },
+                        "pub"  : {
+                            "links" : [
+                                #{ "url" : "https://github.com/ivanwills/App-Hours", "label" : "Git Hub" }
+                                #{ "url" : "http://www.cpantesters.org/distro/T/App-Hours.html", "label" : "CPANTS" }
+                                #{ "url" : "http://cpants.perl.org/dist/kwalitee/App-Hours", "label" : "Kwalitee" }
+                                #{ "url" : "http://beta.metacpan.org/module/App::Hours6", "label" : "Meta" }
+                                #{ "url" : "http://search.cpan.org/~ivanwills/App-Hours/", "label" : "Search.cpan" }
+                                #{ "url" : "https://rt.cpan.org/Public/Dist/Display.html?Name=App::Hours6", "label" : "Bugs" }
+                                #{ "url" : "http://cpanratings.perl.org/dist/App-Hours.html", "label" : "Rating" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "App::ProjMan",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "url" : "file:///home/ivan/src/App-ProjMan", "label" : "/home/ivan/src/App-ProjMan" }
+                            ]
+                        },
+                        "pub"  : {
+                            "links" : [
+                                #{ "url" : "https://github.com/ivanwills/App-Hours", "label" : "Git Hub" }
+                                #{ "url" : "http://www.cpantesters.org/distro/T/App-Hours.html", "label" : "CPANTS" }
+                                #{ "url" : "http://cpants.perl.org/dist/kwalitee/App-Hours", "label" : "Kwalitee" }
+                                #{ "url" : "http://beta.metacpan.org/module/App::Hours6", "label" : "Meta" }
+                                #{ "url" : "http://search.cpan.org/~ivanwills/App-Hours/", "label" : "Search.cpan" }
+                                #{ "url" : "https://rt.cpan.org/Public/Dist/Display.html?Name=App::Hours6", "label" : "Bugs" }
+                                #{ "url" : "http://cpanratings.perl.org/dist/App-Hours.html", "label" : "Rating" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Basiss",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "url" : "file:///home/ivan/src/Basis", "label" : "/home/ivan/src/Basis" }
+                            ]
+                        },
+                        "pub"  : {
+                            "links" : [
+                                #{ "url" : "https://github.com/ivanwills/App-Hours", "label" : "Git Hub" }
+                                #{ "url" : "http://www.cpantesters.org/distro/T/App-Hours.html", "label" : "CPANTS" }
+                                #{ "url" : "http://cpants.perl.org/dist/kwalitee/App-Hours", "label" : "Kwalitee" }
+                                #{ "url" : "http://beta.metacpan.org/module/App::Hours6", "label" : "Meta" }
+                                #{ "url" : "http://search.cpan.org/~ivanwills/App-Hours/", "label" : "Search.cpan" }
+                                #{ "url" : "https://rt.cpan.org/Public/Dist/Display.html?Name=App::Hours6", "label" : "Bugs" }
+                                #{ "url" : "http://cpanratings.perl.org/dist/App-Hours.html", "label" : "Rating" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Catalyst::View::Basis",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "url" : "file:///home/ivan/src/Catalyst-View-Basis", "label" : "/home/ivan/src/Catalyst-View-Basis" }
+                            ]
+                        },
+                        "pub"  : {
+                            "links" : [
+                                #{ "url" : "https://github.com/ivanwills/App-Hours", "label" : "Git Hub" }
+                                #{ "url" : "http://www.cpantesters.org/distro/T/App-Hours.html", "label" : "CPANTS" }
+                                #{ "url" : "http://cpants.perl.org/dist/kwalitee/App-Hours", "label" : "Kwalitee" }
+                                #{ "url" : "http://beta.metacpan.org/module/App::Hours6", "label" : "Meta" }
+                                #{ "url" : "http://search.cpan.org/~ivanwills/App-Hours/", "label" : "Search.cpan" }
+                                #{ "url" : "https://rt.cpan.org/Public/Dist/Display.html?Name=App::Hours6", "label" : "Bugs" }
+                                #{ "url" : "http://cpanratings.perl.org/dist/App-Hours.html", "label" : "Rating" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "dbuscmd",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "url" : "file:///home/ivan/src/dbuscmd", "label" : "/home/ivan/src/dbuscmd" }
+                            ]
+                        },
+                        "pub"  : {
+                            "links" : [
+                                #{ "url" : "https://github.com/ivanwills/App-Hours", "label" : "Git Hub" }
+                                #{ "url" : "http://www.cpantesters.org/distro/T/App-Hours.html", "label" : "CPANTS" }
+                                #{ "url" : "http://cpants.perl.org/dist/kwalitee/App-Hours", "label" : "Kwalitee" }
+                                #{ "url" : "http://beta.metacpan.org/module/App::Hours6", "label" : "Meta" }
+                                #{ "url" : "http://search.cpan.org/~ivanwills/App-Hours/", "label" : "Search.cpan" }
+                                #{ "url" : "https://rt.cpan.org/Public/Dist/Display.html?Name=App::Hours6", "label" : "Bugs" }
+                                #{ "url" : "http://cpanratings.perl.org/dist/App-Hours.html", "label" : "Rating" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "HOP::Iterator",
+                    "links" : [],
+                    "environments" : {
+                    "desc" : {},
+                    "dev"  : {
+                            "links" : [
+                                { "url" : "file:///home/ivan/src/HOP-Iterator", "label" : "/home/ivan/src/HOP-Iterator" }
+                            ]
+                        },
+                        "pub"  : {
+                            "links" : [
+                                #{ "url" : "https://github.com/ivanwills/App-Hours", "label" : "Git Hub" }
+                                #{ "url" : "http://www.cpantesters.org/distro/T/App-Hours.html", "label" : "CPANTS" }
+                                #{ "url" : "http://cpants.perl.org/dist/kwalitee/App-Hours", "label" : "Kwalitee" }
+                                #{ "url" : "http://beta.metacpan.org/module/App::Hours6", "label" : "Meta" }
+                                #{ "url" : "http://search.cpan.org/~ivanwills/App-Hours/", "label" : "Search.cpan" }
+                                #{ "url" : "https://rt.cpan.org/Public/Dist/Display.html?Name=App::Hours6", "label" : "Bugs" }
+                                #{ "url" : "http://cpanratings.perl.org/dist/App-Hours.html", "label" : "Rating" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Proc::Memory::Monitor",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "url" : "file:///home/ivan/src/Proc-Memory-Monitor", "label" : "/home/ivan/src/Proc-Memory-Monitor" }
+                            ]
+                        },
+                        "pub"  : {
+                            "links" : [
+                                #{ "url" : "https://github.com/ivanwills/App-Hours", "label" : "Git Hub" }
+                                #{ "url" : "http://www.cpantesters.org/distro/T/App-Hours.html", "label" : "CPANTS" }
+                                #{ "url" : "http://cpants.perl.org/dist/kwalitee/App-Hours", "label" : "Kwalitee" }
+                                #{ "url" : "http://beta.metacpan.org/module/App::Hours6", "label" : "Meta" }
+                                #{ "url" : "http://search.cpan.org/~ivanwills/App-Hours/", "label" : "Search.cpan" }
+                                #{ "url" : "https://rt.cpan.org/Public/Dist/Display.html?Name=App::Hours6", "label" : "Bugs" }
+                                #{ "url" : "http://cpanratings.perl.org/dist/App-Hours.html", "label" : "Rating" }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name"    : "Photography",
+            "label"   : "Photography",
+            "filter" : "Ivan",
+            "order"  : 5,
+            "data"   : [
+                {
+                    "label" : "Red Bubble",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "url" : "http://www.redbubble.com/mybubble/art", "label" : "http://www.redbubble.com/mybubble/art" }
+                            ]
+                        },
+                        "pub"  : {
+                            "links" : [
+                                { "url" : "http://www.redbubble.com/people/ivanwillsau", "label" : "http://www.redbubble.com/people/ivanwillsau" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Picasa",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "url" : "http://picasaweb.google.com.au/home?tab=mq", "label" : "http://picasaweb.google.com.au/home?tab=mq" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Flickr",
+                    "links" : [],
+                    "environments" : {
+                        "desc" : {},
+                        "dev"  : {
+                            "links" : [
+                                { "url" : "http://flickr.com/", "label" : "http://flickr.com/" }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name"    : "Hosting Sites",
+            "label"   : "Hosting Sites",
+            "filter" : "Links",
+            "order"  : 0,
+            "data"   : [
+                {
+                    "label" : "GitHub",
+                    "links" : [],
+                    "environments" : {
+                        "url"  : {
+                            "links" : [
+                                { "url" : "http://www.github.com/ivanwills", "label" : "github.com" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "SourceForge",
+                    "links" : [],
+                    "environments" : {
+                        "url"  : {
+                            "links" : [
+                                { "url" : "http://sourceforge.net/projects/docperl/", "label" : "http://sourceforge.net/projects/docperl/" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "PAUSE",
+                    "links" : [],
+                    "environments" : {
+                        "url"  : {
+                            "links" : [
+                                { "url" : "https://pause.perl.org/pause/authenquery", "label" : "https://pause.perl.org/pause/authenquery" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "CPAN",
+                    "links" : [],
+                    "environments" : {
+                        "url"  : {
+                            "links" : [
+                                { "url" : "https://metacpan.org/author/IVANWILLS", "label" : "Metacpan" },
+                                { "url" : "http://search.cpan.org/~ivanwills/", "label" : "Search CPAN" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Kwalitee",
+                    "links" : [],
+                    "environments" : {
+                        "url"  : {
+                            "links" : [
+                                { "url" : "http://cpants.perl.org/highscores/many", "label" : "http://cpants.perl.org/highscores/many" }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name"    : "Documentation",
+            "label"   : "Documentation",
+            "filter" : "Links",
+            "order"  : 1,
+            "data"   : [
+                {
+                    "label" : "Dev Moz",
+                    "links" : [],
+                    "environments" : {
+                        "url"  : {
+                            "links" : [
+                                { "url" : "https://developer.mozilla.org/", "label" : "https://developer.mozilla.org/" },
+                                { "url" : "https://developer.mozilla.org/en-US/docs/Tools/Remote_Debugging/", "label" : "Remote debugging" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Dev Moz JS",
+                    "links" : [],
+                    "environments" : {
+                        "url"  : {
+                            "links" : [
+                                { "url" : "https://developer.mozilla.org/en/JavaScript/Reference", "label" : "https://developer.mozilla.org/en/JavaScript/Reference" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "JQuery",
+                    "links" : [],
+                    "environments" : {
+                        "url"  : {
+                            "links" : [
+                                { "url" : "http://jquery.com/"      , "label" : "jQuery       " },
+                                { "url" : "http://jqueryui.com/"    , "label" : "jQuery UI    " },
+                                { "url" : "http://visualjquery.com/", "label" : "Visual JQuery" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Catalyst",
+                    "links" : [],
+                    "environments" : {
+                        "url"  : {
+                            "links" : [
+                                { "url" : "http://wiki.catalystframework.org/wiki/", "label" : "wiki" },
+                                { "url" : "http://dev.catalystframework.org/attachment/wiki/WikiStart/catalyst-flow.png", "label" : "PNG", "title" : "Dispatch Order" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Firebug Console",
+                    "links" : [],
+                    "environments" : {
+                        "url"  : {
+                            "links" : [
+                                { "url" : "http://getfirebug.com/wiki/index.php/Console_API", "label" : "API" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "CSS Gradent editors",
+                    "links" : [],
+                    "environments" : {
+                        "url"  : {
+                            "links" : [
+                                { "url" : "http://www.colorzilla.com/gradient-editor/", "label" : "Colorzilla          " },
+                                { "url" : "http://gradients.glrzad.com/"              , "label" : "gradients.glrzad.com" }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ],
+    "abbreviations" : [
+        { "abbreviation" : "*", "description" : "Available on CPAN", "filter" : "Ivan" },
+        { "abbreviation" : "†", "description" : "Moose Project"    , "filter" : "Ivan" }
+    ]
+}

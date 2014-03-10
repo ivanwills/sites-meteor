@@ -1,0 +1,284 @@
+{
+    "environments" : [
+        { "name" : "mine"    , "label" : "Mine"    , "show" : true , "order" : 0, "filter" : "GDL"      },
+        { "name" : "dev"     , "label" : "DEV"     , "show" : true , "order" : 1, "filter" : "GDL"      },
+        { "name" : "test"    , "label" : "TEST"    , "show" : true , "order" : 2, "filter" : "GDL"      },
+        { "name" : "uat"     , "label" : "UAT"     , "show" : false, "order" : 3, "filter" : "GDL"      },
+        { "name" : "sand"    , "label" : "Sand"    , "show" : true , "order" : 4, "filter" : "GDL"      },
+        { "name" : "prod"    , "label" : "Prod"    , "show" : true , "order" : 5, "filter" : "GDL"      }
+    ],
+    "groups" : [
+        {
+            "name"  : "portals",
+            "label" : "Portals",
+            "show"  : true,
+            "filter" : "GDL",
+            "order"  : 0,
+            "data"  : [
+                {
+                    "label" : "GDL CSR",
+                    "title" : "Klink CSR Portal, Port 3104",
+                    "links": [
+                        { "label" : "GIT", "url": "http://cgit.toolsns.dev/cgit.cgi/NScreens-DigitalVault" },
+                        { "label" : "J", "url": "http://jenkins.gdldevs.com:8080/jenkins/job/gdl_klink_csr", "title": "Jenkins build info" }
+                    ],
+                    "environments": {
+                        "mine": {
+                            "links": [
+                                { "label" : "Site", "url": "http://ivan.wills.usr.optusnet.com.au:3104/" }
+                            ]
+                        },
+                        "test": {
+                            "links": [
+                                { "label" : "Site", "url": "https://portal-test.ena.groupdigitallife.net/" }
+                            ]
+                        },
+                        "uat": {
+                            "links": [
+                                { "label" : "Site", "url": "https://portal-uat.ena.groupdigitallife.net/" }
+                            ]
+                        },
+                        "sand": {
+                            "links": [
+                                { "label" : "Site", "url": "https://portal-sand.ena.groupdigitallife.net/" }
+                            ]
+                        },
+                        "prod": {
+                            "links": [
+                                { "label" : "Site", "url": "https://portal.ena.groupdigitallife.net/" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Klink",
+                    "title" : "Klink Widgets Portal, Port 3120",
+                    "links": [
+                        { "label" : "GIT", "url": "http://cgit.toolsns.dev/cgit.cgi/NScreens-Mobile" },
+                        { "label" : "J", "url": "http://jenkins.gdldevs.com:8080/jenkins/job/gdl_klink", "title": "Jenkins build info" }
+                    ],
+                    "environments": {
+                        "mine": {
+                            "links": [
+                                { "label" : "Site", "url": "http://ivan.wills.usr.optusnet.com.au:3120/" }
+                            ]
+                        },
+                        "test": {
+                            "links": [
+                                { "label" : "Site", "url": "http://mobile.test.ourinfra.net/" }
+                            ]
+                        },
+                        "uat": {
+                            "links": [
+                                { "label" : "Site", "url": "http://mobile.zuat.ourinfra.net/" }
+                            ]
+                        },
+                        "sand": {
+                            "links": [
+                                { "label" : "Site", "url": "http://mobile.next.ourinfra.net/" }
+                            ]
+                        },
+                        "prod": {
+                            "links": [
+                                { "label" : "Site", "url": "http://mobile.ourinfra.net/" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Klink Mobile",
+                    "title" : "Klink Mobile Portal, Port 3122",
+                    "links": [
+                        { "label" : "GIT", "url": "http://cgit.toolsns.dev/cgit.cgi/NScreens-MSC" },
+                        { "label" : "J", "url": "http://jenkins.gdldevs.com:8080/jenkins/job/gdl_klink_mobile", "title": "Jenkins build info" }
+                    ],
+                    "environments": {
+                        "mine": {
+                            "links": [
+                                { "label" : "Site", "url": "http://ivan.wills.usr.optusnet.com.au:3122/" }
+                            ]
+                        },
+                        "test": {
+                            "links": [
+                                { "label" : "Site", "url": "http://msc.test.ourinfra.net/" }
+                            ]
+                        },
+                        "uat": {
+                            "links": [
+                                { "label" : "Site", "url": "http://msc.zuat.ourinfra.net/" }
+                            ]
+                        },
+                        "sand": {
+                            "links": [
+                                { "label" : "Site", "url": "http://msc.next.ourinfra.net/" }
+                            ]
+                        },
+                        "prod": {
+                            "links": [
+                                { "label" : "Site", "url": "http://msc.ourinfra.net/" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Klink CSR",
+                    "title" : "Klink CSR Portal, Port 3124",
+                    "links": [
+                        { "label" : "GIT", "url": "http://cgit.toolsns.dev/cgit.cgi/NScreens-DigitalVault" },
+                        { "label" : "J", "url": "http://jenkins.gdldevs.com:8080/jenkins/job/gdl_klink", "title": "Jenkins build info" }
+                    ],
+                    "environments": {
+                        "mine": {
+                            "links": [
+                                { "label" : "Site", "url": "http://ivan.wills.usr.optusnet.com.au:3124/" }
+                            ]
+                        },
+                        "test": {
+                            "links": [
+                                { "label" : "Site", "url": "http://mydigitalsafe.test.ourinfra.net/" }
+                            ]
+                        },
+                        "uat": {
+                            "links": [
+                                { "label" : "Site", "url": "http://mydigitalsafe.zuat.ourinfra.net/" }
+                            ]
+                        },
+                        "sand": {
+                            "links": [
+                                { "label" : "Site", "url": "http://optussmartsafe.next.ourinfra.net/" }
+                            ]
+                        },
+                        "prod": {
+                            "links": [
+                                { "label" : "Site", "url": "http://optussmartsafe.ourinfra.net/" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "GDL",
+                    "title" : "GDL Portal, Port 3100",
+                    "links": [
+                        { "label" : "GIT", "url": "http://cgit.toolsns.dev/cgit.cgi/NScreens-CloudPVR" },
+                        { "label" : "J", "url": "http://jenkins.gdldevs.com:8080/jenkins/job/gdl_klink", "title": "Jenkins build info" }
+                    ],
+                    "environments": {
+                        "mine": {
+                            "links": [
+                                { "label" : "Site", "url": "http://ivan.wills.usr.optusnet.com.au:3100/" }
+                            ]
+                        },
+                        "test": {
+                            "links": [
+                                { "label" : "Site", "url": "http://cloudpvr.test.ourinfra.net/" }
+                            ]
+                        },
+                        "uat": {
+                            "links": [
+                                { "label" : "Site", "url": "http://cloudpvr.zuat.ourinfra.net/" }
+                            ]
+                        },
+                        "sand": {
+                            "links": [
+                                { "label" : "Site", "url": "http://account.optustvnow.next.ourinfra.net/" }
+                            ]
+                        },
+                        "prod": {
+                            "links": [
+                                { "label" : "Site", "url": "http://account.optustvnow.ourinfra.net/" }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name"  : "links",
+            "label" : "Links",
+            "show"  : true,
+            "filter" : "GDL",
+            "order"  : 1,
+            "data"  : [
+                {
+                    "label" : "Jenkins",
+                    "title" : "Jenkins",
+                    "links": [
+                    ],
+                    "environments": {
+                        "prod": {
+                            "links": [
+                                { "label" : "Jobs", "url": "http://jenkins.gdldevs.com:8080/jenkins/" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Reports",
+                    "title" : "Reports",
+                    "links": [
+                    ],
+                    "environments": {
+                        "prod": {
+                            "links": [
+                                { "label" : "List", "url": "http://repo.ourinfra.net/reports/" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Bitbucket",
+                    "title" : "Bitbucket",
+                    "links": [
+                    ],
+                    "environments": {
+                        "prod": {
+                            "links": [
+                                { "label" : "gdldevs", "url": "https://bitbucket.org/gdldevs"      },
+                                { "label" : "ivanwills", "url": "https://bitbucket.org/ivanwills/" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Confluence",
+                    "title" : "Confluence",
+                    "links": [
+                    ],
+                    "environments": {
+                        "prod": {
+                            "links": [
+                                { "label" : "Wiki", "url": "https://intranet.groupdigitallife.net/confluence/" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Jira",
+                    "title" : "Jira",
+                    "links": [
+                    ],
+                    "environments": {
+                        "prod": {
+                            "links": [
+                                { "label" : "Dashboard", "url": "https://intranet.groupdigitallife.net/jira/secure/Dashboard.jspa" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "",
+                    "title" : "",
+                    "links": [
+                    ],
+                    "environments": {
+                        "prod": {
+                            "links": [
+                                { "label" : "", "url": "" }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
