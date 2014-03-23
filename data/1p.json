@@ -1,6 +1,12 @@
 {
     "environments" : [
         { "name" : "mine"    , "label" : "Mine"    , "show" : true , "order" : 0, "filter" : "1P"      },
+        { "name" : "aws"     , "label" : "AWS"     , "show" : false, "order" : 3, "filter" : "1P"      },
+        { "name" : "opd1"    , "label" : "OPD1"    , "show" : false, "order" : 3, "filter" : "1P"      },
+        { "name" : "opd2"    , "label" : "OPD2"    , "show" : false, "order" : 3, "filter" : "1P"      },
+        { "name" : "opd3"    , "label" : "OPD3"    , "show" : false, "order" : 3, "filter" : "1P"      },
+        { "name" : "opd4"    , "label" : "OPD4"    , "show" : false, "order" : 3, "filter" : "1P"      },
+        { "name" : "opd5"    , "label" : "OPD5"    , "show" : false, "order" : 3, "filter" : "1P"      },
         { "name" : "opt1"    , "label" : "OPT1"    , "show" : false, "order" : 3, "filter" : "1P"      },
         { "name" : "opt2"    , "label" : "OPT2"    , "show" : false, "order" : 3, "filter" : "1P"      },
         { "name" : "opt3"    , "label" : "OPT3"    , "show" : false, "order" : 3, "filter" : "1P"      },
@@ -38,6 +44,11 @@
                                 { "label" : "Spec"   , "url": "http://oneportal.local.optus.com.au/tests/jasmine/SpecRunner.html" },
                                 { "label" : "YS Spec", "url": "http://oneportal.local.optus.com.au/tests/yellowSubmarine/Specrunner.html" },
                                 { "label" : "Portal" , "url": "http://127.0.0.1:8090/shop/consumer" }
+                            ]
+                        },
+                        "aws": {
+                            "links": [
+                                { "label" : "Site", "url": "https://opcms01.bau-ivanwills.aws.optusnet.com.au/shop/consumer/" }
                             ]
                         },
                         "ppt": {
@@ -101,6 +112,51 @@
                     "environments": {
                         "mine": {
                             "links": [
+                            ]
+                        },
+                        "aws": {
+                            "links": [
+                                { "label" : "Site"   , "url": "http://opcms01.bau-ivanwills.optusnet.com.au:8080/portal/console/" }
+                            ]
+                        },
+                        "opd1": {
+                            "links": [
+                                { "label" : "Portal" , "url": "http://opportal01.opd1.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Preview", "url": "http://oppreview01.opd1.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "CMS"    , "url": "http://opcms01.opd1.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Site"   , "url": "http://opportal01.opd1.optusnet.com.au:8080/portal/console/" }
+                            ]
+                        },
+                        "opd2": {
+                            "links": [
+                                { "label" : "Portal" , "url": "http://opportal01.opd2.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Preview", "url": "http://oppreview01.opd2.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "CMS"    , "url": "http://opcms01.opd2.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Site"   , "url": "http://opportal01.opd2.optusnet.com.au:8080/portal/console/" }
+                            ]
+                        },
+                        "opd3": {
+                            "links": [
+                                { "label" : "Portal" , "url": "http://opportal01.opd3.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Preview", "url": "http://oppreview01.opd3.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "CMS"    , "url": "http://opcms01.opd3.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Site"   , "url": "http://opportal01.opd3.optusnet.com.au:8080/portal/console/" }
+                            ]
+                        },
+                        "opd4": {
+                            "links": [
+                                { "label" : "Portal" , "url": "http://opportal01.opd4.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Preview", "url": "http://oppreview01.opd4.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "CMS"    , "url": "http://opcms01.opd4.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Site"   , "url": "http://opportal01.opd4.optusnet.com.au:8080/portal/console/" }
+                            ]
+                        },
+                        "opd5": {
+                            "links": [
+                                { "label" : "Portal" , "url": "http://opportal01.opd5.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Preview", "url": "http://oppreview01.opd5.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "CMS"    , "url": "http://opcms01.opd5.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Site"   , "url": "http://opportal01.opd5.optusnet.com.au:8080/portal/console/" }
                             ]
                         },
                         "opt1": {
@@ -175,14 +231,15 @@
                     }
                 },
                 {
-                    "label" : "Monitor",
+                    "label" : "Dumbo",
                     "title" : "Monitor",
                     "links": [
                     ],
                     "environments": {
                         "prod": {
                             "links": [
-                                { "label" : "Site"   , "url": "https://eai.optusnet.com.au/monitor/" }
+                                { "label" : "Legacy"    , "url": "https://eai.optusnet.com.au/monitor/" },
+                                { "label" : "Dumbo-demo", "url": "http://dumbo-demo.optusnet.com.au/" }
                             ]
                         }
                     }
@@ -224,7 +281,8 @@
                                 { "label" : "Creating Static Pages"  , "url": "https://wiki.express.optus.com.au/display/candp/Creating+Static+Pages+in+OnePortal" },
                                 { "label" : "Code Lifecycle"         , "url": "https://wiki.express.optus.com.au/display/candp/Frontend+Code+Lifecycle" },
                                 { "label" : "Cucumber"               , "url": "https://wiki.express.optus.com.au/display/candp/Cucumber+Test+Automation+Framework" },
-                                { "label" : "New Starters"           , "url": "https://wiki.express.optus.com.au/display/candp/OnePortal+Frontend+Webdev+Start+Guide" }
+                                { "label" : "New Starters"           , "url": "https://wiki.express.optus.com.au/display/candp/OnePortal+Frontend+Webdev+Start+Guide" },
+                                { "label" : "Git Hooks"              , "url": "https://wiki.express.optus.com.au/display/candp/Git+Hooks" }
                             ]
                         }
                     }
