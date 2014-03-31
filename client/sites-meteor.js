@@ -43,9 +43,7 @@ Template.title.title = function () {
 };
 
 Template.filter.selected = Template.filter_option.selected = function (all) {
-    var filter = ReactiveLocal.get("filter");
-    if (all != 'All') all = this + '';
-    return filter == all ? ' selected="selected"' : '';
+    return this.filters ? 'selected' : null;
 };
 
 Template.filter.filters = function () {

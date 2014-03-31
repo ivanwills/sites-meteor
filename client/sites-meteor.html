@@ -52,7 +52,7 @@
     {{#if filters }}
         <div class="brand">
             Select : <select id="filter">
-                <option{{{ selected 'All' }}}>All</option>
+                <option selected="{{ selected }}">All</option>
                 {{#each filters }}
                     {{> filter_option }}
                 {{/each}}
@@ -64,7 +64,7 @@
 </template>
 
 <template name="filter_option">
-    <option{{{ selected }}}>{{ this }}</option>
+    <option selected="{{ selected }}">{{ this }}</option>
 </template>
 
 <template name="footer">
