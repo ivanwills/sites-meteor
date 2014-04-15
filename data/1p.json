@@ -281,6 +281,7 @@
                                 { "label" : "Creating Static Pages"  , "url": "https://wiki.express.optus.com.au/display/candp/Creating+Static+Pages+in+OnePortal" },
                                 { "label" : "Code Lifecycle"         , "url": "https://wiki.express.optus.com.au/display/candp/Frontend+Code+Lifecycle" },
                                 { "label" : "Cucumber"               , "url": "https://wiki.express.optus.com.au/display/candp/Cucumber+Test+Automation+Framework" },
+                                { "label" : "Cucumber HowTo"         , "url": "https://wiki.express.optus.com.au/display/candp/How+to+install+Ruby+and+Cucumber" },
                                 { "label" : "New Starters"           , "url": "https://wiki.express.optus.com.au/display/candp/OnePortal+Frontend+Webdev+Start+Guide" },
                                 { "label" : "Git Hooks"              , "url": "https://wiki.express.optus.com.au/display/candp/Git+Hooks" }
                             ]
@@ -365,6 +366,28 @@
                         "prod": {
                             "links": [
                                 { "label" : "Page", "url": "" }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name"  : "Other",
+            "label" : "Other",
+            "show"  : true,
+            "filter" : "1P",
+            "order"  : 0,
+            "data"  : [
+                {
+                    "label" : "JSP",
+                    "title" : "JSP",
+                    "links": [
+                    ],
+                    "environments": {
+                        "prod": {
+                            "links": [
+                                { "label" : "Tag Lib", "url": "http://www.tutorialspoint.com/jsp/jsp_standard_tag_library.htm" }
                             ]
                         }
                     }
