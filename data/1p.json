@@ -280,8 +280,6 @@
                                 { "label" : "(Local) deploy FE to VM", "url": "https://wiki.express.optus.com.au/display/candp/Deploying+Portal+Assets+to+a+DEV+VM" },
                                 { "label" : "Creating Static Pages"  , "url": "https://wiki.express.optus.com.au/display/candp/Creating+Static+Pages+in+OnePortal" },
                                 { "label" : "Code Lifecycle"         , "url": "https://wiki.express.optus.com.au/display/candp/Frontend+Code+Lifecycle" },
-                                { "label" : "Cucumber"               , "url": "https://wiki.express.optus.com.au/display/candp/Cucumber+Test+Automation+Framework" },
-                                { "label" : "Cucumber HowTo"         , "url": "https://wiki.express.optus.com.au/display/candp/How+to+install+Ruby+and+Cucumber" },
                                 { "label" : "New Starters"           , "url": "https://wiki.express.optus.com.au/display/candp/OnePortal+Frontend+Webdev+Start+Guide" },
                                 { "label" : "Git Hooks"              , "url": "https://wiki.express.optus.com.au/display/candp/Git+Hooks" }
                             ]
@@ -353,6 +351,23 @@
                         "prod": {
                             "links": [
                                 { "label" : "Phoenix1", "url": "https://wiki.express.optus.com.au/display/SystemsInterfaceTeam/Accessing+Phoenix1+on+Mobile+Devices" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "label" : "Test",
+                    "title" : "Test",
+                    "links": [
+                    ],
+                    "environments": {
+                        "prod": {
+                            "links": [
+                                { "label" : "Cucumber"               , "url": "https://wiki.express.optus.com.au/display/candp/Cucumber+Test+Automation+Framework" },
+                                { "label" : "Cucumber HowTo"         , "url": "https://wiki.express.optus.com.au/display/candp/How+to+install+Ruby+and+Cucumber" },
+                                { "label" : "1P Automation Lifecycle", "url": "https://wiki.express.optus.com.au/display/itssivs/OnePortal-Automation+code+life+cycle" },
+                                { "label" : "Test tasks"             , "url": "https://wiki.express.optus.com.au/display/candp/Scenario+Vs+Product+Matrix+-+E2E+Regression" },
+                                { "label" : "Lisa Test Data"         , "url": "https://wiki.express.optus.com.au/display/candp/One+Portal+LISA+Virtual+Services+Documentation" }
                             ]
                         }
                     }
