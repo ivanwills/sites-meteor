@@ -367,7 +367,9 @@
                                 { "label" : "Cucumber HowTo"         , "url": "https://wiki.express.optus.com.au/display/candp/How+to+install+Ruby+and+Cucumber" },
                                 { "label" : "1P Automation Lifecycle", "url": "https://wiki.express.optus.com.au/display/itssivs/OnePortal-Automation+code+life+cycle" },
                                 { "label" : "Test tasks"             , "url": "https://wiki.express.optus.com.au/display/candp/Scenario+Vs+Product+Matrix+-+E2E+Regression" },
-                                { "label" : "Lisa Test Data"         , "url": "https://wiki.express.optus.com.au/display/candp/One+Portal+LISA+Virtual+Services+Documentation" }
+                                { "label" : "Test data"              , "url": "https://wiki.express.optus.com.au/display/itssivs/IVS+Automation+Test+Data+Management+System" },
+                                { "label" : "Lisa Test Data"         , "url": "https://wiki.express.optus.com.au/display/candp/One+Portal+LISA+Virtual+Services+Documentation" },
+                                { "label" : "MyPlan2 notes"          , "url": "https://wiki.express.optus.com.au/pages/viewpage.action?pageId=58530937" }
                             ]
                         }
                     }
