@@ -124,7 +124,8 @@
                                 { "label" : "Portal" , "url": "http://opportal01.opd1.optusnet.com.au:8080/portal/console/" },
                                 { "label" : "Preview", "url": "http://oppreview01.opd1.optusnet.com.au:8080/portal/console/" },
                                 { "label" : "CMS"    , "url": "http://opcms01.opd1.optusnet.com.au:8080/portal/console/" },
-                                { "label" : "Site"   , "url": "http://opportal01.opd1.optusnet.com.au:8080/portal/console/" }
+                                { "label" : "Site"   , "url": "http://opportal01.opd1.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Clear"  , "url": "http://sit3.cms.optus.com.au/vgn-ext-templating/clearCache.jsp?target=all" }
                             ]
                         },
                         "opd2": {
@@ -132,7 +133,8 @@
                                 { "label" : "Portal" , "url": "http://opportal01.opd2.optusnet.com.au:8080/portal/console/" },
                                 { "label" : "Preview", "url": "http://oppreview01.opd2.optusnet.com.au:8080/portal/console/" },
                                 { "label" : "CMS"    , "url": "http://opcms01.opd2.optusnet.com.au:8080/portal/console/" },
-                                { "label" : "Site"   , "url": "http://opportal01.opd2.optusnet.com.au:8080/portal/console/" }
+                                { "label" : "Site"   , "url": "http://opportal01.opd2.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Clear"  , "url": "http://sit3.cms.optus.com.au/vgn-ext-templating/clearCache.jsp?target=all" }
                             ]
                         },
                         "opd3": {
@@ -140,7 +142,8 @@
                                 { "label" : "Portal" , "url": "http://opportal01.opd3.optusnet.com.au:8080/portal/console/" },
                                 { "label" : "Preview", "url": "http://oppreview01.opd3.optusnet.com.au:8080/portal/console/" },
                                 { "label" : "CMS"    , "url": "http://opcms01.opd3.optusnet.com.au:8080/portal/console/" },
-                                { "label" : "Site"   , "url": "http://opportal01.opd3.optusnet.com.au:8080/portal/console/" }
+                                { "label" : "Site"   , "url": "http://opportal01.opd3.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Clear"  , "url": "http://sit3-1.cms.optus.com.au/vgn-ext-templating/clearCache.jsp?target=all" }
                             ]
                         },
                         "opd4": {
@@ -148,7 +151,8 @@
                                 { "label" : "Portal" , "url": "http://opportal01.opd4.optusnet.com.au:8080/portal/console/" },
                                 { "label" : "Preview", "url": "http://oppreview01.opd4.optusnet.com.au:8080/portal/console/" },
                                 { "label" : "CMS"    , "url": "http://opcms01.opd4.optusnet.com.au:8080/portal/console/" },
-                                { "label" : "Site"   , "url": "http://opportal01.opd4.optusnet.com.au:8080/portal/console/" }
+                                { "label" : "Site"   , "url": "http://opportal01.opd4.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Clear"  , "url": "http://sit3.cms.optus.com.au/vgn-ext-templating/clearCache.jsp?target=all" }
                             ]
                         },
                         "opd5": {
@@ -156,7 +160,8 @@
                                 { "label" : "Portal" , "url": "http://opportal01.opd5.optusnet.com.au:8080/portal/console/" },
                                 { "label" : "Preview", "url": "http://oppreview01.opd5.optusnet.com.au:8080/portal/console/" },
                                 { "label" : "CMS"    , "url": "http://opcms01.opd5.optusnet.com.au:8080/portal/console/" },
-                                { "label" : "Site"   , "url": "http://opportal01.opd5.optusnet.com.au:8080/portal/console/" }
+                                { "label" : "Site"   , "url": "http://opportal01.opd5.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Clear"  , "url": "http://sit3.cms.optus.com.au/vgn-ext-templating/clearCache.jsp?target=all" }
                             ]
                         },
                         "opt1": {
@@ -164,7 +169,8 @@
                                 { "label" : "Portal" , "url": "http://opportal01.opt1.optusnet.com.au:8080/portal/console/" },
                                 { "label" : "Preview", "url": "http://oppreview01.opt1.optusnet.com.au:8080/portal/console/" },
                                 { "label" : "CMS"    , "url": "http://opcms01.opt1.optusnet.com.au:8080/portal/console/" },
-                                { "label" : "Site"   , "url": "http://opportal01.opt1.optusnet.com.au:8080/portal/console/" }
+                                { "label" : "Site"   , "url": "http://opportal01.opt1.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Clear"  , "url": "http://sit3.cms.optus.com.au/vgn-ext-templating/clearCache.jsp?target=all" }
                             ]
                         },
                         "opt2": {
@@ -172,7 +178,8 @@
                                 { "label" : "Portal" , "url": "http://opportal01.opt2.optusnet.com.au:8080/portal/console/" },
                                 { "label" : "Preview", "url": "http://oppreview01.opt2.optusnet.com.au:8080/portal/console/" },
                                 { "label" : "CMS"    , "url": "http://opcms01.opt2.optusnet.com.au:8080/portal/console/" },
-                                { "label" : "Site"   , "url": "http://opportal01.opt2.optusnet.com.au:8080/portal/console/" }
+                                { "label" : "Site"   , "url": "http://opportal01.opt2.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Clear"  , "url": "http://sit3.cms.optus.com.au/vgn-ext-templating/clearCache.jsp?target=all" }
                             ]
                         },
                         "opt3": {
@@ -180,7 +187,8 @@
                                 { "label" : "Portal" , "url": "http://opportal01.opt3.optusnet.com.au:8080/portal/console/" },
                                 { "label" : "Preview", "url": "http://oppreview01.opt3.optusnet.com.au:8080/portal/console/" },
                                 { "label" : "CMS"    , "url": "http://opcms01.opt3.optusnet.com.au:8080/portal/console/" },
-                                { "label" : "Site"   , "url": "http://opportal01.opt3.optusnet.com.au:8080/portal/console/" }
+                                { "label" : "Site"   , "url": "http://opportal01.opt3.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Clear"  , "url": "http://sit3.cms.optus.com.au/vgn-ext-templating/clearCache.jsp?target=all" }
                             ]
                         },
                         "opt4": {
@@ -188,7 +196,8 @@
                                 { "label" : "Portal" , "url": "http://opportal01.opt4.optusnet.com.au:8080/portal/console/" },
                                 { "label" : "Preview", "url": "http://oppreview01.opt4.optusnet.com.au:8080/portal/console/" },
                                 { "label" : "CMS"    , "url": "http://opcms01.opt4.optusnet.com.au:8080/portal/console/" },
-                                { "label" : "Site"   , "url": "http://opportal01.opt4.optusnet.com.au:8080/portal/console/" }
+                                { "label" : "Site"   , "url": "http://opportal01.opt4.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Clear"  , "url": "http://sit3.cms.optus.com.au/vgn-ext-templating/clearCache.jsp?target=all" }
                             ]
                         },
                         "opt5": {
@@ -196,7 +205,8 @@
                                 { "label" : "Portal" , "url": "http://opportal01.opt5.optusnet.com.au:8080/portal/console/" },
                                 { "label" : "Preview", "url": "http://oppreview01.opt5.optusnet.com.au:8080/portal/console/" },
                                 { "label" : "CMS"    , "url": "http://opcms01.opt5.optusnet.com.au:8080/portal/console/" },
-                                { "label" : "Site"   , "url": "http://opportal01.opt5.optusnet.com.au:8080/portal/console/" }
+                                { "label" : "Site"   , "url": "http://opportal01.opt5.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Clear"  , "url": "http://sit3.cms.optus.com.au/vgn-ext-templating/clearCache.jsp?target=all" }
                             ]
                         },
                         "opt6": {
@@ -204,7 +214,8 @@
                                 { "label" : "Portal" , "url": "http://opportal01.opt6.optusnet.com.au:8080/portal/console/" },
                                 { "label" : "Preview", "url": "http://oppreview01.opt6.optusnet.com.au:8080/portal/console/" },
                                 { "label" : "CMS"    , "url": "http://opcms01.opt6.optusnet.com.au:8080/portal/console/" },
-                                { "label" : "Site"   , "url": "http://opportal01.opt6.optusnet.com.au:8080/portal/console/" }
+                                { "label" : "Site"   , "url": "http://opportal01.opt6.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Clear"  , "url": "http://sit3.cms.optus.com.au/vgn-ext-templating/clearCache.jsp?target=all" }
                             ]
                         },
                         "opt7": {
@@ -212,7 +223,8 @@
                                 { "label" : "Portal" , "url": "http://opportal01.opt7.optusnet.com.au:8080/portal/console/" },
                                 { "label" : "Preview", "url": "http://oppreview01.opt7.optusnet.com.au:8080/portal/console/" },
                                 { "label" : "CMS"    , "url": "http://opcms01.opt7.optusnet.com.au:8080/portal/console/" },
-                                { "label" : "Site"   , "url": "http://opportal01.opt7.optusnet.com.au:8080/portal/console/" }
+                                { "label" : "Site"   , "url": "http://opportal01.opt7.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Clear"  , "url": "http://sit3.cms.optus.com.au/vgn-ext-templating/clearCache.jsp?target=all" }
                             ]
                         },
                         "opt8": {
@@ -220,7 +232,8 @@
                                 { "label" : "Portal" , "url": "http://opportal01.opt8.optusnet.com.au:8080/portal/console/" },
                                 { "label" : "Preview", "url": "http://oppreview01.opt8.optusnet.com.au:8080/portal/console/" },
                                 { "label" : "CMS"    , "url": "http://opcms01.opt8.optusnet.com.au:8080/portal/console/" },
-                                { "label" : "Site"   , "url": "http://opportal01.opt8.optusnet.com.au:8080/portal/console/" }
+                                { "label" : "Site"   , "url": "http://opportal01.opt8.optusnet.com.au:8080/portal/console/" },
+                                { "label" : "Clear"  , "url": "http://sit3.cms.optus.com.au/vgn-ext-templating/clearCache.jsp?target=all" }
                             ]
                         },
                         "uat1": {
