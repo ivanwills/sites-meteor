@@ -417,7 +417,8 @@
                     "environments": {
                         "prod": {
                             "links": [
-                                { "label" : "Tag Lib", "url": "http://www.tutorialspoint.com/jsp/jsp_standard_tag_library.htm" }
+                                { "label" : "Tag Lib", "url": "http://www.tutorialspoint.com/jsp/jsp_standard_tag_library.htm" },
+                                { "label" : "Sonar"  , "url": "http://211.29.157.220:9000/dashboard/index/frontend.test" }
                             ]
                         }
                     }
